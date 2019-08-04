@@ -25,6 +25,19 @@ var cursors;
 function preload() {
 	this.load.image("wizard", "assets/wizard.png");
 	this.load.image("sword", "assets/5.png");
+	this.load.image("sword2", "assets/sword2.png");
+	this.load.image("inventoryIcon", "assets/1.png");
+
+	this.load.atlas({
+		key: "armor",
+		textureURL: "assets/armor/armor.png",
+		atlasURL: "assets/armor/armor.json"
+	});
+	this.load.atlas({
+		key: "swords",
+		textureURL: "assets/weapons/swords.png",
+		atlasURL: "assets/weapons/swords.json"
+	});
 
 	this.load.atlas({
 		key: "idle",

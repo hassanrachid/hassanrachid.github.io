@@ -1,7 +1,11 @@
-export default class Item extends Phaser.GameObjects.GameObject {
+export default class Item extends Phaser.GameObjects.Sprite {
 	constructor(config) {
-		super(config.scene, config.type);
-		this.setData("name", config.name);
-		this.setData("image", config.image);
+		super(config.scene, config.x, config.y, config.image, config.frame);
+		this.setScale(0.33);
+		this.scene.add.existing(this);
+		this.setInteractive({
+			draggable: true,
+			customHitArea: false
+		});
 	}
 }

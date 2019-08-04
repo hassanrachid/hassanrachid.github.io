@@ -1,5 +1,6 @@
 import Ability from "phaser3-project-template/src/ability";
 import Inventory from "phaser3-project-template/src/inventory";
+import UtilityBar from "phaser3-project-template/src/utilitybar";
 
 export default class Player extends Phaser.GameObjects.Sprite {
 	constructor(config) {
@@ -21,8 +22,16 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
 		this.inventory = new Inventory({
 			scene: this.scene,
-			x: 400,
-			y: 200
+			x: 100,
+			y: 600
+		});
+
+		this.utilitybar = new UtilityBar({
+			scene: this.scene,
+			x: 100,
+			y: 860,
+			width: 1792,
+			height: 64
 		});
 	}
 

@@ -1,0 +1,540 @@
+{
+	"frames": [
+		{
+			"filename": "ArielDress_[Paint].png",
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "BanditLightArmor_[Paint].png",
+			"frame": {
+				"x": 195,
+				"y": 1,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "ChainmailLightArmor_[Paint].png",
+			"frame": {
+				"x": 389,
+				"y": 1,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "Cleric_[Paint].png",
+			"frame": {
+				"x": 583,
+				"y": 1,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "CrusaderChainmail_[Paint].png",
+			"frame": {
+				"x": 777,
+				"y": 1,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "Deserter.png",
+			"frame": {
+				"x": 1,
+				"y": 195,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "EliteGuardArmor_[Paint].png",
+			"frame": {
+				"x": 195,
+				"y": 195,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "FalconLightArmor.png",
+			"frame": {
+				"x": 389,
+				"y": 195,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "FireAdept.png",
+			"frame": {
+				"x": 583,
+				"y": 195,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "GuardArmor_[Paint].png",
+			"frame": {
+				"x": 777,
+				"y": 195,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "Hermit.png",
+			"frame": {
+				"x": 1,
+				"y": 389,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "Hunter.png",
+			"frame": {
+				"x": 195,
+				"y": 389,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "HunterLightArmor.png",
+			"frame": {
+				"x": 389,
+				"y": 389,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "HunterTunic.png",
+			"frame": {
+				"x": 583,
+				"y": 389,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "IronArmor_[Paint].png",
+			"frame": {
+				"x": 777,
+				"y": 389,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "KnightArmor.png",
+			"frame": {
+				"x": 1,
+				"y": 583,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "LeatherJacket.png",
+			"frame": {
+				"x": 195,
+				"y": 583,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "LeatherLightArmor.png",
+			"frame": {
+				"x": 389,
+				"y": 583,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "LeatherRivetedArmor.png",
+			"frame": {
+				"x": 583,
+				"y": 583,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "Militiaman.png",
+			"frame": {
+				"x": 777,
+				"y": 583,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "PeasantClothing.png",
+			"frame": {
+				"x": 1,
+				"y": 777,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "Robe.png",
+			"frame": {
+				"x": 195,
+				"y": 777,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "Scout_[Paint].png",
+			"frame": {
+				"x": 389,
+				"y": 777,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "Slave.png",
+			"frame": {
+				"x": 583,
+				"y": 777,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		},
+		{
+			"filename": "WaterAdept.png",
+			"frame": {
+				"x": 777,
+				"y": 777,
+				"w": 192,
+				"h": 192
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 192,
+				"h": 192
+			},
+			"sourceSize": {
+				"w": 192,
+				"h": 192
+			}
+		}
+	],
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 970,
+			"h": 970
+		},
+		"scale": "1"
+	}
+}
