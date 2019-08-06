@@ -1,4 +1,4 @@
-import Item from "phaser3-project-template/src/item";
+import Item from "./item";
 
 export default class Inventory extends Phaser.GameObjects.Rectangle {
 	constructor(config) {
@@ -14,12 +14,6 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 	}
 
 	create() {
-		this.inventoryContainer = new Phaser.Geom.Rectangle(
-			this.x,
-			this.y,
-			this.width,
-			this.height
-		);
 		this.cols = this.width / 64;
 		this.rows = this.height / 64;
 
@@ -28,8 +22,8 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 			for (var y = 0; y < this.cols; y++) {
 				this.rect = new Phaser.GameObjects.Rectangle(
 					this.scene,
-					this.inventoryContainer.x + x * 64,
-					this.inventoryContainer.y + y * 64,
+					this.x + x * 64,
+					this.y + y * 64,
 					64,
 					64
 				);
@@ -46,13 +40,13 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 	}
 
 	addItem(item) {
-		// this.slotArray[0][0].item = new Item({
-		// 	scene: this.scene,
-		// 	x: this.slotArray[0][0].x,
-		// 	y: this.slotArray[0][0].y,
-		// 	image: "swords",
-		// 	frame: "SmallAxe.png"
-		// });
+		this.slotArray[0][0].item = new Item({
+			scene: this.scene,
+			x: this.slotArray[0][0].x,
+			y: this.slotArray[0][0].y,
+			image: "swords",
+			frame: "SmallAxe.png"
+		});
 	}
 
 	handleEvents() {
@@ -67,8 +61,8 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 			gameObject.y = dragY;
 		});
 		this.scene.input.on("drop", (pointer, gameObject, target) => {
-			var x = (gameObject.xx - this.inventoryContainer.x) / 64;
-			var y = (gameObject.yy - this.inventoryContainer.y) / 64;
+			var x = (gameObject.xx - this.x) / 64;
+			var y = (gameObject.yy - this.y) / 64;
 
 			var previous = this.slotArray[x][y];
 			this.slotArray[x][y].item = undefined;
@@ -87,5 +81,18 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 				gameObject.y = gameObject.yy;
 			}
 		});
+	}
+
+	hide() {
+		for (var x = 0; x < this.rows; x++) {
+			for (var y = 0; y < this.cols; y++) {
+				this.slotArray[x][y].setVisible(!this.slotArray[x][y].visible);
+				if (this.slotArray[x][y].item != undefined) {
+					this.slotArray[x][y].item.setVisible(
+						!this.slotArray[x][y].item.visible
+					);
+				}
+			}
+		}
 	}
 }

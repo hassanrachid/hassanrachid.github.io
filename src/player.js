@@ -1,6 +1,6 @@
-import Ability from "phaser3-project-template/src/ability";
-import Inventory from "phaser3-project-template/src/inventory";
-import UtilityBar from "phaser3-project-template/src/utilitybar";
+import Ability from "./ability";
+import Inventory from "./inventory";
+import UtilityBar from "./utilitybar";
 
 export default class Player extends Phaser.GameObjects.Sprite {
 	constructor(config) {
@@ -31,7 +31,8 @@ export default class Player extends Phaser.GameObjects.Sprite {
 			x: 100,
 			y: 860,
 			width: 1792,
-			height: 64
+			height: 64,
+			player: this
 		});
 	}
 

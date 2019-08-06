@@ -1,5 +1,5 @@
 import "phaser";
-import Player from "phaser3-project-template/src/player";
+import Player from "./player";
 
 var config = {
 	type: Phaser.AUTO,
@@ -26,7 +26,7 @@ function preload() {
 	this.load.image("wizard", "assets/wizard.png");
 	this.load.image("sword", "assets/5.png");
 	this.load.image("sword2", "assets/sword2.png");
-	this.load.image("inventoryIcon", "assets/1.png");
+	this.load.image("inventory", "assets/1.png");
 
 	this.load.atlas({
 		key: "armor",

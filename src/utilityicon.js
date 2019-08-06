@@ -5,17 +5,25 @@ export default class UtilityIcon extends Phaser.GameObjects.Rectangle {
 		this.x = config.x;
 		this.y = config.y;
 		this.name = config.name;
+		this.player = config.player;
 		this.scene.add.existing(true);
+		this.scene.add.existing(
+			new Phaser.GameObjects.Image(
+				this.scene,
+				this.x,
+				this.y,
+				this.name
+			).setScale(0.125)
+		);
 
-		if (this.name == "inventory") {
-			this.scene.add.existing(
-				new Phaser.GameObjects.Image(
-					this.scene,
-					this.x,
-					this.y,
-					"inventoryIcon"
-				).setScale(0.125)
-			);
-		}
+		this.setInteractive({ enabled: true });
+
+		this.on("pointerdown", function() {
+			switch (this.name) {
+				case "inventory":
+					this.player.inventory.hide();
+					break;
+			}
+		});
 	}
 }

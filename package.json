@@ -35,7 +35,7 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "grunt": "^1.0.4",
-    "phaser": "^3.3.0",
+    "phaser": "^3.18.1",
     "phaser-sprite-gui": "^0.7.1"
   },
   "deprecated": false,

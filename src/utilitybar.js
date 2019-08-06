@@ -1,5 +1,5 @@
-import UtilityIcon from "phaser3-project-template/src/utilityicon";
-
+import UtilityIcon from "./utilityicon";
+// https://www.gamedevmarket.net/asset/gui-icons-8656/
 export default class UtilityBar {
 	constructor(config) {
 		this.scene = config.scene;
@@ -7,6 +7,7 @@ export default class UtilityBar {
 		this.y = config.y;
 		this.width = config.width;
 		this.height = config.height;
+		this.player = config.player;
 
 		this.iconNames = ["inventory", "2", "3", "4", "5", "6", "7"];
 
@@ -21,7 +22,8 @@ export default class UtilityBar {
 				y: this.y,
 				width: 64,
 				height: 64,
-				name: this.iconNames[index]
+				name: this.iconNames[index],
+				player: this.player
 			});
 		}
 	}
