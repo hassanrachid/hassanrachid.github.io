@@ -26,7 +26,10 @@ function preload() {
 	this.load.image("wizard", "assets/wizard.png");
 	this.load.image("sword", "assets/5.png");
 	this.load.image("sword2", "assets/sword2.png");
-	this.load.image("inventory", "assets/1.png");
+	this.load.image("inventory", "assets/utilityicons/1.png");
+	this.load.image("abilities", "assets/utilityicons/2.png");
+	this.load.image("skills", "assets/utilityicons/3.png");
+	this.load.image("equipment", "assets/utilityicons/4.png");
 
 	this.load.atlas({
 		key: "armor",

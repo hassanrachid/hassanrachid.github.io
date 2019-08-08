@@ -9,7 +9,15 @@ export default class UtilityBar {
 		this.height = config.height;
 		this.player = config.player;
 
-		this.iconNames = ["inventory", "2", "3", "4", "5", "6", "7"];
+		this.iconNames = [
+			"inventory",
+			"abilities",
+			"skills",
+			"equipment",
+			"5",
+			"6",
+			"7"
+		];
 
 		this.create();
 	}

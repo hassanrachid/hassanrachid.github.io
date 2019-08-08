@@ -8,12 +8,7 @@ export default class UtilityIcon extends Phaser.GameObjects.Rectangle {
 		this.player = config.player;
 		this.scene.add.existing(true);
 		this.scene.add.existing(
-			new Phaser.GameObjects.Image(
-				this.scene,
-				this.x,
-				this.y,
-				this.name
-			).setScale(0.125)
+			new Phaser.GameObjects.Image(this.scene, this.x, this.y, this.name)
 		);
 
 		this.setInteractive({ enabled: true });
