@@ -30,6 +30,12 @@ function preload() {
 	this.load.image("abilities", "assets/utilityicons/2.png");
 	this.load.image("skills", "assets/utilityicons/3.png");
 	this.load.image("equipment", "assets/utilityicons/4.png");
+	this.load.image(
+		"inventorybackground",
+		"assets/inventory/inventorybackground.png"
+	);
+	this.load.image("itemtooltip", "assets/inventory/itemtooltip.png");
+	this.load.image("inventoryframe", "assets/inventory/inventoryframe.png");
 
 	this.load.atlas({
 		key: "armor",

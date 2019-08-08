@@ -23,7 +23,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
 		this.inventory = new Inventory({
 			scene: this.scene,
 			x: 100,
-			y: 600
+			y: 580
 		});
 
 		this.utilitybar = new UtilityBar({

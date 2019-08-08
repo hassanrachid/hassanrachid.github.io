@@ -10,6 +10,16 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 		this.height = 256;
 		this.x = config.x;
 		this.y = config.y;
+
+		this.b = new Phaser.GameObjects.Image(
+			this.scene,
+			this.x - 56,
+			this.y - 56,
+			"inventorybackground"
+		);
+		this.b.setOrigin(0, 0);
+		this.b.setDisplaySize(304, 304);
+		this.scene.add.existing(this.b);
 		this.create();
 	}
 
@@ -27,8 +37,15 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 					64,
 					64
 				);
-				this.rect.setOrigin(0.5, 0.5);
-				this.rect.isStroked = true;
+				this.rect.image = this.scene.add.existing(
+					new Phaser.GameObjects.Image(
+						this.scene,
+						this.x + x * 64,
+						this.y + y * 64,
+						"inventoryframe"
+					)
+				);
+				//this.rect.isStroked = true;
 				this.rect.setInteractive({ dropZone: true });
 				this.slotArray[x][y] = this.rect;
 				this.scene.add.existing(this.rect);
@@ -45,14 +62,24 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 			x: this.slotArray[0][0].x,
 			y: this.slotArray[0][0].y,
 			image: "swords",
-			frame: "SmallAxe.png"
+			frame: "ShortDagger_[Paint].png"
+		});
+		this.slotArray[0][1].item = new Item({
+			scene: this.scene,
+			x: this.slotArray[0][1].x,
+			y: this.slotArray[0][1].y,
+			image: "swords",
+			frame: "ShortSword_[Paint].png"
 		});
 	}
 
 	handleEvents() {
+		this.scene.input.on("pointerdown", (pointer, localX, localY) => {
+			console.log(pointer.x);
+			console.log(pointer.y);
+		});
 		this.scene.input.on("dragstart", (pointer, gameObject) => {
 			this.scene.children.bringToTop(gameObject);
-			console.log(gameObject.getTopLeft());
 			gameObject.xx = gameObject.x;
 			gameObject.yy = gameObject.y;
 		});
@@ -84,9 +111,13 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 	}
 
 	hide() {
+		this.b.setVisible(!this.b.visible);
 		for (var x = 0; x < this.rows; x++) {
 			for (var y = 0; y < this.cols; y++) {
 				this.slotArray[x][y].setVisible(!this.slotArray[x][y].visible);
+				this.slotArray[x][y].image.setVisible(
+					!this.slotArray[x][y].image.visible
+				);
 				if (this.slotArray[x][y].item != undefined) {
 					this.slotArray[x][y].item.setVisible(
 						!this.slotArray[x][y].item.visible
