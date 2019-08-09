@@ -21,13 +21,13 @@ export default class Player extends Phaser.GameObjects.Sprite {
 		});
 
 		this.inventory = new Inventory({
-			scene: this.scene,
+			scene: this.scene.game.scene.keys["InterfaceScene"],
 			x: 100,
 			y: 580
 		});
 
 		this.utilitybar = new UtilityBar({
-			scene: this.scene,
+			scene: this.scene.game.scene.keys["InterfaceScene"],
 			x: 100,
 			y: 860,
 			width: 1792,
@@ -61,6 +61,8 @@ export default class Player extends Phaser.GameObjects.Sprite {
 			this.body.setVelocityX(0);
 			this.body.setVelocityY(0);
 		}
+
+		// On if move state, check for any enemies near by, and then have the enemy move to the player
 
 		if (Phaser.Input.Keyboard.JustDown(cursors.spell1)) {
 			this.ability.cast(this);

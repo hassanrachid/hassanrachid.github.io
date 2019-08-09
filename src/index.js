@@ -1,10 +1,12 @@
 import "phaser";
-import Player from "./player";
+import InterfaceScene from "./interface";
+import GameScene from "./game";
+import LoadScene from "./load";
 
 var config = {
-	type: Phaser.AUTO,
+	type: Phaser.WEBGL,
 	antialias: false,
-	parent: "phaser-example",
+	parent: "content",
 	physics: {
 		default: "arcade",
 		arcade: { debug: true }
@@ -12,101 +14,7 @@ var config = {
 	backgroundColor: 0x666666,
 	width: 1600,
 	height: 900,
-	scene: {
-		preload: preload,
-		create: create,
-		update: update
-	}
+	scene: [LoadScene, GameScene, InterfaceScene]
 };
 
-var game = new Phaser.Game(config);
-var cursors;
-
-function preload() {
-	this.load.image("wizard", "assets/wizard.png");
-	this.load.image("sword", "assets/5.png");
-	this.load.image("sword2", "assets/sword2.png");
-	this.load.image("inventory", "assets/utilityicons/1.png");
-	this.load.image("abilities", "assets/utilityicons/2.png");
-	this.load.image("skills", "assets/utilityicons/3.png");
-	this.load.image("equipment", "assets/utilityicons/4.png");
-	this.load.image(
-		"inventorybackground",
-		"assets/inventory/inventorybackground.png"
-	);
-	this.load.image("itemtooltip", "assets/inventory/itemtooltip.png");
-	this.load.image("inventoryframe", "assets/inventory/inventoryframe.png");
-
-	this.load.atlas({
-		key: "armor",
-		textureURL: "assets/armor/armor.png",
-		atlasURL: "assets/armor/armor.json"
-	});
-	this.load.atlas({
-		key: "swords",
-		textureURL: "assets/weapons/swords.png",
-		atlasURL: "assets/weapons/swords.json"
-	});
-
-	this.load.atlas({
-		key: "idle",
-		textureURL: "assets/wizard/animations/idle/spritesheet.png",
-		atlasURL: "assets/wizard/animations/idle/spritesheet.json"
-	});
-
-	this.load.atlas({
-		key: "walk",
-		textureURL: "assets/wizard/animations/walk/spritesheet.png",
-		atlasURL: "assets/wizard/animations/walk/spritesheet.json"
-	});
-
-	this.load.atlas({
-		key: "firestrike",
-		textureURL: "assets/wizard/animations/spells/fire/spritesheet.png",
-		atlasURL: "assets/wizard/animations/spells/fire/spritesheet.json"
-	});
-}
-
-function create() {
-	this.anims.create({
-		key: "idle",
-		frames: this.anims.generateFrameNames("idle"),
-		frameRate: 30,
-		repeat: -1
-	});
-	this.anims.create({
-		key: "walk",
-		frames: this.anims.generateFrameNames("walk"),
-		frameRate: 30,
-		repeat: -1
-	});
-	this.anims.create({
-		key: "firestrike",
-		frames: this.anims.generateFrameNames("firestrike"),
-		frameRate: 30,
-		repeat: 0,
-		hideOnComplete: true,
-		showOnStart: true
-	});
-	cursors = this.input.keyboard.addKeys({
-		left: "a",
-		right: "d",
-		up: "w",
-		down: "s",
-		spell1: "q",
-		spell2: "w",
-		spell3: "e",
-		spell4: "r"
-	});
-
-	this.player = new Player({
-		scene: this,
-		x: 400,
-		y: 300,
-		key: "player"
-	});
-}
-
-function update() {
-	this.player.update(cursors);
-}
+const game = new Phaser.Game(config);

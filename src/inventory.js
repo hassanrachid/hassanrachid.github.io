@@ -21,6 +21,7 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 		this.b.setDisplaySize(304, 304);
 		this.scene.add.existing(this.b);
 		this.create();
+		this.hide();
 	}
 
 	create() {
