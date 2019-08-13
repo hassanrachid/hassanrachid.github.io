@@ -15,7 +15,7 @@ export default class Ability extends Phaser.GameObjects.Sprite {
 			"animationupdate",
 			(frame, index) => {
 				this.casting = true;
-				if (index.index >= 4 && !this.collided) {
+				if (!this.collided) {
 					this.scene.physics.world.collide(
 						this,
 						this.scene.enemies,
@@ -30,16 +30,15 @@ export default class Ability extends Phaser.GameObjects.Sprite {
 			"animationcomplete",
 			function() {
 				this.casting = false;
-			},
-			this
+			}
 		);
 	}
 
 	cast(player) {
 		if (!this.casting) {
+			this.player = player;
 			this.collided = false;
 			this.anims.play("firestrike", true);
-			this.player = player;
 			this.x = this.scene.input.activePointer.worldX + 25;
 			this.y = this.scene.input.activePointer.worldY - 200;
 		}
@@ -47,5 +46,6 @@ export default class Ability extends Phaser.GameObjects.Sprite {
 
 	collision(o1, o2) {
 		o2.attacked(o1.damage);
+		console.log("collided")
 	}
 }

@@ -46,7 +46,6 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 						"inventoryframe"
 					)
 				);
-				//this.rect.isStroked = true;
 				this.rect.setInteractive({ dropZone: true });
 				this.slotArray[x][y] = this.rect;
 				this.scene.add.existing(this.rect);

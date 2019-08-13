@@ -20,7 +20,7 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 		});
 
 		this.on("animationupdate", (anim, frame) => {
-			this.emit("animationupdate_" + anim.key);
+			this.emit("animationupdate_" + anim.key, anim, frame);
 		});
 
 		this.on("animationcomplete_goblinattack", () => {
@@ -32,11 +32,16 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 			this.attacking = true;
 			this.body.setVelocity(0, 0);
 		});
-		this.on("animationcomplete_goblinhurt", (anim, frame) => {
+
+		this.on("animationupdate_goblinhurt", (anim, frame) => {
+			this.state = "HurtState";
 			if (frame.isLast) {
 				this.state = "IdleState";
 			}
+
 		});
+		// this.on("animationcomplete_goblinhurt", (anim, frame) => {
+		// });
 
 		this.on("animationcomplete_goblindie", (anim, frame) => {
 			if (frame.isLast) {
@@ -57,7 +62,7 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 
 		this.state = "HurtState";
 		if (this.health <= 0) {
-			this.anims.play("goblindie");
+			this.state = "DieState"
 		}
 	}
 
@@ -65,7 +70,7 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 		var absX = Math.abs(Math.abs(this.x) - Math.abs(target.x));
 		var absY = Math.abs(Math.abs(this.y) - Math.abs(target.y));
 
-		if (!this.attacking) {
+		if (!this.attacking && this.state != "HurtState" && this.state != "DieState") {
 			this.state = "MoveState";
 		}
 		if (this.state == "MoveState") {
@@ -99,6 +104,10 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 			this.state = "AttackState";
 			return distance;
 		}
+	}
+
+	DieState() { 
+		this.anims.play("goblindie", true);
 	}
 
 	HurtState() {
