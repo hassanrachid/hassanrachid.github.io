@@ -31,10 +31,9 @@ export default class GameScene extends Phaser.Scene {
 		this.enemies = this.physics.add.group();
 
 		this.goblin = new Goblin({
-			idleAnimation: "goblinidle",
 			scene: this,
-			x: 400,
-			y: 400
+			x: 800,
+			y: 800
 		});
 		this.enemies.add(this.goblin);
 

@@ -64,6 +64,17 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
 		// On if move state, check for any enemies near by, and then have the enemy move to the player
 
+		this.scene.enemies.getChildren().forEach(e => {
+			// have aggro distance configurable in enemy class ** TODO
+
+			var d = this.distance(e.x, e.y, this.x, this.y);
+			if (d <= 300) {
+				if (e.moveTo(this, d) == undefined) {
+					e.moveTo(this, d);
+				}
+			}
+		});
+
 		if (Phaser.Input.Keyboard.JustDown(cursors.spell1)) {
 			this.ability.cast(this);
 		}
@@ -75,5 +86,12 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
 	MoveState() {
 		this.anims.play("walk", true);
+	}
+
+	distance(x1, y1, x2, y2) {
+		var dx = x1 - x2;
+		var dy = y1 - y2;
+
+		return Math.sqrt(dx * dx + dy * dy);
 	}
 }

@@ -76,6 +76,11 @@ export default class LoadScene extends Phaser.Scene {
 		});
 
 		this.load.atlas({
+			key: "goblinattack",
+			textureURL: "assets/enemy/goblin/attack/spritesheet.png",
+			atlasURL: "assets/enemy/goblin/attack/spritesheet.json"
+		});
+		this.load.atlas({
 			key: "goblinidle",
 			textureURL: "assets/enemy/goblin/idle/spritesheet.png",
 			atlasURL: "assets/enemy/goblin/idle/spritesheet.json"
@@ -89,6 +94,11 @@ export default class LoadScene extends Phaser.Scene {
 			key: "goblindie",
 			textureURL: "assets/enemy/goblin/die/spritesheet.png",
 			atlasURL: "assets/enemy/goblin/die/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "goblinwalk",
+			textureURL: "assets/enemy/goblin/walk/spritesheet.png",
+			atlasURL: "assets/enemy/goblin/walk/spritesheet.json"
 		});
 
 		this.load.atlas({
@@ -118,8 +128,20 @@ export default class LoadScene extends Phaser.Scene {
 			repeat: -1
 		});
 		this.anims.create({
+			key: "goblinwalk",
+			frames: this.anims.generateFrameNames("goblinwalk"),
+			frameRate: 30,
+			repeat: -1
+		});
+		this.anims.create({
 			key: "goblinhurt",
 			frames: this.anims.generateFrameNames("goblinhurt"),
+			frameRate: 30,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "goblinattack",
+			frames: this.anims.generateFrameNames("goblinattack"),
 			frameRate: 30,
 			repeat: 0
 		});
