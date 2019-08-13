@@ -1,7 +1,7 @@
 import Ability from "./ability";
 import Inventory from "./inventory";
 import UtilityBar from "./utilitybar";
-
+import HealthBar from "./healthbar";
 export default class Player extends Phaser.GameObjects.Sprite {
 	constructor(config) {
 		super(config.scene, config.x, config.y, config.key);
@@ -13,6 +13,10 @@ export default class Player extends Phaser.GameObjects.Sprite {
 		this.body.setOffset(80, 0);
 		this.body.setCollideWorldBounds(true);
 		this.scene = config.scene;
+
+		// Attributes // Move later to another child object..
+		this.maxHealth = 100;
+		this.currentHealth = 100;
 		this.ability = new Ability({
 			scene: this.scene,
 			x: 0,
@@ -34,6 +38,8 @@ export default class Player extends Phaser.GameObjects.Sprite {
 			height: 64,
 			player: this
 		});
+
+		this.healthbar = new HealthBar(this, this.scene);
 	}
 
 	update(cursors) {
@@ -86,6 +92,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
 	MoveState() {
 		this.anims.play("walk", true);
+		this.healthbar.update();
 	}
 
 	distance(x1, y1, x2, y2) {

@@ -10,13 +10,14 @@ export default class Ability extends Phaser.GameObjects.Sprite {
 		this.body.setOffset(125, 1900);
 		this.collided = false;
 		this.damage = 10;
+		this.body.setImmovable(true);
 
 		this.on(
 			"animationupdate",
 			(frame, index) => {
 				this.casting = true;
 				if (!this.collided) {
-					this.scene.physics.world.collide(
+					this.scene.physics.world.overlap(
 						this,
 						this.scene.enemies,
 						this.collision
@@ -26,12 +27,9 @@ export default class Ability extends Phaser.GameObjects.Sprite {
 			},
 			this
 		);
-		this.on(
-			"animationcomplete",
-			function() {
-				this.casting = false;
-			}
-		);
+		this.on("animationcomplete", function() {
+			this.casting = false;
+		});
 	}
 
 	cast(player) {
@@ -46,6 +44,6 @@ export default class Ability extends Phaser.GameObjects.Sprite {
 
 	collision(o1, o2) {
 		o2.attacked(o1.damage);
-		console.log("collided")
+		console.log("collided");
 	}
 }
