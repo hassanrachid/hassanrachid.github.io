@@ -36,8 +36,6 @@ export default class GameScene extends Phaser.Scene {
 			y: 800
 		});
 		this.enemies.add(this.goblin);
-
-		console.log(this);
 	}
 
 	update() {

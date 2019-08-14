@@ -9,7 +9,7 @@ export default class Ability extends Phaser.GameObjects.Sprite {
 		this.body.setSize(500, 200);
 		this.body.setOffset(125, 1900);
 		this.collided = false;
-		this.damage = 10;
+		this.damage = 5;
 		this.body.setImmovable(true);
 
 		this.on(

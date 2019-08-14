@@ -11,6 +11,7 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 		this.body.setOffset(100, 20);
 		this.attacking = false;
 		this.attackDelay = 1000;
+		this.agroRange = 150;
 		this.lastAttack;
 		this.timer;
 		// Attributes
@@ -71,7 +72,7 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 	moveTo(target, distance) {
 		var absX = Math.abs(Math.abs(this.x) - Math.abs(target.x));
 		var absY = Math.abs(Math.abs(this.y) - Math.abs(target.y));
-
+		
 		if (
 			!this.attackanim &&
 			this.state != "HurtState" &&
@@ -81,25 +82,25 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 		}
 		if (this.state == "MoveState") {
 			if (this.x > target.x) {
-				this.body.setVelocityX(-120);
+				this.body.setVelocityX(-100);
 				this.flipX = true;
 				if (absX >= 0 && absX <= 20) {
 					this.body.setVelocityX(0);
 				}
 			} else if (this.x < target.x) {
-				this.body.setVelocityX(120);
+				this.body.setVelocityX(100);
 				this.flipX = false;
 				if (absX >= 0 && absX <= 20) {
 					this.body.setVelocityX(0);
 				}
 			}
 			if (this.y > target.y) {
-				this.body.setVelocityY(-120);
+				this.body.setVelocityY(-100);
 				if (absY >= 0 && absY <= 20) {
 					this.body.setVelocityY(0);
 				}
 			} else if (this.y < target.y) {
-				this.body.setVelocityY(120);
+				this.body.setVelocityY(100);
 				if (absY >= 0 && absY <= 20) {
 					this.body.setVelocityY(0);
 				}
@@ -120,13 +121,15 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 	}
 
 	HurtState() {
-		this.anims.play("goblinhurt", true);
+		if (this.anims.currentAnim.key != "goblinattack") {
+			this.anims.play("goblinhurt", true);
+		}
 	}
 
 	IdleState() {
-		if (this.body.velocity.x == 0 && this.body.velocity.y == 0) {
-			this.anims.play("goblinidle", true);
-		}
+		this.body.setVelocity(0, 0);
+		this.anims.play("goblinidle", true);
+		
 	}
 
 	AttackState() {
