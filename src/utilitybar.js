@@ -8,6 +8,7 @@ export default class UtilityBar {
 		this.width = config.width;
 		this.height = config.height;
 		this.player = config.player;
+		this.openedInterface;
 
 		this.iconNames = [
 			"inventory",
@@ -20,11 +21,13 @@ export default class UtilityBar {
 		];
 
 		this.create();
+
+		// Handler to close other interfaces when opening a new one
 	}
 
 	create() {
 		for (let index = 0; index < this.iconNames.length; index++) {
-			this.utilityicon = new UtilityIcon({
+			this.icon = new UtilityIcon({
 				scene: this.scene,
 				x: this.x + index * 64,
 				y: this.y,

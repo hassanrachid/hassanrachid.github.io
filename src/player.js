@@ -2,6 +2,7 @@ import Ability from "./ability";
 import Inventory from "./inventory";
 import UtilityBar from "./utilitybar";
 import HealthBar from "./healthbar";
+import Equipment from "./equipment";
 export default class Player extends Phaser.GameObjects.Sprite {
 	constructor(config) {
 		super(config.scene, config.x, config.y, config.key);
@@ -29,6 +30,10 @@ export default class Player extends Phaser.GameObjects.Sprite {
 			x: 100,
 			y: 580
 		});
+
+		this.equipment = new Equipment(
+			this.scene.game.scene.keys["InterfaceScene"]
+		);
 
 		this.utilitybar = new UtilityBar({
 			scene: this.scene.game.scene.keys["InterfaceScene"],

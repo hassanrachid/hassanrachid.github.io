@@ -62,6 +62,10 @@ export default class LoadScene extends Phaser.Scene {
 		this.load.image("equipment", "assets/utilityicons/4.png");
 		this.load.image("itemtooltip", "assets/inventory/itemtooltip.png");
 		this.load.image("inventoryframe", "assets/inventory/inventoryframe.png");
+		this.load.image(
+			"equipmentframe",
+			"assets/inventory/equipmentinterface.png"
+		);
 		this.load.image("wizard", "assets/wizard.png");
 
 		this.load.atlas({

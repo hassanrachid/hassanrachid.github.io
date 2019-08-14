@@ -21,7 +21,7 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 		this.b.setDisplaySize(304, 304);
 		this.scene.add.existing(this.b);
 		this.create();
-		this.hide();
+		this.show();
 	}
 
 	create() {
@@ -110,7 +110,7 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 		});
 	}
 
-	hide() {
+	show() {
 		this.b.setVisible(!this.b.visible);
 		for (var x = 0; x < this.rows; x++) {
 			for (var y = 0; y < this.cols; y++) {
