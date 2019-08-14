@@ -11,7 +11,7 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 		this.body.setOffset(100, 20);
 		this.attacking = false;
 		this.attackDelay = 1000;
-		this.agroRange = 150;
+		this.agroRange = 250;
 		this.lastAttack;
 		this.timer;
 		// Attributes
@@ -31,22 +31,32 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 
 		this.on("animationcomplete_goblinattack", () => {
 			this.attackanim = false;
+			this.state = "IdleState";
 			this.timer = this.scene.time.delayedCall(this.attackDelay, () => {
 				this.attacking = false;
 			});
 		});
+
+		// We need to keep track of the attack animation and set it to true when player attack and set velocity to
 		this.on("animationupdate_goblinattack", () => {
 			this.attackanim = true;
 			this.attacking = true;
-			this.body.setVelocity(0, 0);
-		});
-
-		this.on("animationupdate_goblinhurt", (anim, frame) => {
-			this.state = "HurtState";
-			if (frame.isLast) {
-				this.state = "IdleState";
+			if (this.state != "DieState") {
+				this.state = "AttackState";
 			}
 		});
+
+		// On each animation update, set state of goblin to hurt
+		this.on("animationupdate_goblinhurt", (anim, frame) => {
+			this.state = "HurtState";
+		});
+
+		// When hurt animation completes, set back to IdleState
+		this.on("animationcomplete_goblinhurt", (anim, frame) => {
+			this.state = "IdleState";
+		});
+
+		// On die animation - destroy sprite
 		this.on("animationcomplete_goblindie", (anim, frame) => {
 			if (frame.isLast) {
 				this.destroy();
@@ -56,6 +66,15 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 
 	update() {
 		this.healthbar.update();
+		if (
+			this.timer != undefined &&
+			this.timer.getElapsed() != this.attackDelay
+		) {
+			if (this.state != "HurtState" && this.state != "DieState") {
+				this.state = "IdleState";
+			}
+		}
+
 		this[this.state]();
 	}
 
@@ -70,9 +89,19 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 	}
 
 	moveTo(target, distance) {
+		// If player is out of range, this will stop the enemy
+		if (distance >= this.agroRange) {
+			if (this.state != "HurtState" && this.state != "DieState") {
+				this.state = "IdleState";
+				return;
+			}
+		}
+
+		// Gets the x and y threshold from distance between enemy and target positions
 		var absX = Math.abs(Math.abs(this.x) - Math.abs(target.x));
 		var absY = Math.abs(Math.abs(this.y) - Math.abs(target.y));
-		
+
+		// Sets the enemy to MoveState only if attack, hurt, or die animation are not playing
 		if (
 			!this.attackanim &&
 			this.state != "HurtState" &&
@@ -80,6 +109,8 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 		) {
 			this.state = "MoveState";
 		}
+
+		// Moves to player
 		if (this.state == "MoveState") {
 			if (this.x > target.x) {
 				this.body.setVelocityX(-100);
@@ -107,12 +138,11 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 			}
 		}
 
+		// Attacks player if within distance
 		if (distance <= 75) {
 			if (!this.attacking) {
 				this.state = "AttackState";
 			}
-
-			return distance;
 		}
 	}
 
@@ -129,11 +159,11 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 	IdleState() {
 		this.body.setVelocity(0, 0);
 		this.anims.play("goblinidle", true);
-		
 	}
 
 	AttackState() {
 		if (this.anims.currentAnim.key != "goblindie") {
+			this.body.setVelocity(0, 0);
 			this.anims.play("goblinattack", true);
 		}
 	}

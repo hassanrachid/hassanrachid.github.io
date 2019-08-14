@@ -74,9 +74,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
 			// have aggro distance configurable in enemy class ** TODO
 
 			var d = this.distance(e.x, e.y, this.x, this.y);
-			if (d <= e.agroRange) {
-				e.moveTo(this, d);
-			}
+			e.moveTo(this, d);
 		});
 
 		if (Phaser.Input.Keyboard.JustDown(cursors.spell1)) {
