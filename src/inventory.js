@@ -62,14 +62,16 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 			x: this.slotArray[0][0].x,
 			y: this.slotArray[0][0].y,
 			image: "swords",
-			frame: "ShortDagger_[Paint].png"
+			frame: "ShortDagger_[Paint].png",
+			type: "weapon"
 		});
 		this.slotArray[0][1].item = new Item({
 			scene: this.scene,
 			x: this.slotArray[0][1].x,
 			y: this.slotArray[0][1].y,
 			image: "swords",
-			frame: "ShortSword_[Paint].png"
+			frame: "ShortSword_[Paint].png",
+			type: "weapon"
 		});
 	}
 
@@ -111,6 +113,8 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 	}
 
 	show() {
+		// store these in a container later on..
+		this.setVisible(!this.visible);
 		this.b.setVisible(!this.b.visible);
 		for (var x = 0; x < this.rows; x++) {
 			for (var y = 0; y < this.cols; y++) {

@@ -7,7 +7,6 @@ export default class UtilityIcon extends Phaser.GameObjects.Rectangle {
 		this.name = config.name;
 		this.player = config.player;
 		this.open = false;
-		this.scene.add.existing(true);
 		this.scene.add.existing(
 			new Phaser.GameObjects.Image(this.scene, this.x, this.y, this.name)
 		);
@@ -15,25 +14,12 @@ export default class UtilityIcon extends Phaser.GameObjects.Rectangle {
 		this.setInteractive({ enabled: true });
 
 		this.on("pointerdown", () => {
-			this.openInterface(this.name);
+			this.openInterface();
 		});
 	}
 
-	openInterface(name) {
-		// show interface
-		this.player[name].show();
-		// check if another interface is open...
-		if (
-			this.player.utilitybar.openedInterface != undefined &&
-			this.player.utilitybar.openedInterface != name
-		) {
-			// close this one then
-			this.player[this.player.utilitybar.openedInterface].show();
-			console.log("hi");
-		} else {
-			// if no other interface is open, just set the variable to current interface
-			this.player.utilitybar.openedInterface = name;
-			console.log("hi2");
-		}
+	openInterface() {
+		this.player[this.name].show();
+		this.player.utilitybar.closeOtherInterfaces(this.name);
 	}
 }

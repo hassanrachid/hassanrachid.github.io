@@ -8,7 +8,6 @@ export default class UtilityBar {
 		this.width = config.width;
 		this.height = config.height;
 		this.player = config.player;
-		this.openedInterface;
 
 		this.iconNames = [
 			"inventory",
@@ -21,13 +20,11 @@ export default class UtilityBar {
 		];
 
 		this.create();
-
-		// Handler to close other interfaces when opening a new one
 	}
 
 	create() {
 		for (let index = 0; index < this.iconNames.length; index++) {
-			this.icon = new UtilityIcon({
+			new UtilityIcon({
 				scene: this.scene,
 				x: this.x + index * 64,
 				y: this.y,
@@ -37,5 +34,18 @@ export default class UtilityBar {
 				player: this.player
 			});
 		}
+	}
+
+	closeOtherInterfaces(currentInterface) {
+		this.iconNames.forEach(i => {
+			if (
+				this.player[i] != undefined &&
+				i != currentInterface &&
+				this.player[i].visible == true
+			) {
+				console.log(i);
+				this.player[i].show();
+			}
+		});
 	}
 }

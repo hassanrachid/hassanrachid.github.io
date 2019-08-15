@@ -7,7 +7,7 @@ export default class ItemTooltip extends Phaser.GameObjects.Image {
 		this.setVisible(false);
 
 		this.text = this.scene.make.text({
-			x: 202,
+			x: 203,
 			y: 480,
 			text: this.item.name,
 			origin: { x: 0.5, y: 0.5 },
@@ -21,6 +21,14 @@ export default class ItemTooltip extends Phaser.GameObjects.Image {
 		this.text.setVisible(false);
 
 		this.item.on("pointerover", () => {
+			if (
+				this.item.parentContainer != null &&
+				this.item.parentContainer.name == "equipment"
+			) {
+				this.y = 467;
+				this.setDisplaySize(256, this.height);
+				this.text.y = this.y - 10;
+			}
 			this.show();
 		});
 
