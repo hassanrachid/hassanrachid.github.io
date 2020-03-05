@@ -7,9 +7,11 @@ var config = {
 	type: Phaser.WEBGL,
 	antialias: false,
 	parent: "content",
+	pixelArt: false,
+	disableContextMenu: true,
 	physics: {
 		default: "arcade",
-		arcade: { debug: true }
+		arcade: { debug: true, gravity: { x: 0, y: 0 } }
 	},
 	backgroundColor: 0x666666,
 	width: 1600,

@@ -1,4 +1,4 @@
-import Item from "./item";
+import Weapon from './weapon';
 
 export default class Inventory extends Phaser.GameObjects.Rectangle {
 	constructor(config) {
@@ -57,21 +57,19 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 	}
 
 	addItem(item) {
-		this.slotArray[0][0].item = new Item({
+		this.slotArray[0][0].item = new Weapon({
 			scene: this.scene,
 			x: this.slotArray[0][0].x,
 			y: this.slotArray[0][0].y,
 			image: "swords",
-			frame: "ShortDagger_[Paint].png",
-			type: "weapon"
+			frame: "ShortDagger_[Paint].png"
 		});
-		this.slotArray[0][1].item = new Item({
+		this.slotArray[0][1].item = new Weapon({
 			scene: this.scene,
 			x: this.slotArray[0][1].x,
 			y: this.slotArray[0][1].y,
 			image: "swords",
-			frame: "ShortSword_[Paint].png",
-			type: "weapon"
+			frame: "ShortSword_[Paint].png"
 		});
 	}
 

@@ -1,4 +1,5 @@
 import Item from "./item";
+import Weapon from './weapon';
 
 export default class Equipment extends Phaser.GameObjects.Container {
 	constructor(scene) {
@@ -47,7 +48,7 @@ export default class Equipment extends Phaser.GameObjects.Container {
 					y: 690
 				}
 			},
-			shield: {
+			gloves: {
 				id: 4,
 				type: "shield",
 				position: {
@@ -55,7 +56,7 @@ export default class Equipment extends Phaser.GameObjects.Container {
 					y: 660
 				}
 			},
-			gloves: {
+			shield: {
 				id: 5,
 				type: "gloves",
 				position: {
@@ -78,6 +79,7 @@ export default class Equipment extends Phaser.GameObjects.Container {
 	}
 
 	create() {
+		// looping thru each item type and creating a slot for it in equipment screen
 		for (var type in this.types) {
 			this.slot = new Phaser.GameObjects.Rectangle(
 				this.scene,
@@ -90,25 +92,14 @@ export default class Equipment extends Phaser.GameObjects.Container {
 		}
 		this.add(this.slots);
 
+		// add item to equipment to test
 		this.addItem(
-			new Item({
+			new Weapon({
 				scene: this.scene,
 				x: 50,
 				y: 50,
 				image: "swords",
-				frame: "ShortSword_[Paint].png",
-				type: "weapon"
-			})
-		);
-
-		this.addItem(
-			new Item({
-				scene: this.scene,
-				x: 50,
-				y: 50,
-				image: "armor",
-				frame: "BanditLightArmor_[Paint].png",
-				type: "armor"
+				frame: "ShortSword_[Paint].png"
 			})
 		);
 	}
@@ -116,10 +107,19 @@ export default class Equipment extends Phaser.GameObjects.Container {
 	addItem(item) {
 		this.item = item;
 		this.add(this.item);
-		console.log(this.item.parentContainer);
 		this.scene.children.bringToTop(this.item);
 		this.item.x = this.slots[this.types[this.item.type].id].x;
 		this.item.y = this.slots[this.types[this.item.type].id].y;
+		// if item in slot exists, replace the item
+		if (this.slots[this.types[this.item.type].id].item != undefined) {
+			// remove old item from container
+			this.remove(this.slots[this.types[this.item.type].id].item);
+			// TODO: after replace item in equipment, move it back to inventory
+		}
 		this.slots[this.types[this.item.type].id].item = this.item;
+	}
+
+	getItem(weaponType) {
+		return this.slots[this.types[weaponType].id].item;
 	}
 }

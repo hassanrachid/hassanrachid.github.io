@@ -66,7 +66,9 @@ export default class LoadScene extends Phaser.Scene {
 			"equipmentframe",
 			"assets/inventory/equipmentinterface.png"
 		);
-		this.load.image("wizard", "assets/wizard.png");
+
+		this.load.image("warrior", "assets/warrior.png");
+
 
 		this.load.atlas({
 			key: "armor",
@@ -106,17 +108,35 @@ export default class LoadScene extends Phaser.Scene {
 		});
 
 		this.load.atlas({
-			key: "idle",
-			textureURL: "assets/wizard/animations/idle/spritesheet.png",
-			atlasURL: "assets/wizard/animations/idle/spritesheet.json"
+			key: "idle_front",
+			textureURL: "assets/warrior/idle_front/spritesheet.png",
+			atlasURL: "assets/warrior/idle_front/spritesheet.json"
 		});
-
 		this.load.atlas({
-			key: "walk",
-			textureURL: "assets/wizard/animations/walk/spritesheet.png",
-			atlasURL: "assets/wizard/animations/walk/spritesheet.json"
+			key: "idle_side",
+			textureURL: "assets/warrior/idle_side/spritesheet.png",
+			atlasURL: "assets/warrior/idle_side/spritesheet.json"
 		});
-
+		this.load.atlas({
+			key: "attack_front",
+			textureURL: "assets/warrior/attack_front/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side",
+			textureURL: "assets/warrior/attack_side/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "walk_front",
+			textureURL: "assets/warrior/walk_front/spritesheet.png",
+			atlasURL: "assets/warrior/walk_front/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "walk_side",
+			textureURL: "assets/warrior/walk_side/spritesheet.png",
+			atlasURL: "assets/warrior/walk_side/spritesheet.json"
+		});
 		this.load.atlas({
 			key: "firestrike",
 			textureURL: "assets/wizard/animations/spells/fire/spritesheet.png",
@@ -156,16 +176,40 @@ export default class LoadScene extends Phaser.Scene {
 			repeat: 0
 		});
 		this.anims.create({
-			key: "idle",
-			frames: this.anims.generateFrameNames("idle"),
+			key: "idle_front",
+			frames: this.anims.generateFrameNames("idle_front"),
 			frameRate: 30,
 			repeat: -1
 		});
 		this.anims.create({
-			key: "walk",
-			frames: this.anims.generateFrameNames("walk"),
-			frameRate: 30,
-			repeat: -1
+			key: "walk_front",
+			frames: this.anims.generateFrameNames("walk_front"),
+			frameRate: 60,
+			repeat: -1,
+		});
+		this.anims.create({
+			key: "attack_front",
+			frames: this.anims.generateFrameNames("attack_front"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_side",
+			frames: this.anims.generateFrameNames("attack_side"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "walk_side",
+			frames: this.anims.generateFrameNames("walk_side"),
+			frameRate: 60,
+			repeat: -1,
+		});
+		this.anims.create({
+			key: "idle_side",
+			frames: this.anims.generateFrameNames("idle_side"),
+			frameRate: 60,
+			repeat: -1,
 		});
 		this.anims.create({
 			key: "firestrike",

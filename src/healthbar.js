@@ -1,20 +1,20 @@
 export default class HealthBar {
-	constructor(sprite, scene) {
-		this.sprite = sprite;
+	constructor(container, scene) {
+		this.container = container;
 		this.scene = scene;
 		this.minLimit = 0;
 		this.maxLimit = 1;
 		this.rect = new Phaser.GameObjects.Rectangle(
 			this.scene,
-			this.sprite.x,
-			this.sprite.y - 50,
+			this.container.x,
+			this.container.y - 50,
 			100,
 			10
 		);
 		this.healthRect = new Phaser.GameObjects.Rectangle(
 			this.scene,
-			this.sprite.x,
-			this.sprite.y - 50,
+			this.container.x,
+			this.container.y - 50,
 			100,
 			10
 		);
@@ -25,11 +25,11 @@ export default class HealthBar {
 	}
 
 	update() {
-		this.rect.x = this.sprite.x;
-		this.rect.y = this.sprite.y - 50;
+		this.rect.x = this.container.x;
+		this.rect.y = this.container.y - 50;
 
-		this.healthRect.x = this.sprite.x;
-		this.healthRect.y = this.sprite.y - 50;
+		this.healthRect.x = this.container.x;
+		this.healthRect.y = this.container.y - 50;
 
 		this.healthRect.width = this.normalize();
 
@@ -43,6 +43,6 @@ export default class HealthBar {
 		var max = this.maxLimit;
 		var min = this.minLimit;
 		var delta = max - min;
-		return (this.sprite.currentHealth - min) / delta;
+		return (this.container.sprite.currentHealth - min) / delta;
 	}
 }

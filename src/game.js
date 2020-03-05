@@ -8,7 +8,7 @@ export default class GameScene extends Phaser.Scene {
 		});
 	}
 
-	preload() {}
+	preload() { }
 
 	create() {
 		this.cursors = this.input.keyboard.addKeys({
@@ -16,6 +16,7 @@ export default class GameScene extends Phaser.Scene {
 			right: "d",
 			up: "w",
 			down: "s",
+			space: "space",
 			spell1: "q",
 			spell2: "w",
 			spell3: "e",
@@ -26,7 +27,7 @@ export default class GameScene extends Phaser.Scene {
 			scene: this,
 			x: 400,
 			y: 300,
-			key: "player"
+			key: "warrior"
 		});
 		this.enemies = this.physics.add.group();
 

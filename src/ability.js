@@ -27,7 +27,7 @@ export default class Ability extends Phaser.GameObjects.Sprite {
 			},
 			this
 		);
-		this.on("animationcomplete", function() {
+		this.on("animationcomplete", function () {
 			this.casting = false;
 		});
 	}

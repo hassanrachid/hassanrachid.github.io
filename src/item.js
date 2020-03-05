@@ -1,13 +1,12 @@
 import ItemTooltip from "./itemtooltip";
 
 export default class Item extends Phaser.GameObjects.Sprite {
-	constructor(config) {
-		super(config.scene, config.x, config.y, config.image, config.frame);
+	constructor(scene, x, y, image, frame) {
+		super(scene, x, y, image, frame);
 		this.setDisplaySize(48, 48);
-		this.scene = config.scene;
+		this.scene = scene;
 		this.scene.add.existing(this);
-		this.name = config.frame;
-		this.type = config.type;
+		this.name = frame;
 		this.setInteractive({
 			draggable: true,
 			enabled: true
@@ -15,6 +14,12 @@ export default class Item extends Phaser.GameObjects.Sprite {
 		this.tooltip = new ItemTooltip({
 			scene: this.scene,
 			item: this
+		});
+
+		this.on("pointerdown", (pointer, gameObject, localY) => {
+			if (pointer.rightButtonDown()) {
+
+			}
 		});
 	}
 }

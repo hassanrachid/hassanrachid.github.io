@@ -14,12 +14,12 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 		this.agroRange = 250;
 		this.lastAttack;
 		this.timer;
-		// Attributes
 
+		// Attributes
 		this.maxHealth = 100;
 		this.currentHealth = 100;
 
-		this.healthbar = new HealthBar(this, this.scene);
+		// this.healthbar = new HealthBar(this, this.scene);
 
 		this.on("animationcomplete", (anim, frame) => {
 			this.emit("animationcomplete_" + anim.key, anim, frame);
@@ -65,7 +65,7 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 	}
 
 	update() {
-		this.healthbar.update();
+		// this.healthbar.update();
 		if (
 			this.timer != undefined &&
 			this.timer.getElapsed() != this.attackDelay
