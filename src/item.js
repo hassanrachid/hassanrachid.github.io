@@ -1,12 +1,13 @@
 import ItemTooltip from "./itemtooltip";
 
 export default class Item extends Phaser.GameObjects.Sprite {
-	constructor(scene, x, y, image, frame) {
-		super(scene, x, y, image, frame);
+	constructor(config) {
+		super(config.scene, config.x, config.y, config.itemlist.image, config.itemlist.frame);
 		this.setDisplaySize(48, 48);
-		this.scene = scene;
+		this.scene = config.scene;
 		this.scene.add.existing(this);
-		this.name = frame;
+		this.name = config.itemlist.frame;
+		this.type = config.itemlist.type;
 		this.setInteractive({
 			draggable: true,
 			enabled: true

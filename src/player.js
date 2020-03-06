@@ -4,41 +4,23 @@ import UtilityBar from "./utilitybar";
 import HealthBar from "./healthbar";
 import Equipment from "./equipment";
 import StateMachine from './statemachine';
-export default class Player extends Phaser.GameObjects.Sprite {
+import Combat from './combat';
+import BaseCharacter from "./basecharacter";
+import Attributes from "./attributes";
+export default class Player extends BaseCharacter {
 	constructor(config) {
-		super(config.scene, 0, 0, config.key);
+		super(config);
 		this.direction = "front";
 		this.state = "IdleState";
-		this.statemachine = new StateMachine(this, config.scene);
 		this.scene = config.scene;
-		// always add the sprite to scene first
-		this.scene.add.existing(this);
+		this.statemachine = new StateMachine(this, this.scene);
 
-		// create a container for the player
-		this.container = this.scene.add.container(config.x, config.y);
-		this.container.setSize(this.width, this.height);
-		this.scene.physics.world.enable(this.container);
-		this.container.add(this);
-		this.container.setScale(0.5);
-		this.container.sprite = this;
-		// weapon collider
-		this.collider = this.scene.physics.add.image();
-		this.collider.body.setCircle(60);
-		this.collider.setDebugBodyColor(0xffff00);
-		this.container.add(this.collider)
-
-		// so the player cant go outside the world map
-		this.container.body.setCollideWorldBounds(true);
-
-		// Attributes // Move later to another child object..
-		this.maxHealth = 100;
-		this.currentHealth = 100;
-		this.ability = new Ability({
-			scene: this.scene,
-			x: 0,
-			y: 0,
-			key: "firestrike"
-		});
+		// this.ability = new Ability({
+		// 	scene: this.scene,
+		// 	x: 0,
+		// 	y: 0,
+		// 	key: "firestrike"
+		// });
 
 		this.inventory = new Inventory({
 			scene: this.scene.game.scene.keys["InterfaceScene"],
@@ -59,8 +41,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
 			player: this
 		});
 
-		this.healthbar = new HealthBar(this.container, this.scene);
-
+		this.combat = new Combat(this, this.collider, this.scene);
 	}
 
 	update(cursors) {
@@ -137,4 +118,5 @@ export default class Player extends Phaser.GameObjects.Sprite {
 			b.y + b.halfHeight - a.halfHeight
 		);
 	}
+
 }

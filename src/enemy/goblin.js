@@ -2,7 +2,7 @@ import HealthBar from "../healthbar";
 
 export default class Goblin extends Phaser.GameObjects.Sprite {
 	constructor(config) {
-		super(config.scene, config.x, config.y);
+		super({ scene: config.scene, x: config.x, y: config.y, key: config.key });
 		this.scene.add.existing(this);
 		this.scene.physics.world.enable(this);
 		this.state = "IdleState";
@@ -19,7 +19,7 @@ export default class Goblin extends Phaser.GameObjects.Sprite {
 		this.maxHealth = 100;
 		this.currentHealth = 100;
 
-		// this.healthbar = new HealthBar(this, this.scene);
+		this.healthbar = new HealthBar(this, this.scene);
 
 		this.on("animationcomplete", (anim, frame) => {
 			this.emit("animationcomplete_" + anim.key, anim, frame);

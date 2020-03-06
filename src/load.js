@@ -69,42 +69,16 @@ export default class LoadScene extends Phaser.Scene {
 
 		this.load.image("warrior", "assets/warrior.png");
 
-
 		this.load.atlas({
 			key: "armor",
 			textureURL: "assets/armor/armor.png",
 			atlasURL: "assets/armor/armor.json"
 		});
+
 		this.load.atlas({
 			key: "swords",
 			textureURL: "assets/weapons/swords.png",
 			atlasURL: "assets/weapons/swords.json"
-		});
-
-		this.load.atlas({
-			key: "goblinattack",
-			textureURL: "assets/enemy/goblin/attack/spritesheet.png",
-			atlasURL: "assets/enemy/goblin/attack/spritesheet.json"
-		});
-		this.load.atlas({
-			key: "goblinidle",
-			textureURL: "assets/enemy/goblin/idle/spritesheet.png",
-			atlasURL: "assets/enemy/goblin/idle/spritesheet.json"
-		});
-		this.load.atlas({
-			key: "goblinhurt",
-			textureURL: "assets/enemy/goblin/hurt/spritesheet.png",
-			atlasURL: "assets/enemy/goblin/hurt/spritesheet.json"
-		});
-		this.load.atlas({
-			key: "goblindie",
-			textureURL: "assets/enemy/goblin/die/spritesheet.png",
-			atlasURL: "assets/enemy/goblin/die/spritesheet.json"
-		});
-		this.load.atlas({
-			key: "goblinwalk",
-			textureURL: "assets/enemy/goblin/walk/spritesheet.png",
-			atlasURL: "assets/enemy/goblin/walk/spritesheet.json"
 		});
 
 		this.load.atlas({
@@ -118,16 +92,6 @@ export default class LoadScene extends Phaser.Scene {
 			atlasURL: "assets/warrior/idle_side/spritesheet.json"
 		});
 		this.load.atlas({
-			key: "attack_front",
-			textureURL: "assets/warrior/attack_front/spritesheet.png",
-			atlasURL: "assets/warrior/attack_front/spritesheet.json"
-		});
-		this.load.atlas({
-			key: "attack_side",
-			textureURL: "assets/warrior/attack_side/spritesheet.png",
-			atlasURL: "assets/warrior/attack_side/spritesheet.json"
-		});
-		this.load.atlas({
 			key: "walk_front",
 			textureURL: "assets/warrior/walk_front/spritesheet.png",
 			atlasURL: "assets/warrior/walk_front/spritesheet.json"
@@ -138,43 +102,48 @@ export default class LoadScene extends Phaser.Scene {
 			atlasURL: "assets/warrior/walk_side/spritesheet.json"
 		});
 		this.load.atlas({
-			key: "firestrike",
-			textureURL: "assets/wizard/animations/spells/fire/spritesheet.png",
-			atlasURL: "assets/wizard/animations/spells/fire/spritesheet.json"
+			key: "attack_front_Default",
+			textureURL: "assets/warrior/attack_front/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Short Sword",
+			textureURL: "assets/warrior/attack_front/Short Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Short Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Gold Sword",
+			textureURL: "assets/warrior/attack_front/Gold Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Gold Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Iron Sword",
+			textureURL: "assets/warrior/attack_front/Iron Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Iron Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Short Sword",
+			textureURL: "assets/warrior/attack_side/Short Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Short Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Iron Sword",
+			textureURL: "assets/warrior/attack_side/Iron Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Iron Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Gold Sword",
+			textureURL: "assets/warrior/attack_side/Gold Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Gold Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Default",
+			textureURL: "assets/warrior/attack_side/Default/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Default/spritesheet.json"
 		});
 	}
 
 	create() {
-		this.anims.create({
-			key: "goblinidle",
-			frames: this.anims.generateFrameNames("goblinidle"),
-			frameRate: 30,
-			repeat: -1
-		});
-		this.anims.create({
-			key: "goblinwalk",
-			frames: this.anims.generateFrameNames("goblinwalk"),
-			frameRate: 30,
-			repeat: -1
-		});
-		this.anims.create({
-			key: "goblinhurt",
-			frames: this.anims.generateFrameNames("goblinhurt"),
-			frameRate: 30,
-			repeat: 0
-		});
-		this.anims.create({
-			key: "goblinattack",
-			frames: this.anims.generateFrameNames("goblinattack"),
-			frameRate: 30,
-			repeat: 0
-		});
-		this.anims.create({
-			key: "goblindie",
-			frames: this.anims.generateFrameNames("goblindie"),
-			frameRate: 30,
-			repeat: 0
-		});
 		this.anims.create({
 			key: "idle_front",
 			frames: this.anims.generateFrameNames("idle_front"),
@@ -186,18 +155,6 @@ export default class LoadScene extends Phaser.Scene {
 			frames: this.anims.generateFrameNames("walk_front"),
 			frameRate: 60,
 			repeat: -1,
-		});
-		this.anims.create({
-			key: "attack_front",
-			frames: this.anims.generateFrameNames("attack_front"),
-			frameRate: 60,
-			repeat: 0,
-		});
-		this.anims.create({
-			key: "attack_side",
-			frames: this.anims.generateFrameNames("attack_side"),
-			frameRate: 60,
-			repeat: 0,
 		});
 		this.anims.create({
 			key: "walk_side",
@@ -212,12 +169,53 @@ export default class LoadScene extends Phaser.Scene {
 			repeat: -1,
 		});
 		this.anims.create({
-			key: "firestrike",
-			frames: this.anims.generateFrameNames("firestrike"),
-			frameRate: 30,
+			key: "attack_front_Default",
+			frames: this.anims.generateFrameNames("attack_front_Default"),
+			frameRate: 60,
 			repeat: 0,
-			hideOnComplete: true,
-			showOnStart: true
 		});
+		this.anims.create({
+			key: "attack_front_Short Sword",
+			frames: this.anims.generateFrameNames("attack_front_Short Sword"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_front_Iron Sword",
+			frames: this.anims.generateFrameNames("attack_front_Iron Sword"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_front_Gold Sword",
+			frames: this.anims.generateFrameNames("attack_front_Gold Sword"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_side_Short Sword",
+			frames: this.anims.generateFrameNames("attack_side_Short Sword"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_side_Iron Sword",
+			frames: this.anims.generateFrameNames("attack_side_Iron Sword"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_side_Gold Sword",
+			frames: this.anims.generateFrameNames("attack_side_Gold Sword"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_side_Default",
+			frames: this.anims.generateFrameNames("attack_side_Default"),
+			frameRate: 60,
+			repeat: 0,
+		});
+
 	}
 }

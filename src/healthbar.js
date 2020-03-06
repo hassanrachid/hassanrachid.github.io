@@ -43,6 +43,6 @@ export default class HealthBar {
 		var max = this.maxLimit;
 		var min = this.minLimit;
 		var delta = max - min;
-		return (this.container.sprite.currentHealth - min) / delta;
+		return (this.container.sprite.attributes.currentHealth - min) / delta;
 	}
 }

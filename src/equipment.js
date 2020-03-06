@@ -1,10 +1,11 @@
 import Item from "./item";
-import Weapon from './weapon';
+import ItemSlot from './itemslot';
 
 export default class Equipment extends Phaser.GameObjects.Container {
 	constructor(scene) {
 		super(scene);
 		this.scene = scene;
+		this.gamescene = this.scene.game.scene.keys["GameScene"];
 		this.scene.add.existing(this);
 		this.name = "equipment";
 
@@ -81,25 +82,18 @@ export default class Equipment extends Phaser.GameObjects.Container {
 	create() {
 		// looping thru each item type and creating a slot for it in equipment screen
 		for (var type in this.types) {
-			this.slot = new Phaser.GameObjects.Rectangle(
-				this.scene,
-				this.types[type].position.x,
-				this.types[type].position.y,
-				64,
-				64
-			);
+			this.slot = new ItemSlot(this.scene, this.types[type].position.x, this.types[type].position.y, 64, 64, null);
 			this.slots.push(this.slot);
 		}
 		this.add(this.slots);
 
 		// add item to equipment to test
 		this.addItem(
-			new Weapon({
+			new Item({
 				scene: this.scene,
-				x: 50,
-				y: 50,
-				image: "swords",
-				frame: "ShortSword_[Paint].png"
+				x: 0,
+				y: 0,
+				itemlist: this.gamescene.itemlist.items["Gold Sword"]
 			})
 		);
 	}
@@ -117,9 +111,19 @@ export default class Equipment extends Phaser.GameObjects.Container {
 			// TODO: after replace item in equipment, move it back to inventory
 		}
 		this.slots[this.types[this.item.type].id].item = this.item;
+		this.recalculateAttributes();
 	}
 
 	getItem(weaponType) {
+		if (this.slots[this.types[weaponType].id].item == undefined) {
+			return "default";
+		}
 		return this.slots[this.types[weaponType].id].item;
+	}
+
+	recalculateAttributes() {
+		for (var s in this.slots) {
+			console.log(this.slots[s]);
+		}
 	}
 }

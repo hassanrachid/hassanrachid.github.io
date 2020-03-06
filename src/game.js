@@ -1,5 +1,6 @@
 import Player from "./player";
 import Goblin from "./enemy/goblin";
+import ItemList from './itemlist';
 
 export default class GameScene extends Phaser.Scene {
 	constructor() {
@@ -23,20 +24,22 @@ export default class GameScene extends Phaser.Scene {
 			spell4: "r"
 		});
 
+		this.itemlist = new ItemList();
 		this.player = new Player({
 			scene: this,
-			x: 400,
-			y: 300,
+			x: 0,
+			y: 0,
 			key: "warrior"
 		});
 		this.enemies = this.physics.add.group();
 
-		this.goblin = new Goblin({
-			scene: this,
-			x: 800,
-			y: 800
-		});
-		this.enemies.add(this.goblin);
+
+		// this.goblin = new Goblin({
+		// 	scene: this,
+		// 	x: 800,
+		// 	y: 800
+		// });
+		// this.enemies.add(this.goblin);
 	}
 
 	update() {

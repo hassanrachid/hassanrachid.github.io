@@ -1,9 +1,10 @@
-import Weapon from './weapon';
-
+import ItemSlot from './itemslot';
+import Item from './item';
 export default class Inventory extends Phaser.GameObjects.Rectangle {
 	constructor(config) {
 		super(config.scene, config.x, config.y);
 		this.scene = config.scene;
+		this.gamescene = this.scene.game.scene.keys["GameScene"];
 
 		this.slotArray = [];
 		this.width = 256;
@@ -31,12 +32,13 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 		for (var x = 0; x < this.rows; x++) {
 			this.slotArray[x] = [];
 			for (var y = 0; y < this.cols; y++) {
-				this.rect = new Phaser.GameObjects.Rectangle(
+				this.rect = new ItemSlot(
 					this.scene,
 					this.x + x * 64,
 					this.y + y * 64,
 					64,
-					64
+					64,
+					null
 				);
 				this.rect.image = this.scene.add.existing(
 					new Phaser.GameObjects.Image(
@@ -57,19 +59,17 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 	}
 
 	addItem(item) {
-		this.slotArray[0][0].item = new Weapon({
+		this.slotArray[0][0].item = new Item({
 			scene: this.scene,
 			x: this.slotArray[0][0].x,
 			y: this.slotArray[0][0].y,
-			image: "swords",
-			frame: "ShortDagger_[Paint].png"
+			itemlist: this.gamescene.itemlist.items["Short Sword"]
 		});
-		this.slotArray[0][1].item = new Weapon({
+		this.slotArray[0][1].item = new Item({
 			scene: this.scene,
 			x: this.slotArray[0][1].x,
 			y: this.slotArray[0][1].y,
-			image: "swords",
-			frame: "ShortSword_[Paint].png"
+			itemlist: this.gamescene.itemlist.items["Short Sword"]
 		});
 	}
 
