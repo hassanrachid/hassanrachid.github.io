@@ -1,20 +1,12 @@
 import Item from "./item";
 import ItemSlot from './itemslot';
 
-export default class Equipment extends Phaser.GameObjects.Container {
+export default class Equipment extends Phaser.GameObjects.Rectangle {
 	constructor(scene) {
 		super(scene);
 		this.scene = scene;
 		this.gamescene = this.scene.game.scene.keys["GameScene"];
 		this.scene.add.existing(this);
-		this.name = "equipment";
-
-		this.image = new Phaser.GameObjects.Image(
-			this.scene,
-			200,
-			660,
-			"equipmentframe"
-		).setOrigin(0.5, 0.5);
 
 		this.types = {
 			weapon: {
@@ -69,49 +61,48 @@ export default class Equipment extends Phaser.GameObjects.Container {
 
 		this.slots = [];
 
-		this.add(this.image);
-
 		this.create();
 		this.show();
 	}
 
 	show() {
 		this.setVisible(!this.visible);
+		for (var s in this.slots) {
+			this.slots[s].image.setVisible(!this.slots[s].image.visible);
+			if (this.slots[s].item != null) {
+				this.slots[s].item.setVisible(!this.slots[s].item.visible);
+			}
+		}
 	}
 
 	create() {
-		// looping thru each item type and creating a slot for it in equipment screen
 		for (var type in this.types) {
 			this.slot = new ItemSlot(this.scene, this.types[type].position.x, this.types[type].position.y, 64, 64, null);
+			this.slot.setInteractive({ dropZone: false })
 			this.slots.push(this.slot);
 		}
-		this.add(this.slots);
 
-		// add item to equipment to test
-		this.addItem(
-			new Item({
-				scene: this.scene,
-				x: 0,
-				y: 0,
-				itemlist: this.gamescene.itemlist.items["Gold Sword"]
-			})
-		);
+		this.addItem({ name: "Gold Sword", type: "weapon" })
 	}
 
 	addItem(item) {
-		this.item = item;
-		this.add(this.item);
-		this.scene.children.bringToTop(this.item);
-		this.item.x = this.slots[this.types[this.item.type].id].x;
-		this.item.y = this.slots[this.types[this.item.type].id].y;
-		// if item in slot exists, replace the item
-		if (this.slots[this.types[this.item.type].id].item != undefined) {
-			// remove old item from container
-			this.remove(this.slots[this.types[this.item.type].id].item);
-			// TODO: after replace item in equipment, move it back to inventory
+		// equip the new item
+		this.item = new Item({
+			scene: this.scene,
+			x: this.slots[this.types[item.type].id].x,
+			y: this.slots[this.types[item.type].id].y,
+			name: item.name,
+			attributes: item.attributes
+		})
+		this.item.tooltip.text = "Press [E] to Unequip";
+		this.item.setVisible(this.visible);
+		// if there was a previous item.. throw it back in the inventory
+		if (this.slots[this.types[item.type].id].item != undefined) {
+			this.gamescene.player.inventory.addItem(this.slots[this.types[item.type].id].item);
+			// this.slots[this.types[this.item.type].id].item.destroy();
 		}
+
 		this.slots[this.types[this.item.type].id].item = this.item;
-		this.recalculateAttributes();
 	}
 
 	getItem(weaponType) {
@@ -122,8 +113,8 @@ export default class Equipment extends Phaser.GameObjects.Container {
 	}
 
 	recalculateAttributes() {
-		for (var s in this.slots) {
-			console.log(this.slots[s]);
-		}
+		// for (var s in this.slots) {
+		// 	console.log(this.slots[s]);
+		// }
 	}
 }

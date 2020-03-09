@@ -5,7 +5,9 @@ export default class InterfaceScene extends Phaser.Scene {
 		});
 	}
 
-	preload() {}
+	preload() { }
 
-	create() {}
+	create() {
+		this.input.topOnly = false;
+	}
 }

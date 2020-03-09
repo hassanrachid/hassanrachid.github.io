@@ -2,12 +2,29 @@ import ItemTooltip from "./itemtooltip";
 
 export default class Item extends Phaser.GameObjects.Sprite {
 	constructor(config) {
-		super(config.scene, config.x, config.y, config.itemlist.image, config.itemlist.frame);
-		this.setDisplaySize(48, 48);
+		// grab item from item list
+		var GameScene = config.scene.game.scene.keys["GameScene"];
+		var frame = GameScene.itemlist.items[config.name].frame;
+		var image = GameScene.itemlist.items[config.name].image;
+		var type = GameScene.itemlist.items[config.name].type;
+		var attributes = GameScene.itemlist.items[config.name].attributes;
+		// initialize sprite...
+		super(config.scene, config.x, config.y, image, frame);
+
+		this.setDisplaySize(64, 64);
 		this.scene = config.scene;
 		this.scene.add.existing(this);
-		this.name = config.itemlist.frame;
-		this.type = config.itemlist.type;
+		// set name of item
+		this.name = config.name;
+		// set attributes of item (for when we recreate items)
+		if (config.attributes == null) {
+			this.attributes = attributes;
+		} else {
+			this.attributes = config.attributes;
+		}
+		// type of item.. (weapon, armor, etc...)
+		this.type = type;
+
 		this.setInteractive({
 			draggable: true,
 			enabled: true
@@ -17,10 +34,6 @@ export default class Item extends Phaser.GameObjects.Sprite {
 			item: this
 		});
 
-		this.on("pointerdown", (pointer, gameObject, localY) => {
-			if (pointer.rightButtonDown()) {
 
-			}
-		});
 	}
 }

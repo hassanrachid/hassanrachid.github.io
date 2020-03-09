@@ -1,44 +1,32 @@
-export default class ItemTooltip extends Phaser.GameObjects.Image {
+export default class ItemTooltip extends Phaser.GameObjects.Text {
 	constructor(config) {
-		super(config.scene, 197, 490, "itemtooltip");
+		var style = {
+			font: "bold 12px Helvetica",
+			fill: "white",
+			wordWrap: { width: 280 }
+		};
+		super(config.scene, 0, 0, "Press [E] to Equip", style);
+		this.setAlign("center");
+
 		this.item = config.item;
 		this.scene = config.scene;
+
 		this.scene.add.existing(this);
-		this.setVisible(false);
+		this.show(false);
 
-		this.text = this.scene.make.text({
-			x: 203,
-			y: 480,
-			text: this.item.name,
-			origin: { x: 0.5, y: 0.5 },
-			style: {
-				font: "bold 12px Arial",
-				fill: "black",
-				wordWrap: { width: 280 }
-			}
-		});
-		this.text.setAlign("center");
-		this.text.setVisible(false);
-
-		this.item.on("pointerover", () => {
-			if (
-				this.item.parentContainer != null &&
-				this.item.parentContainer.name == "equipment"
-			) {
-				this.y = 467;
-				this.setDisplaySize(256, this.height);
-				this.text.y = this.y - 10;
-			}
-			this.show();
+		this.item.on("pointerover", (pointer) => {
+			console.log(this.item);
+			this.show(true, pointer.x, pointer.y);
 		});
 
 		this.item.on("pointerout", () => {
-			this.show();
+			this.show(false);
 		});
 	}
 
-	show() {
-		this.setVisible(!this.visible);
-		this.text.setVisible(!this.text.visible);
+	show(flag, x, y) {
+		this.x = x;
+		this.y = y;
+		this.setVisible(flag);
 	}
 }

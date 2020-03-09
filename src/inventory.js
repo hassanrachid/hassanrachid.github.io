@@ -2,27 +2,19 @@ import ItemSlot from './itemslot';
 import Item from './item';
 export default class Inventory extends Phaser.GameObjects.Rectangle {
 	constructor(config) {
-		super(config.scene, config.x, config.y);
+		super(config.scene, config.x, config.y, config.width, config.height);
 		this.scene = config.scene;
 		this.gamescene = this.scene.game.scene.keys["GameScene"];
 
 		this.slotArray = [];
-		this.width = 256;
-		this.height = 256;
+		this.width = config.width;
+		this.height = config.height;
 		this.x = config.x;
 		this.y = config.y;
 
-		this.b = new Phaser.GameObjects.Image(
-			this.scene,
-			this.x - 56,
-			this.y - 56,
-			"inventorybackground"
-		);
-		this.b.setOrigin(0, 0);
-		this.b.setDisplaySize(304, 304);
-		this.scene.add.existing(this.b);
 		this.create();
 		this.show();
+
 	}
 
 	create() {
@@ -32,54 +24,72 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 		for (var x = 0; x < this.rows; x++) {
 			this.slotArray[x] = [];
 			for (var y = 0; y < this.cols; y++) {
-				this.rect = new ItemSlot(
+				this.slotArray[x][y] = new ItemSlot(
 					this.scene,
-					this.x + x * 64,
-					this.y + y * 64,
+					this.x + x * 72,
+					this.y + y * 72,
 					64,
 					64,
 					null
 				);
-				this.rect.image = this.scene.add.existing(
-					new Phaser.GameObjects.Image(
-						this.scene,
-						this.x + x * 64,
-						this.y + y * 64,
-						"inventoryframe"
-					)
-				);
-				this.rect.setInteractive({ dropZone: true });
-				this.slotArray[x][y] = this.rect;
-				this.scene.add.existing(this.rect);
+
+				this.slotArray[x][y].setInteractive({ dropZone: true });
+				this.scene.add.existing(this.slotArray[x][y]);
 			}
 		}
 
+
+		this.addItem({ name: "Short Sword" });
 		this.handleEvents();
-		this.addItem();
+
 	}
 
 	addItem(item) {
-		this.slotArray[0][0].item = new Item({
-			scene: this.scene,
-			x: this.slotArray[0][0].x,
-			y: this.slotArray[0][0].y,
-			itemlist: this.gamescene.itemlist.items["Short Sword"]
-		});
-		this.slotArray[0][1].item = new Item({
-			scene: this.scene,
-			x: this.slotArray[0][1].x,
-			y: this.slotArray[0][1].y,
-			itemlist: this.gamescene.itemlist.items["Short Sword"]
-		});
+		for (var x = 0; x < this.rows; x++) {
+			for (var y = 0; y < this.cols; y++) {
+				if (this.slotArray[y][x].item == undefined) {
+					this.slotArray[y][x].item = new Item({
+						scene: this.scene,
+						x: this.slotArray[y][x].x,
+						y: this.slotArray[y][x].y,
+						name: item.name
+					});
+					return;
+				}
+			}
+		}
+	}
+
+	removeItem(item) {
+		for (var x = 0; x < this.rows; x++) {
+			for (var y = 0; y < this.cols; y++) {
+				if (this.slotArray[y][x].item == item) {
+					item.destroy();
+					item.tooltip.destroy();
+					this.slotArray[y][x].item = null;
+					return;
+				}
+			}
+		}
 	}
 
 	handleEvents() {
-		this.scene.input.on("pointerdown", (pointer, localX, localY) => {
-			console.log(pointer.x);
-			console.log(pointer.y);
+		var pointer = this.scene.input.activePointer;
+		this.equipKey = this.scene.input.keyboard.addKey("E");
+		this.equipKey.on("up", () => {
+			if (this.gamescene.player.inventory.getSlot(pointer.x, pointer.y)) {
+				var item = this.gamescene.player.inventory.getSlot(pointer.x, pointer.y).item;
+				if (item) {
+					// equip item
+					this.gamescene.player.equipment.addItem(item);
+					this.removeItem(item);
+				}
+			}
 		});
+
 		this.scene.input.on("dragstart", (pointer, gameObject) => {
 			this.scene.children.bringToTop(gameObject);
+			gameObject.tooltip.show(false);
 			gameObject.xx = gameObject.x;
 			gameObject.yy = gameObject.y;
 		});
@@ -88,8 +98,8 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 			gameObject.y = dragY;
 		});
 		this.scene.input.on("drop", (pointer, gameObject, target) => {
-			var x = (gameObject.xx - this.x) / 64;
-			var y = (gameObject.yy - this.y) / 64;
+			var x = (gameObject.xx - this.x) / 72;
+			var y = (gameObject.yy - this.y) / 72;
 
 			var previous = this.slotArray[x][y];
 			this.slotArray[x][y].item = undefined;
@@ -103,6 +113,8 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 			target.item.y = target.y;
 		});
 		this.scene.input.on("dragend", (pointer, gameObject, dropped) => {
+			this.scene.children.bringToTop(gameObject.tooltip);
+			gameObject.tooltip.show(true, pointer.x, pointer.y);
 			if (!dropped) {
 				gameObject.x = gameObject.xx;
 				gameObject.y = gameObject.yy;
@@ -113,7 +125,6 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 	show() {
 		// store these in a container later on..
 		this.setVisible(!this.visible);
-		this.b.setVisible(!this.b.visible);
 		for (var x = 0; x < this.rows; x++) {
 			for (var y = 0; y < this.cols; y++) {
 				this.slotArray[x][y].setVisible(!this.slotArray[x][y].visible);
@@ -124,6 +135,20 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 					this.slotArray[x][y].item.setVisible(
 						!this.slotArray[x][y].item.visible
 					);
+				}
+			}
+		}
+	}
+
+	getSlot(xx, yy) {
+		if (this.visible) {
+			for (var x = 0; x < this.rows; x++) {
+				for (var y = 0; y < this.cols; y++) {
+					var bottomLeft = this.slotArray[x][y].getBottomLeft();
+					var topRight = this.slotArray[x][y].getTopRight();
+					if ((xx > bottomLeft.x && xx < topRight.x) && (yy < bottomLeft.y && yy > topRight.y)) {
+						return this.slotArray[x][y];
+					}
 				}
 			}
 		}

@@ -25,7 +25,9 @@ export default class Player extends BaseCharacter {
 		this.inventory = new Inventory({
 			scene: this.scene.game.scene.keys["InterfaceScene"],
 			x: 100,
-			y: 580
+			y: 580,
+			width: 256,
+			height: 256
 		});
 
 		this.equipment = new Equipment(
@@ -54,20 +56,20 @@ export default class Player extends BaseCharacter {
 			if (cursors.left.isDown) {
 				this.container.body.setVelocityX(-250);
 				this.flipX = false;
-				this.direction = "side";
+				this.setDirection("side")
 			} else if (cursors.right.isDown) {
 				this.container.body.setVelocityX(250);
 				this.flipX = true;
-				this.direction = "side";
+				this.setDirection("side")
 			}
 
 			// Vertical movement
 			if (cursors.up.isDown) {
 				this.container.body.setVelocityY(-250);
-				this.direction = "front";
+				this.setDirection("front")
 			} else if (cursors.down.isDown) {
 				this.container.body.setVelocityY(250);
-				this.direction = "front";
+				this.setDirection("front")
 			}
 
 			// so diagonal movement isnt too fast...
@@ -117,6 +119,12 @@ export default class Player extends BaseCharacter {
 			b.x + b.halfWidth - a.halfWidth,
 			b.y + b.halfHeight - a.halfHeight
 		);
+	}
+
+	setDirection(direction) {
+		if (!this.statemachine.attacking) {
+			this.direction = direction;
+		}
 	}
 
 }
