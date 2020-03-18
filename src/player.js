@@ -102,9 +102,9 @@ export default class Player extends BaseCharacter {
 			e.moveTo(this, d);
 		});
 
-		if (Phaser.Input.Keyboard.JustDown(cursors.spell1)) {
-			this.ability.cast(this);
-		}
+		// if (Phaser.Input.Keyboard.JustDown(cursors.spell1)) {
+		// 	this.ability.cast(this);
+		// }
 	}
 
 	distance(x1, y1, x2, y2) {
