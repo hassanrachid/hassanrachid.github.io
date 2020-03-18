@@ -69,6 +69,8 @@ export default class LoadScene extends Phaser.Scene {
 		);
 
 		this.load.image("warrior", "assets/warrior.png");
+		this.load.image("orc", "assets/orc.png");
+
 
 		this.load.atlas({
 			key: "armor",
@@ -82,6 +84,7 @@ export default class LoadScene extends Phaser.Scene {
 			atlasURL: "assets/weapons/swords.json"
 		});
 
+		// player animations
 		this.load.atlas({
 			key: "idle_front",
 			textureURL: "assets/warrior/idle_front/spritesheet.png",
@@ -142,9 +145,17 @@ export default class LoadScene extends Phaser.Scene {
 			textureURL: "assets/warrior/attack_side/Default/spritesheet.png",
 			atlasURL: "assets/warrior/attack_side/Default/spritesheet.json"
 		});
+
+		// orc animations..
+		this.load.atlas({
+			key: "orcidle_front",
+			textureURL: "assets/enemy/orc/idle_front/spritesheet.png",
+			atlasURL: "assets/enemy/orc/idle_front/spritesheet.json"
+		});
 	}
 
 	create() {
+		// #region PLAYER ANIMATIONS
 		this.anims.create({
 			key: "idle_front",
 			frames: this.anims.generateFrameNames("idle_front"),
@@ -217,6 +228,15 @@ export default class LoadScene extends Phaser.Scene {
 			frameRate: 60,
 			repeat: 0,
 		});
+		//#endregion
 
+
+		// orc animations
+		this.anims.create({
+			key: "orcidle_front",
+			frames: this.anims.generateFrameNames("orcidle_front"),
+			frameRate: 30,
+			repeat: 0,
+		});
 	}
 }

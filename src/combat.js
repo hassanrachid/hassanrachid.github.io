@@ -5,19 +5,19 @@ export default class Combat {
         this.scene = scene;
         this.collided = false;
 
+        
         this.sprite.on(
             "animationupdate",
             (frame, index, key) => {
                 if (frame.key.includes("attack")) {
                     if (index.progress == 0.50) {
-                        this.scene.physics.world.overlap(
+                        this.scene.enemies.children.each(e => 
+                            this.scene.physics.world.overlap(
                             this.collider,
-                            this.scene.enemies,
+                            e.container,
                             this.Collision
-                        );
+                        ));
                     }
-
-
                 }
             },
             this
@@ -25,8 +25,9 @@ export default class Combat {
     }
 
     Collision(o1, o2) {
-        var style = { font: "24px Verdana", fill: '#FF0000', align: "center" };
-        var text = o1.scene.add.text(o2.x, o2.y - 25, "15", style);
+        console.log("collided");
+        var style = { font: "bold 24px Verdana", fill: '#FF0000', align: "center" };
+        var text = o1.scene.add.text(o2.x - 5, o2.y, "-15", style);
         text.setOrigin(0.5);
         o1.scene.tweens.add({
             targets: text, duration: 300, ease: 'Cubic', y: o2.y - (Math.random() + 75),

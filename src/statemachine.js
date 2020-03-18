@@ -1,7 +1,7 @@
 export default class StateMachine {
     constructor(sprite, scene) {
         this.sprite = sprite;
-        this.scene = scene
+        this.scene = scene;
         this.attacking = false;
         this.previousState = "IdleState";
 
@@ -23,7 +23,7 @@ export default class StateMachine {
     }
 
     IdleState() {
-        this.sprite.anims.play("idle_" + this.sprite.direction, true);
+        this.sprite.anims.play(this.sprite.name + "idle_" + this.sprite.direction, true);
     }
 
     MoveState() {
