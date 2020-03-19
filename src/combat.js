@@ -11,6 +11,7 @@ export default class Combat {
             (frame, index, key) => {
                 if (frame.key.includes("attack")) {
                     if (index.progress == 0.50) {
+                        // this is probably soo inefficient.....
                         this.scene.enemies.children.each(e => 
                             this.scene.physics.world.overlap(
                             this.collider,
@@ -25,9 +26,13 @@ export default class Combat {
     }
 
     Collision(o1, o2) {
-        console.log("collided");
+        /* TODO */
+        // make method to take in both object attributes and calculate damage done
+        var playerAttributes = o1.parentContainer.sprite.attributesWithEquipment;
+        var enemyAttributes = o2.sprite.attributesWithEquipment;
+
         var style = { font: "bold 24px Verdana", fill: '#FF0000', align: "center" };
-        var text = o1.scene.add.text(o2.x - 5, o2.y, "-15", style);
+        var text = o1.scene.add.text(o2.x - 5, o2.y, "-" + playerAttributes.strength, style);
         text.setOrigin(0.5);
         o1.scene.tweens.add({
             targets: text, duration: 300, ease: 'Cubic', y: o2.y - (Math.random() + 75),
@@ -35,5 +40,7 @@ export default class Combat {
                 text.destroy();
             }, callbackScope: this
         });
+
+        o2.sprite.damage(playerAttributes.strength);
     }
 }

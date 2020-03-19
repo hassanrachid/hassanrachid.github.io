@@ -17,11 +17,7 @@ export default class GameScene extends Phaser.Scene {
 			right: "d",
 			up: "w",
 			down: "s",
-			space: "space",
-			spell1: "q",
-			spell2: "w",
-			spell3: "e",
-			spell4: "r"
+			space: "space"
 		});
 
 		this.itemlist = new ItemList();
@@ -36,10 +32,9 @@ export default class GameScene extends Phaser.Scene {
 
 		this.goblin = new Orc({
 			scene: this,
-			x: 100,
+			x: 300,
 			y: 300,
-			key: "orc",
-			isEnemy: true
+			key: "orc"
 		});
 		this.enemies.add(this.goblin);
 	}

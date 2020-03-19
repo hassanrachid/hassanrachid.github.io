@@ -2,10 +2,10 @@ import Item from "./item";
 import ItemSlot from './itemslot';
 
 export default class Equipment extends Phaser.GameObjects.Rectangle {
-	constructor(scene) {
+	constructor(scene, player) {
 		super(scene);
 		this.scene = scene;
-		this.gamescene = this.scene.game.scene.keys["GameScene"];
+		this.player = player;
 		this.scene.add.existing(this);
 
 		this.types = {
@@ -98,11 +98,12 @@ export default class Equipment extends Phaser.GameObjects.Rectangle {
 		this.item.setVisible(this.visible);
 		// if there was a previous item.. throw it back in the inventory
 		if (this.slots[this.types[item.type].id].item != undefined) {
-			this.gamescene.player.inventory.addItem(this.slots[this.types[item.type].id].item);
+			this.player.inventory.addItem(this.slots[this.types[item.type].id].item);
 			// this.slots[this.types[this.item.type].id].item.destroy();
 		}
 
 		this.slots[this.types[this.item.type].id].item = this.item;
+		this.recalculateAttributes();
 	}
 
 	getItem(weaponType) {
@@ -113,8 +114,17 @@ export default class Equipment extends Phaser.GameObjects.Rectangle {
 	}
 
 	recalculateAttributes() {
-		// for (var s in this.slots) {
-		// 	console.log(this.slots[s]);
-		// }
+		if (this.player != undefined) {
+			this.player.resetAttributes();
+			for (var s in this.slots) {
+				if (this.slots[s].item) {
+					this.player.attributesWithEquipment.strength += this.slots[s].item.attributes.strength
+					this.player.attributesWithEquipment.health += this.slots[s].item.attributes.health
+					this.player.attributesWithEquipment.agility += this.slots[s].item.attributes.agility
+					this.player.attributesWithEquipment.intelligence += this.slots[s].item.attributes.intelligence
+					this.player.attributesWithEquipment.defense += this.slots[s].item.attributes.defense
+				}
+			}
+		}
 	}
 }

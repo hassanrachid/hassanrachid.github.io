@@ -52,10 +52,7 @@ export default class LoadScene extends Phaser.Scene {
 			this.scene.launch("InterfaceScene");
 		});
 
-		this.load.image(
-			"inventorybackground",
-			"assets/inventory/inventorybackground.png"
-		);
+		this.load.image("inventorybackground", "assets/inventory/inventorybackground.png");
 		this.load.image("inventory", "assets/utilityicons/1.png");
 		this.load.image("abilities", "assets/utilityicons/2.png");
 		this.load.image("skills", "assets/utilityicons/3.png");
@@ -63,14 +60,10 @@ export default class LoadScene extends Phaser.Scene {
 		this.load.image("itemtooltip", "assets/inventory/itemtooltip.png");
 		this.load.image("inventoryframe", "assets/inventory/inventoryframe.png");
 
-		this.load.image(
-			"equipmentframe",
-			"assets/inventory/equipmentinterface.png"
-		);
+		this.load.image("equipmentframe", "assets/inventory/equipmentinterface.png");
 
 		this.load.image("warrior", "assets/warrior.png");
 		this.load.image("orc", "assets/orc.png");
-
 
 		this.load.atlas({
 			key: "armor",
@@ -152,6 +145,21 @@ export default class LoadScene extends Phaser.Scene {
 			textureURL: "assets/enemy/orc/idle_front/spritesheet.png",
 			atlasURL: "assets/enemy/orc/idle_front/spritesheet.json"
 		});
+		this.load.atlas({
+			key: "orcdying_front",
+			textureURL: "assets/enemy/orc/dying_front/spritesheet.png",
+			atlasURL: "assets/enemy/orc/dying_front/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "orchurt_front",
+			textureURL: "assets/enemy/orc/hurt_front/spritesheet.png",
+			atlasURL: "assets/enemy/orc/hurt_front/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "orcwalk_front",
+			textureURL: "assets/enemy/orc/walk_front/spritesheet.png",
+			atlasURL: "assets/enemy/orc/walk_front/spritesheet.json"
+		});
 	}
 
 	create() {
@@ -166,77 +174,94 @@ export default class LoadScene extends Phaser.Scene {
 			key: "walk_front",
 			frames: this.anims.generateFrameNames("walk_front"),
 			frameRate: 60,
-			repeat: -1,
+			repeat: -1
 		});
 		this.anims.create({
 			key: "walk_side",
 			frames: this.anims.generateFrameNames("walk_side"),
 			frameRate: 60,
-			repeat: -1,
+			repeat: -1
 		});
 		this.anims.create({
 			key: "idle_side",
 			frames: this.anims.generateFrameNames("idle_side"),
 			frameRate: 60,
-			repeat: -1,
+			repeat: -1
 		});
 		this.anims.create({
 			key: "attack_front_Default",
 			frames: this.anims.generateFrameNames("attack_front_Default"),
 			frameRate: 60,
-			repeat: 0,
+			repeat: 0
 		});
 		this.anims.create({
 			key: "attack_front_Short Sword",
 			frames: this.anims.generateFrameNames("attack_front_Short Sword"),
 			frameRate: 60,
-			repeat: 0,
+			repeat: 0
 		});
 		this.anims.create({
 			key: "attack_front_Iron Sword",
 			frames: this.anims.generateFrameNames("attack_front_Iron Sword"),
 			frameRate: 60,
-			repeat: 0,
+			repeat: 0
 		});
 		this.anims.create({
 			key: "attack_front_Gold Sword",
 			frames: this.anims.generateFrameNames("attack_front_Gold Sword"),
 			frameRate: 60,
-			repeat: 0,
+			repeat: 0
 		});
 		this.anims.create({
 			key: "attack_side_Short Sword",
 			frames: this.anims.generateFrameNames("attack_side_Short Sword"),
 			frameRate: 60,
-			repeat: 0,
+			repeat: 0
 		});
 		this.anims.create({
 			key: "attack_side_Iron Sword",
 			frames: this.anims.generateFrameNames("attack_side_Iron Sword"),
 			frameRate: 60,
-			repeat: 0,
+			repeat: 0
 		});
 		this.anims.create({
 			key: "attack_side_Gold Sword",
 			frames: this.anims.generateFrameNames("attack_side_Gold Sword"),
 			frameRate: 60,
-			repeat: 0,
+			repeat: 0
 		});
 		this.anims.create({
 			key: "attack_side_Default",
 			frames: this.anims.generateFrameNames("attack_side_Default"),
 			frameRate: 60,
-			repeat: 0,
+			repeat: 0
 		});
 		//#endregion
-
 
 		// orc animations
 		this.anims.create({
 			key: "orcidle_front",
 			frames: this.anims.generateFrameNames("orcidle_front"),
 			frameRate: 30,
-			repeat: 0,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "orcdying_front",
+			frames: this.anims.generateFrameNames("orcdying_front"),
+			frameRate: 30,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "orchurt_front",
+			frames: this.anims.generateFrameNames("orchurt_front"),
+			frameRate: 30,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "orcwalk_front",
+			frames: this.anims.generateFrameNames("orcwalk_front"),
+			frameRate: 30,
+			repeat: 0
 		});
 	}
 }

@@ -3,8 +3,8 @@ import Inventory from "./inventory";
 import UtilityBar from "./utilitybar";
 import HealthBar from "./healthbar";
 import Equipment from "./equipment";
-import StateMachine from './statemachine';
-import Combat from './combat';
+import StateMachine from "./statemachine";
+import Combat from "./combat";
 import BaseCharacter from "./basecharacter";
 import Attributes from "./attributes";
 export default class Player extends BaseCharacter {
@@ -14,6 +14,8 @@ export default class Player extends BaseCharacter {
 		this.state = "IdleState";
 		this.scene = config.scene;
 		this.statemachine = new StateMachine(this, this.scene);
+		this.healthbar.offsetx = 0;
+		this.healthbar.offsety = -60;
 
 		// this.ability = new Ability({
 		// 	scene: this.scene,
@@ -31,8 +33,10 @@ export default class Player extends BaseCharacter {
 		});
 
 		this.equipment = new Equipment(
-			this.scene.game.scene.keys["InterfaceScene"]
+			this.scene.game.scene.keys["InterfaceScene"],
+			this
 		);
+		this.equipment.recalculateAttributes();
 
 		this.utilitybar = new UtilityBar({
 			scene: this.scene.game.scene.keys["InterfaceScene"],
@@ -55,20 +59,20 @@ export default class Player extends BaseCharacter {
 			if (cursors.left.isDown) {
 				this.container.body.setVelocityX(-250);
 				this.flipX = false;
-				super.setDirection("side")
+				super.setDirection("side");
 			} else if (cursors.right.isDown) {
 				this.container.body.setVelocityX(250);
 				this.flipX = true;
-				super.setDirection("side")
+				super.setDirection("side");
 			}
 
 			// Vertical movement
 			if (cursors.up.isDown) {
 				this.container.body.setVelocityY(-250);
-				super.setDirection("front")
+				super.setDirection("front");
 			} else if (cursors.down.isDown) {
 				this.container.body.setVelocityY(250);
-				super.setDirection("front")
+				super.setDirection("front");
 			}
 
 			this.container.body.velocity.normalize().scale(200, 200);
@@ -80,12 +84,17 @@ export default class Player extends BaseCharacter {
 
 		// On if move state, check for any enemies near by, and then have the enemy move to the player
 
-		// this.scene.enemies.getChildren().forEach(e => {
-		// 	// have aggro distance configurable in enemy class ** TODO
+		this.scene.enemies.getChildren().forEach(e => {
+			// have aggro distance configurable in enemy class ** TODO
 
-		// 	var d = this.distance(e.x, e.y, this.x, this.y);
-		// 	e.moveTo(this, d);
-		// });
+			var d = this.distance(
+				e.container.x,
+				e.container.y,
+				this.container.x,
+				this.container.y
+			);
+			e.moveTo(this.container, d);
+		});
 
 		// if (Phaser.Input.Keyboard.JustDown(cursors.spell1)) {
 		// 	this.ability.cast(this);
