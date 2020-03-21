@@ -119,6 +119,11 @@ export default class LoadScene extends Phaser.Scene {
 			atlasURL: "assets/warrior/attack_front/Iron Sword/spritesheet.json"
 		});
 		this.load.atlas({
+			key: "attack_front_Short Spear",
+			textureURL: "assets/warrior/attack_front/Short Spear/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Short Spear/spritesheet.json"
+		});
+		this.load.atlas({
 			key: "attack_side_Short Sword",
 			textureURL: "assets/warrior/attack_side/Short Sword/spritesheet.png",
 			atlasURL: "assets/warrior/attack_side/Short Sword/spritesheet.json"
@@ -132,6 +137,11 @@ export default class LoadScene extends Phaser.Scene {
 			key: "attack_side_Gold Sword",
 			textureURL: "assets/warrior/attack_side/Gold Sword/spritesheet.png",
 			atlasURL: "assets/warrior/attack_side/Gold Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Short Spear",
+			textureURL: "assets/warrior/attack_side/Short Spear/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Short Spear/spritesheet.json"
 		});
 		this.load.atlas({
 			key: "attack_side_Default",
@@ -213,6 +223,12 @@ export default class LoadScene extends Phaser.Scene {
 			repeat: 0
 		});
 		this.anims.create({
+			key: "attack_front_Short Spear",
+			frames: this.anims.generateFrameNames("attack_front_Short Spear"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
 			key: "attack_side_Short Sword",
 			frames: this.anims.generateFrameNames("attack_side_Short Sword"),
 			frameRate: 60,
@@ -227,6 +243,12 @@ export default class LoadScene extends Phaser.Scene {
 		this.anims.create({
 			key: "attack_side_Gold Sword",
 			frames: this.anims.generateFrameNames("attack_side_Gold Sword"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_side_Short Spear",
+			frames: this.anims.generateFrameNames("attack_side_Short Spear"),
 			frameRate: 60,
 			repeat: 0
 		});

@@ -32,10 +32,7 @@ export default class Player extends BaseCharacter {
 			height: 256
 		});
 
-		this.equipment = new Equipment(
-			this.scene.game.scene.keys["InterfaceScene"],
-			this
-		);
+		this.equipment = new Equipment(this.scene.game.scene.keys["InterfaceScene"], this);
 		this.equipment.recalculateAttributes();
 
 		this.utilitybar = new UtilityBar({
@@ -54,6 +51,25 @@ export default class Player extends BaseCharacter {
 		if (this.container) {
 			super.update();
 			this.container.body.setVelocity(0);
+
+			// face to the right if pointer is right of player
+			if (this.scene.input.activePointer.position.x >= this.container.x) {
+				super.setDirection("side");
+				if (!this.flipX) {
+					this.flipX = true;
+				}
+			}
+			// face to the left if pointer is left of player
+			if (this.scene.input.activePointer.position.x <= this.container.x) {
+				super.setDirection("side");
+				if (this.flipX) {
+					this.flipX = false;
+				}
+			}
+			// face front if pointer is under player
+			if (this.scene.input.activePointer.position.y >= this.container.y + 80) {
+				super.setDirection("front");
+			}
 
 			// Horizontal movement
 			if (cursors.left.isDown) {
@@ -85,19 +101,8 @@ export default class Player extends BaseCharacter {
 		// On if move state, check for any enemies near by, and then have the enemy move to the player
 
 		this.scene.enemies.getChildren().forEach(e => {
-			// have aggro distance configurable in enemy class ** TODO
-
-			var d = this.distance(
-				e.container.x,
-				e.container.y,
-				this.container.x,
-				this.container.y
-			);
+			var d = this.distance(e.container.x, e.container.y, this.container.x, this.container.y);
 			e.moveTo(this.container, d);
 		});
-
-		// if (Phaser.Input.Keyboard.JustDown(cursors.spell1)) {
-		// 	this.ability.cast(this);
-		// }
 	}
 }

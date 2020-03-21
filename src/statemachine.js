@@ -98,7 +98,11 @@ export default class StateMachine {
 	}
 
 	AttackState() {
-		this.sprite.anims.play("attack_" + this.sprite.direction + "_" + this.sprite.equipment.getItem("weapon").name, true);
+		if (this.sprite.equipment) {
+			
+			// this.sprite.anims.play("attack_" + this.sprite.direction + "_" + this.sprite.equipment.getItem("weapon").name, true);
+			this.sprite.anims.play("attack_" + this.sprite.direction + "_Short Spear", true);
+		}
 	}
 
 	UpdateState(state) {

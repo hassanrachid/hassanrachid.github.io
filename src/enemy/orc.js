@@ -33,18 +33,18 @@ export default class Goblin extends BaseCharacter {
 		var absX = Math.abs(Math.abs(this.container.x) - Math.abs(target.x));
 		var absY = Math.abs(Math.abs(this.container.y) - Math.abs(target.y));
 
-		// Sets the enemy to MoveState only if attack, hurt, or die animation are not playing
-
 		// Moves to player
 		if (this.container.x > target.x) {
 			this.container.body.setVelocityX(-100);
 			this.flipX = true;
+			this.healthbar.offsetx = 0;
 			if (absX >= 0 && absX <= 50) {
 				this.container.body.setVelocityX(0);
 			}
 		} else if (this.container.x < target.x) {
 			this.container.body.setVelocityX(100);
 			this.flipX = false;
+			this.healthbar.offsetx = -8;
 			if (absX >= 0 && absX <= 50) {
 				this.container.body.setVelocityX(0);
 			}
@@ -60,12 +60,10 @@ export default class Goblin extends BaseCharacter {
 				this.container.body.setVelocityY(0);
 			}
 		}
-	}
-	// 	// Attacks player if within distance
-	// 	if (distance <= 75) {
-	// 		if (!this.attacking) {
-	// 			this.state = "AttackState";
-	// 		}
-	// 	}
-	// }
+		// if (distance <= 75) {
+		// 	if (!this.statemachine.attacking) {
+		// 		this.state = "AttackState";
+		// 	}
+		// }
+	}	
 }
