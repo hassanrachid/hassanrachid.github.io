@@ -46,7 +46,7 @@ export default class Combat {
         // play blood particles
         var fn = new Function('return ' + o2.scene.cache.text.get('bloodeffect'))();
         fn[0].x = o2.x;
-        fn[0].y = o2.y;
+        fn[0].y = o2.y + 15;
         o2.scene.add.particles('blood', fn);
 
         o2.sprite.damage(playerAttributes.strength);
