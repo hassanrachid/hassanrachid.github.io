@@ -13,8 +13,8 @@ export default class StateMachine {
 				if (anim.key.includes("attack")) {
 					this.AdjustColliderBox(this.sprite.direction);
 					if (frame.isLast) {
-						this.attacking = false;
 						this.ResetColliderBox();
+						this.attacking = false;
 					}
 				}
 			},
@@ -31,6 +31,16 @@ export default class StateMachine {
 						this.sprite.destroy();
 						this.dying = false;
 					}
+				}
+			},
+			this
+		);
+		
+		this.sprite.on(
+			"animationstart",
+			function(anim, frame) {
+				if (anim.key.includes("dying")) {
+					this.sprite.container.body.setEnable(false);
 				}
 			},
 			this
@@ -99,9 +109,8 @@ export default class StateMachine {
 
 	AttackState() {
 		if (this.sprite.equipment) {
-			
-			// this.sprite.anims.play("attack_" + this.sprite.direction + "_" + this.sprite.equipment.getItem("weapon").name, true);
-			this.sprite.anims.play("attack_" + this.sprite.direction + "_Short Spear", true);
+			this.sprite.anims.setTimeScale(0.75);
+			this.sprite.anims.play("attack_" + this.sprite.direction + "_" + this.sprite.equipment.getItem("weapon").name, true);
 		}
 	}
 
@@ -118,19 +127,20 @@ export default class StateMachine {
 	}
 
 	AdjustColliderBox(direction) {
-		// first center collider box on body..
+		var collider = this.sprite.equipment.getItem("weapon").collider;
 		if (direction == "side") {
 			if (!this.sprite.flipX) {
-				this.sprite.collider.body.setOffset(-60, 0);
+				this.sprite.collider.body.setSize(collider.height, collider.width)
+				this.sprite.collider.body.setOffset(-collider.offset.side, 0);
 			} else {
-				this.sprite.collider.body.setOffset(60, 0);
+				this.sprite.collider.body.setSize(collider.height, collider.width)
+				this.sprite.collider.body.setOffset(collider.offset.side, 0);
 			}
 		}
 		if (direction == "front") {
-			this.sprite.collider.body.setOffset(0, 80);
+			this.sprite.collider.body.setSize(collider.width, collider.height)
+			this.sprite.collider.body.setOffset(0, collider.offset.front);
         }
-        // set of the offset after getting weapon
-		// console.log(this.sprite.equipment.getItem("weapon"))
 	}
 
 	ResetColliderBox() {

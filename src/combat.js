@@ -10,7 +10,7 @@ export default class Combat {
             "animationupdate",
             (frame, index, key) => {
                 if (frame.key.includes("attack")) {
-                    if (index.progress == 0.50) {
+                    if (index.progress >= 0.50 && index.progress <= 0.60) {
                         // this is probably soo inefficient.....
                         this.scene.enemies.children.each(e => 
                             this.scene.physics.world.overlap(

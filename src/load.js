@@ -77,6 +77,12 @@ export default class LoadScene extends Phaser.Scene {
 			atlasURL: "assets/weapons/swords.json"
 		});
 
+		this.load.atlas({
+			key: "spears",
+			textureURL: "assets/weapons/spears.png",
+			atlasURL: "assets/weapons/spears.json"
+		});
+
 		// player animations
 		this.load.atlas({
 			key: "idle_front",

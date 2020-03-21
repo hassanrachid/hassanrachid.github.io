@@ -8,6 +8,7 @@ export default class Item extends Phaser.GameObjects.Sprite {
 		var image = GameScene.itemlist.items[config.name].image;
 		var type = GameScene.itemlist.items[config.name].type;
 		var attributes = GameScene.itemlist.items[config.name].attributes;
+		var collider = GameScene.itemlist.items[config.name].collider;
 		// initialize sprite...
 		super(config.scene, config.x, config.y, image, frame);
 
@@ -16,6 +17,8 @@ export default class Item extends Phaser.GameObjects.Sprite {
 		this.scene.add.existing(this);
 		// set name of item
 		this.name = config.name;
+		// size of hitbox of weapon
+		this.collider = collider;
 		// set attributes of item (for when we recreate items)
 		if (config.attributes == null) {
 			this.attributes = attributes;

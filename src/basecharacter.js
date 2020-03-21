@@ -18,8 +18,8 @@ export default class BaseCharacter extends Phaser.GameObjects.Sprite {
 
 		// weapon collider
 		this.collider = this.scene.physics.add.image();
-		this.collider.body.setCircle(60);
 		this.collider.setDebugBodyColor(0xffff00);
+		this.collider.setOrigin(1.5, 1.5);
 		this.container.add(this.collider);
 
 		// so the player cant go outside the world map
@@ -70,10 +70,6 @@ export default class BaseCharacter extends Phaser.GameObjects.Sprite {
 			if (this.statemachine.attacking) {
 				this.state = "AttackState";
 			}
-
-			if (!this.statemachine.attacking) {
-				this.centerBodyOnBody(this.collider.body, this.container.body);
-			}
 		}
 	}
 
@@ -108,6 +104,7 @@ export default class BaseCharacter extends Phaser.GameObjects.Sprite {
 	setDirection(direction) {
 		if (!this.statemachine.attacking) {
 			this.direction = direction;
+			this.statemachine.ResetColliderBox();
 		}
 	}
 }

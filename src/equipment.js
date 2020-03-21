@@ -82,7 +82,7 @@ export default class Equipment extends Phaser.GameObjects.Rectangle {
 			this.slots.push(this.slot);
 		}
 
-		this.addItem({ name: "Gold Sword", type: "weapon" })
+		this.addItem({ name: "Short Spear", type: "weapon" })
 	}
 
 	addItem(item) {
@@ -96,13 +96,19 @@ export default class Equipment extends Phaser.GameObjects.Rectangle {
 		})
 		this.item.tooltip.text = "Press [E] to Unequip";
 		this.item.setVisible(this.visible);
+
 		// if there was a previous item.. throw it back in the inventory
 		if (this.slots[this.types[item.type].id].item != undefined) {
 			this.player.inventory.addItem(this.slots[this.types[item.type].id].item);
-			// this.slots[this.types[this.item.type].id].item.destroy();
+		}
+		// set new item to correct slot
+		this.slots[this.types[this.item.type].id].item = this.item;
+
+		// if new item was a weapon, set collider box
+		if (this.getItem("weapon") != undefined) {
+			this.player.collider.body.setSize(this.getItem("weapon").collider.width, this.getItem("weapon").collider.height);
 		}
 
-		this.slots[this.types[this.item.type].id].item = this.item;
 		this.recalculateAttributes();
 	}
 
