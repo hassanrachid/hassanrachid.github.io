@@ -72,6 +72,13 @@ export default class LoadScene extends Phaser.Scene {
 		});
 
 		this.load.atlas({
+			key: "blood",
+			textureURL: "assets/particles/blood/blood.png",
+			atlasURL: "assets/particles/blood/blood.json"
+		});
+		this.load.text('bloodeffect', 'assets/particles/blood/bloodeffect.json');
+
+		this.load.atlas({
 			key: "swords",
 			textureURL: "assets/weapons/swords.png",
 			atlasURL: "assets/weapons/swords.json"

@@ -10,7 +10,8 @@ export default class Combat {
             "animationupdate",
             (frame, index, key) => {
                 if (frame.key.includes("attack")) {
-                    if (index.progress >= 0.50 && index.progress <= 0.60) {
+                    if (index.progress >= 0.50 && index.progress <= 0.55) {
+                        console.log(index.progress);
                         // this is probably soo inefficient.....
                         this.scene.enemies.children.each(e => 
                             this.scene.physics.world.overlap(
@@ -31,6 +32,7 @@ export default class Combat {
         var playerAttributes = o1.parentContainer.sprite.attributesWithEquipment;
         var enemyAttributes = o2.sprite.attributesWithEquipment;
 
+        // damage indicators
         var style = { font: "bold 24px Verdana", fill: '#FF0000', align: "center" };
         var text = o1.scene.add.text(o2.x - 5, o2.y, "-" + playerAttributes.strength, style);
         text.setOrigin(0.5);
@@ -40,6 +42,12 @@ export default class Combat {
                 text.destroy();
             }, callbackScope: this
         });
+
+        // play blood particles
+        var fn = new Function('return ' + o2.scene.cache.text.get('bloodeffect'))();
+        fn[0].x = o2.x;
+        fn[0].y = o2.y;
+        o2.scene.add.particles('blood', fn);
 
         o2.sprite.damage(playerAttributes.strength);
     }
