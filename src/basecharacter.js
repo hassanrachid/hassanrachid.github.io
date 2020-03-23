@@ -116,4 +116,16 @@ export default class BaseCharacter extends Phaser.GameObjects.Sprite {
 			this.statemachine.ResetColliderBox();
 		}
 	}
+
+	getDirection() {
+		if (this.direction == "side") {
+			if (this.container.sprite.flipX) {
+				return "right";
+			} else {
+				return "left";
+			}
+		} else {
+			return "front";
+		}
+	}
 }

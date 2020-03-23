@@ -37,7 +37,7 @@ export default class Combat {
 			targets: text,
 			duration: 300,
 			ease: "Cubic",
-			y: o2.y - (Math.random() + 75),
+			y: o2.y - (Math.random() * 75),
 			onComplete: () => {
 				text.destroy();
 			},
@@ -50,6 +50,19 @@ export default class Combat {
 		fn[0].y = o2.y;
 		o2.scene.add.particles('blood', fn);
 		o2.setDepth(1);
+
+		// o2 is the enemy
+		// apply knockback? depending on opposite direction I AM facing
+		// if im facing right, you wanna add x coordinate to enemy, if im facing left, subtract x coordinate
+		if (o1.parentContainer.sprite.getDirection() == "right") {
+			o2.x = o2.x + 25;
+		}
+		if (o1.parentContainer.sprite.getDirection() == "left") {
+			o2.x = o2.x - 25;
+		}
+		if (o1.parentContainer.sprite.getDirection() == "front") {
+			o2.y = o2.y + 25;
+		}
 
 		o2.sprite.damage(playerAttributes.strength);
 	}

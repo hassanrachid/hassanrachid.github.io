@@ -13,7 +13,6 @@ export default class StateMachine {
 				if (anim.key.includes("attack")) {
 					this.AdjustColliderBox(this.sprite.direction);
 					if (frame.isLast) {
-						this.ResetColliderBox();
 						this.attacking = false;
 					}
 				}
