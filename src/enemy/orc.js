@@ -1,4 +1,3 @@
-import HealthBar from "../healthbar";
 import BaseCharacter from "../basecharacter";
 import StateMachine from "../statemachine";
 
@@ -14,8 +13,8 @@ export default class Goblin extends BaseCharacter {
 		this.healthbar.offsety = -50;
 
 		this.statemachine = new StateMachine(this, this.scene);
-		this.agroRange = 250;
-
+		this.agroRange = 500;
+		this.container.immovable = false;
 	}
 
 	update() {
@@ -65,5 +64,15 @@ export default class Goblin extends BaseCharacter {
 		// 		this.state = "AttackState";
 		// 	}
 		// }
-	}	
+
+		if (this.container.body.velocity.x != 0 || this.container.body.velocity.y != 0) {
+			for (var i = 0; i < this.scene.enemies.children.entries.length; i++) {
+				this.scene.physics.world.overlap(this.container, this.scene.enemies.children.entries[i].container, this.handleCollision);
+			}
+		}
+	}
+
+	handleCollision() {
+
+	}
 }

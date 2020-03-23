@@ -12,7 +12,9 @@ export default class Combat {
 					if (index.progress >= 0.5 && index.progress <= 0.55) {
 						// this is probably soo inefficient.....
 						for (var i = 0; i < this.scene.enemies.children.entries.length; i++) {
-							this.scene.physics.world.collide(this.collider, this.scene.enemies.children.entries[i].container, this.Collision);
+							if (this.scene.physics.world.overlap(this.collider, this.scene.enemies.children.entries[i].container, this.Collision)) {
+								break;
+							}
 						}
 					}
 				}

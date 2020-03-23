@@ -131,7 +131,7 @@ export default class StateMachine {
 		if (direction == "side") {
 			if (!this.sprite.flipX) {
 				this.sprite.collider.body.setSize(collider.height, collider.width)
-				this.sprite.collider.body.setOffset(-collider.offset.side, 0);
+				this.sprite.collider.body.setOffset(-collider.offset.side - (collider.height - collider.width), 0);
 			} else {
 				this.sprite.collider.body.setSize(collider.height, collider.width)
 				this.sprite.collider.body.setOffset(collider.offset.side, 0);

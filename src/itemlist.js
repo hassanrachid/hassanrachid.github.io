@@ -9,8 +9,8 @@ export default class ItemList {
                 type: "weapon",
                 attributes: new Attributes({ health: 0, strength: 3, defense: 1, intelligence: 0, agility: 0 }),
                 collider: {
-                    width: 100,
-                    height: 100,
+                    width: 80,
+                    height: 80,
                     offset: {
                         front: 100,
                         side: 80
@@ -79,11 +79,11 @@ export default class ItemList {
                 type: "weapon",
                 attributes: new Attributes({ health: 21, strength: 54, defense: 8, intelligence: 0, agility: 0 }),
                 collider: {
-                    width: 100,
-                    height: 100,
+                    width: 60,
+                    height: 120,
                     offset: {
-                        front: 155,
-                        side: 135
+                        front: 130,
+                        side: 100
                     }
                 }
             }
