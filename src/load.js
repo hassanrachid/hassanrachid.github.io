@@ -53,6 +53,8 @@ export default class LoadScene extends Phaser.Scene {
 		});
 
 		this.load.image('tiles', 'assets/map/Tiles.png');
+		this.load.image('tree', 'assets/map/tree.png');
+
 		this.load.tilemapTiledJSON('map', 'assets/map/map.json');
 
 		this.load.image("inventorybackground", "assets/inventory/inventorybackground.png");

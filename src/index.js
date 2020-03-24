@@ -11,7 +11,7 @@ var config = {
 	disableContextMenu: true,
 	physics: {
 		default: "arcade",
-		arcade: { debug: false, gravity: { x: 0, y: 0 } }
+		arcade: { debug: true, gravity: { x: 0, y: 0 } }
 	},
 	backgroundColor: 0x666666,
 	width: 1600,

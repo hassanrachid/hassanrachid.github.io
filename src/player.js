@@ -16,7 +16,7 @@ export default class Player extends BaseCharacter {
 		this.statemachine = new StateMachine(this, this.scene);
 		this.healthbar.offsetx = 0;
 		this.healthbar.offsety = -60;
-
+		this.container.setDepth(999);
 		// this.ability = new Ability({
 		// 	scene: this.scene,
 		// 	x: 0,

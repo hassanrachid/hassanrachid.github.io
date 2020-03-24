@@ -12,13 +12,7 @@ export default class GameScene extends Phaser.Scene {
 	preload() {}
 
 	create() {
-		const map = this.make.tilemap({ key: "map" });
-		const tileset = map.addTilesetImage("Tiles", "tiles");
-		const groundLayer = map.createStaticLayer("Tile Layer 1", tileset, 0, 0);
-
-		this.physics.world.bounds.width = groundLayer.width;
-		this.physics.world.bounds.height = groundLayer.height;
-
+		
 		this.cursors = this.input.keyboard.addKeys({
 			left: "a",
 			right: "d",
@@ -34,8 +28,27 @@ export default class GameScene extends Phaser.Scene {
 			y: 0,
 			key: "warrior"
 		});
-		this.enemies = this.add.group();
+		
+		const map = this.make.tilemap({ key: "map" });
+		const tileset = map.addTilesetImage("Tiles", "tiles");
+		const groundLayer = map.createStaticLayer("Tile Layer 1", tileset, 0, 0);
+		const treeLayer = map.getObjectLayer("Trees")["objects"];
 
+		let trees = this.physics.add.staticGroup();
+		treeLayer.forEach(object => {
+			let obj = trees.create(object.x, object.y, "tree");
+			obj.body.width = object.width - 150;
+			obj.body.height = object.height - 150;
+			obj.body.x = obj.x - 50;
+			obj.setOrigin(0.5, 1);
+		});
+
+		this.physics.add.collider(this.player.container, trees, null)
+
+		this.physics.world.bounds.width = groundLayer.width;
+		this.physics.world.bounds.height = groundLayer.height;
+
+		this.enemies = this.add.group();
 		this.goblin = new Orc({
 			scene: this,
 			x: 300,
@@ -46,8 +59,6 @@ export default class GameScene extends Phaser.Scene {
 
 		this.cameras.main.setBounds(0, 0, 6400, 6400);
 		this.cameras.main.startFollow(this.player.container, true, 0.5, 0.5);
-
-		
 	}
 
 	update() {

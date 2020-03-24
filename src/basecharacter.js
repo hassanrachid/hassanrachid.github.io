@@ -15,15 +15,14 @@ export default class BaseCharacter extends Phaser.GameObjects.Sprite {
 		this.scene.physics.world.enable(this.container);
 		this.container.setScale(0.5);
   
-		var radius = this.width / 2;
-		this.container.body.setCircle(
-			radius,
-			(-radius + 0.5 * this.width),
-			(-radius + 0.5 * this.height)
-		);
+		// var radius = this.width / 2;
+		// this.container.body.setCircle(
+		// 	radius,
+		// 	(-radius + 0.5 * this.width),
+		// 	(-radius + 0.5 * this.height)
+		// );
  
 		this.container.sprite = this;
-
 		// weapon collider
 		this.collider = this.scene.physics.add.image();
 		this.collider.setDebugBodyColor(0xffff00);
