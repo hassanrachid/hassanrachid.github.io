@@ -1,6 +1,6 @@
 import Player from "./player";
 import Orc from "./enemy/orc";
-import ItemList from './itemlist';
+import ItemList from "./itemlist";
 
 export default class GameScene extends Phaser.Scene {
 	constructor() {
@@ -9,9 +9,16 @@ export default class GameScene extends Phaser.Scene {
 		});
 	}
 
-	preload() { }
+	preload() {}
 
 	create() {
+		const map = this.make.tilemap({ key: "map" });
+		const tileset = map.addTilesetImage("Tiles", "tiles");
+		const groundLayer = map.createStaticLayer("Tile Layer 1", tileset, 0, 0);
+
+		this.physics.world.bounds.width = groundLayer.width;
+		this.physics.world.bounds.height = groundLayer.height;
+
 		this.cursors = this.input.keyboard.addKeys({
 			left: "a",
 			right: "d",
@@ -29,7 +36,6 @@ export default class GameScene extends Phaser.Scene {
 		});
 		this.enemies = this.add.group();
 
-
 		this.goblin = new Orc({
 			scene: this,
 			x: 300,
@@ -37,6 +43,11 @@ export default class GameScene extends Phaser.Scene {
 			key: "orc"
 		});
 		this.enemies.add(this.goblin);
+
+		this.cameras.main.setBounds(0, 0, 6400, 6400);
+		this.cameras.main.startFollow(this.player.container, true, 0.5, 0.5);
+
+		
 	}
 
 	update() {

@@ -52,6 +52,9 @@ export default class LoadScene extends Phaser.Scene {
 			this.scene.launch("InterfaceScene");
 		});
 
+		this.load.image('tiles', 'assets/map/Tiles.png');
+		this.load.tilemapTiledJSON('map', 'assets/map/map.json');
+
 		this.load.image("inventorybackground", "assets/inventory/inventorybackground.png");
 		this.load.image("inventory", "assets/utilityicons/1.png");
 		this.load.image("abilities", "assets/utilityicons/2.png");
@@ -298,5 +301,7 @@ export default class LoadScene extends Phaser.Scene {
 			frameRate: 30,
 			repeat: 0
 		});
-	}
+
+		
+	}	
 }
