@@ -67,6 +67,9 @@ export default class LoadScene extends Phaser.Scene {
 
 		this.load.image("equipmentframe", "assets/inventory/equipmentinterface.png");
 
+		// misc items
+		this.load.image("wood_cut", "assets/misc items/wood_cut.png");
+
 		this.load.image("warrior", "assets/warrior.png");
 		this.load.image("orc", "assets/orc.png");
 
@@ -249,6 +252,13 @@ export default class LoadScene extends Phaser.Scene {
 			textureURL: "assets/enemy/orc/walk_front/spritesheet.png",
 			atlasURL: "assets/enemy/orc/walk_front/spritesheet.json"
 		});
+
+		// tree animation
+		this.load.atlas({
+			key: "tree_cut",
+			textureURL: "assets/animations/treecut/spritesheet.png",
+			atlasURL: "assets/animations/treecut/spritesheet.json"
+		});
 	}
 
 	create() {
@@ -425,6 +435,12 @@ export default class LoadScene extends Phaser.Scene {
 			repeat: 0
 		});
 
-		
+		// tree animations
+		this.anims.create({
+			key: "tree_cut",
+			frames: this.anims.generateFrameNames("tree_cut"),
+			frameRate: 30,
+			repeat: 0
+		});
 	}	
 }

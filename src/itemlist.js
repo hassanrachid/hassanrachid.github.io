@@ -157,6 +157,14 @@ export default class ItemList {
                     }
                 }
             },
+            'Wood': {
+                image: null,
+                frame: "wood_cut",
+                type: "misc",
+                stackable: true,
+                maxStackSize: 64,
+                description: "A piece of wood"
+            },
         }
     }
 }

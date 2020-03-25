@@ -15,7 +15,6 @@ export default class ItemTooltip extends Phaser.GameObjects.Text {
 		this.show(false);
 
 		this.item.on("pointerover", (pointer) => {
-			console.log(this.item);
 			this.show(true, pointer.x, pointer.y);
 		});
 

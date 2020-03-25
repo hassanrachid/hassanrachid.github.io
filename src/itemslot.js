@@ -6,12 +6,14 @@ export default class ItemSlot extends Phaser.GameObjects.Rectangle {
 
         this.scene.add.existing(this.image);
 
+
         this.on('pointerover', () => {
             this.image.tint = 0x00FF00;
         })
         this.on('pointerout', () => {
             this.image.clearTint();
         })
+        
         this.scene.children.bringToTop(this);
     }
 }

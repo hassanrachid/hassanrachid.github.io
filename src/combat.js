@@ -28,21 +28,6 @@ export default class Combat {
 		var weapon = o1.parentContainer.sprite.equipment.getItem("weapon").name;
 		if (weapon.includes("Axe")) {
 			o2.damage(50);
-			o2.scene.tweens.add({
-				targets: o2,
-				onStart: function () {
-					o2.setTint(16711680)
-				},
-				onComplete: function () {
-					o2.clearTint()
-				},
-				duration: 50,
-				ease: "Cubic",
-				x: o2.x - Math.floor(-20 + Math.random() * (20 + 1 - (-20))),
-				y: o2.y - Math.random() * 10,
-				yoyo: true,
-				callbackScope: this
-			});
 		}
 	}
 
