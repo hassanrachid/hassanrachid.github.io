@@ -82,6 +82,8 @@ export default class LoadScene extends Phaser.Scene {
 			atlasURL: "assets/particles/blood/blood.json"
 		});
 		this.load.text('bloodeffect', 'assets/particles/blood/bloodeffect.json');
+		this.load.text('treehit', 'assets/particles/tree/treehit.json');
+
 
 		this.load.atlas({
 			key: "swords",
@@ -93,6 +95,12 @@ export default class LoadScene extends Phaser.Scene {
 			key: "spears",
 			textureURL: "assets/weapons/spears.png",
 			atlasURL: "assets/weapons/spears.json"
+		});
+
+		this.load.atlas({
+			key: "axes",
+			textureURL: "assets/weapons/axes.png",
+			atlasURL: "assets/weapons/axes.json"
 		});
 
 		// player animations
@@ -121,6 +129,7 @@ export default class LoadScene extends Phaser.Scene {
 			textureURL: "assets/warrior/attack_front/spritesheet.png",
 			atlasURL: "assets/warrior/attack_front/spritesheet.json"
 		});
+		
 		this.load.atlas({
 			key: "attack_front_Short Sword",
 			textureURL: "assets/warrior/attack_front/Short Sword/spritesheet.png",
@@ -140,6 +149,37 @@ export default class LoadScene extends Phaser.Scene {
 			key: "attack_front_Short Spear",
 			textureURL: "assets/warrior/attack_front/Short Spear/spritesheet.png",
 			atlasURL: "assets/warrior/attack_front/Short Spear/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Iron Axe",
+			textureURL: "assets/warrior/attack_front/Iron Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Iron Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Steel Axe",
+			textureURL: "assets/warrior/attack_front/Steel Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Steel Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Silver Axe",
+			textureURL: "assets/warrior/attack_front/Silver Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Silver Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Hardened Axe",
+			textureURL: "assets/warrior/attack_front/Hardened Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Hardened Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Platinum Axe",
+			textureURL: "assets/warrior/attack_front/Platinum Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Platinum Axe/spritesheet.json"
+		});
+
+		this.load.atlas({
+			key: "attack_side_Default",
+			textureURL: "assets/warrior/attack_side/Default/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Default/spritesheet.json"
 		});
 		this.load.atlas({
 			key: "attack_side_Short Sword",
@@ -162,10 +202,31 @@ export default class LoadScene extends Phaser.Scene {
 			atlasURL: "assets/warrior/attack_side/Short Spear/spritesheet.json"
 		});
 		this.load.atlas({
-			key: "attack_side_Default",
-			textureURL: "assets/warrior/attack_side/Default/spritesheet.png",
-			atlasURL: "assets/warrior/attack_side/Default/spritesheet.json"
+			key: "attack_side_Iron Axe",
+			textureURL: "assets/warrior/attack_side/Iron Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Iron Axe/spritesheet.json"
 		});
+		this.load.atlas({
+			key: "attack_side_Steel Axe",
+			textureURL: "assets/warrior/attack_side/Steel Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Steel Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Silver Axe",
+			textureURL: "assets/warrior/attack_side/Silver Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Silver Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Hardened Axe",
+			textureURL: "assets/warrior/attack_side/Hardened Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Hardened Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Platinum Axe",
+			textureURL: "assets/warrior/attack_side/Platinum Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Platinum Axe/spritesheet.json"
+		});
+		
 
 		// orc animations..
 		this.load.atlas({
@@ -247,6 +308,36 @@ export default class LoadScene extends Phaser.Scene {
 			repeat: 0,
 		});
 		this.anims.create({
+			key: "attack_front_Iron Axe",
+			frames: this.anims.generateFrameNames("attack_front_Iron Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_front_Steel Axe",
+			frames: this.anims.generateFrameNames("attack_front_Steel Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_front_Silver Axe",
+			frames: this.anims.generateFrameNames("attack_front_Silver Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_front_Hardened Axe",
+			frames: this.anims.generateFrameNames("attack_front_Hardened Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_front_Platinum Axe",
+			frames: this.anims.generateFrameNames("attack_front_Platinum Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
 			key: "attack_side_Short Sword",
 			frames: this.anims.generateFrameNames("attack_side_Short Sword"),
 			frameRate: 60,
@@ -269,6 +360,36 @@ export default class LoadScene extends Phaser.Scene {
 			frames: this.anims.generateFrameNames("attack_side_Short Spear"),
 			frameRate: 60,
 			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_side_Iron Axe",
+			frames: this.anims.generateFrameNames("attack_side_Iron Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_side_Steel Axe",
+			frames: this.anims.generateFrameNames("attack_side_Steel Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_side_Silver Axe",
+			frames: this.anims.generateFrameNames("attack_side_Silver Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_side_Hardened Axe",
+			frames: this.anims.generateFrameNames("attack_side_Hardened Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_side_Platinum Axe",
+			frames: this.anims.generateFrameNames("attack_side_Platinum Axe"),
+			frameRate: 60,
+			repeat: 0,
 		});
 		this.anims.create({
 			key: "attack_side_Default",

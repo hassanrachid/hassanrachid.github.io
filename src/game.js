@@ -1,6 +1,7 @@
 import Player from "./player";
 import Orc from "./enemy/orc";
 import ItemList from "./itemlist";
+import Tree from "./tree";
 
 export default class GameScene extends Phaser.Scene {
 	constructor() {
@@ -12,7 +13,6 @@ export default class GameScene extends Phaser.Scene {
 	preload() {}
 
 	create() {
-		
 		this.cursors = this.input.keyboard.addKeys({
 			left: "a",
 			right: "d",
@@ -28,41 +28,33 @@ export default class GameScene extends Phaser.Scene {
 			y: 0,
 			key: "warrior"
 		});
-		
+
 		const map = this.make.tilemap({ key: "map" });
 		const tileset = map.addTilesetImage("Tiles", "tiles");
 		const groundLayer = map.createStaticLayer("Tile Layer 1", tileset, 0, 0);
 		const treeLayer = map.getObjectLayer("Trees")["objects"];
 
-		let trees = this.physics.add.staticGroup();
+		this.trees = this.physics.add.staticGroup();
 		treeLayer.forEach(object => {
-			let obj = trees.create(object.x, object.y, "tree");
-			obj.body.width = object.width - 150;
-			obj.body.height = object.height - 150;
-			obj.body.x = obj.x - 50;
-			obj.setOrigin(0.5, 1);
+			let obj = new Tree({scene: this, x: object.x, y: object.y, width: object.width, height: object.height, key: "tree"});
+			this.trees.add(obj, true);
+			obj.setBounds();
 		});
 
-		this.physics.add.collider(this.player.container, trees, null)
+		this.physics.add.collider(this.player.container, this.trees, null);
 
 		this.physics.world.bounds.width = groundLayer.width;
 		this.physics.world.bounds.height = groundLayer.height;
 
 		this.enemies = this.add.group();
-		this.goblin = new Orc({
-			scene: this,
-			x: 300,
-			y: 300,
-			key: "orc"
-		});
-		this.enemies.add(this.goblin);
 
 		this.cameras.main.setBounds(0, 0, 6400, 6400);
-		this.cameras.main.startFollow(this.player.container, true, 0.5, 0.5);
+		this.cameras.main.startFollow(this.player.container, true, 1, 1);
 	}
 
 	update() {
 		this.player.update(this.cursors);
 		this.enemies.getChildren().forEach(c => c.update());
+		this.trees.getChildren().forEach(c => c.update());
 	}
 }

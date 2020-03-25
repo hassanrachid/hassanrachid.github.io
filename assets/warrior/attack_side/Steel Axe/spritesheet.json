@@ -1,0 +1,415 @@
+{
+	"frames": {
+		"SteelAxe_000.png": {
+			"frame": {
+				"x": 16,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_001.png": {
+			"frame": {
+				"x": 346,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_002.png": {
+			"frame": {
+				"x": 676,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_003.png": {
+			"frame": {
+				"x": 16,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_004.png": {
+			"frame": {
+				"x": 346,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_005.png": {
+			"frame": {
+				"x": 676,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_006.png": {
+			"frame": {
+				"x": 16,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_007.png": {
+			"frame": {
+				"x": 346,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_008.png": {
+			"frame": {
+				"x": 676,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_009.png": {
+			"frame": {
+				"x": 16,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_010.png": {
+			"frame": {
+				"x": 346,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_011.png": {
+			"frame": {
+				"x": 676,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_012.png": {
+			"frame": {
+				"x": 16,
+				"y": 948,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_013.png": {
+			"frame": {
+				"x": 346,
+				"y": 948,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_014.png": {
+			"frame": {
+				"x": 676,
+				"y": 948,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_015.png": {
+			"frame": {
+				"x": 1006,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_016.png": {
+			"frame": {
+				"x": 1006,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_017.png": {
+			"frame": {
+				"x": 1006,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_018.png": {
+			"frame": {
+				"x": 1006,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelAxe_019.png": {
+			"frame": {
+				"x": 1006,
+				"y": 948,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 1320,
+			"h": 1165
+		},
+		"scale": "1"
+	}
+}

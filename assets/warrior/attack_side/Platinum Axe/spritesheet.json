@@ -1,0 +1,415 @@
+{
+	"frames": {
+		"PlatinumAxe_000.png": {
+			"frame": {
+				"x": 16,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_001.png": {
+			"frame": {
+				"x": 346,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_002.png": {
+			"frame": {
+				"x": 676,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_003.png": {
+			"frame": {
+				"x": 16,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_004.png": {
+			"frame": {
+				"x": 346,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_005.png": {
+			"frame": {
+				"x": 676,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_006.png": {
+			"frame": {
+				"x": 16,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_007.png": {
+			"frame": {
+				"x": 346,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_008.png": {
+			"frame": {
+				"x": 676,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_009.png": {
+			"frame": {
+				"x": 16,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_010.png": {
+			"frame": {
+				"x": 346,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_011.png": {
+			"frame": {
+				"x": 676,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_012.png": {
+			"frame": {
+				"x": 16,
+				"y": 948,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_013.png": {
+			"frame": {
+				"x": 346,
+				"y": 948,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_014.png": {
+			"frame": {
+				"x": 676,
+				"y": 948,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_015.png": {
+			"frame": {
+				"x": 1006,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_016.png": {
+			"frame": {
+				"x": 1006,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_017.png": {
+			"frame": {
+				"x": 1006,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_018.png": {
+			"frame": {
+				"x": 1006,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"PlatinumAxe_019.png": {
+			"frame": {
+				"x": 1006,
+				"y": 948,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 1320,
+			"h": 1165
+		},
+		"scale": "1"
+	}
+}

@@ -27,7 +27,7 @@ export default class BaseCharacter extends Phaser.GameObjects.Sprite {
 		this.collider = this.scene.physics.add.image();
 		this.collider.setDebugBodyColor(0xffff00);
 		this.collider.setImmovable(true);
-		this.collider.setOrigin(1, 1);
+		this.collider.setOrigin(1.5, 0.5);
 		this.container.add(this.collider);
 
 		// so the player cant go outside the world map

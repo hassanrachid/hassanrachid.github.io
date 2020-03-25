@@ -39,7 +39,12 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 		}
 
 
-		this.addItem({ name: "Short Sword" });
+		this.addItem({ name: "Iron Axe" });
+		this.addItem({ name: "Steel Axe" });
+		this.addItem({ name: "Silver Axe" });
+		this.addItem({ name: "Hardened Axe" });
+		this.addItem({ name: "Platinum Axe" });
+
 		this.handleEvents();
 
 	}

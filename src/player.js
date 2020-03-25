@@ -53,21 +53,21 @@ export default class Player extends BaseCharacter {
 			this.container.body.setVelocity(0);
 
 			// face to the right if pointer is right of player
-			if (this.scene.input.activePointer.position.x >= this.container.x) {
+			if (this.scene.input.activePointer.worldX >= this.container.x) {
 				super.setDirection("side");
 				if (!this.flipX) {
 					this.flipX = true;
 				}
 			}
 			// face to the left if pointer is left of player
-			if (this.scene.input.activePointer.position.x <= this.container.x) {
+			if (this.scene.input.activePointer.worldX <= this.container.x) {
 				super.setDirection("side");
 				if (this.flipX) {
 					this.flipX = false;
 				}
 			}
 			// face front if pointer is under player
-			if (this.scene.input.activePointer.position.y >= this.container.y + 80) {
+			if (this.scene.input.activePointer.worldY >= this.container.y + 80) {
 				super.setDirection("front");
 			}
 

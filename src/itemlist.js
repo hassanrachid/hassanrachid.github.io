@@ -9,11 +9,11 @@ export default class ItemList {
                 type: "weapon",
                 attributes: new Attributes({ health: 0, strength: 3, defense: 1, intelligence: 0, agility: 0 }),
                 collider: {
-                    width: 80,
-                    height: 80,
+                    width: 120,
+                    height: 120,
                     offset: {
-                        front: 100,
-                        side: 80
+                        front: 60,
+                        side: 60
                     }
                 }
             },
@@ -79,14 +79,84 @@ export default class ItemList {
                 type: "weapon",
                 attributes: new Attributes({ health: 21, strength: 54, defense: 8, intelligence: 0, agility: 0 }),
                 collider: {
-                    width: 60,
+                    width: 120,
                     height: 120,
                     offset: {
                         front: 130,
                         side: 100
                     }
                 }
-            }
+            },
+            'Iron Axe': {
+                image: "axes",
+                frame: "IronAxe",
+                type: "weapon",
+                attributes: new Attributes({ health: 0, strength: 3, defense: 1, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 60,
+                        side: 60
+                    }
+                }
+            },
+            'Steel Axe': {
+                image: "axes",
+                frame: "SteelAxe",
+                type: "weapon",
+                attributes: new Attributes({ health: 0, strength: 3, defense: 1, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 60,
+                        side: 60
+                    }
+                }
+            },
+            'Silver Axe': {
+                image: "axes",
+                frame: "SilverAxe",
+                type: "weapon",
+                attributes: new Attributes({ health: 0, strength: 3, defense: 1, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 60,
+                        side: 60
+                    }
+                }
+            },
+            'Hardened Axe': {
+                image: "axes",
+                frame: "HardenedAxe",
+                type: "weapon",
+                attributes: new Attributes({ health: 0, strength: 3, defense: 1, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 60,
+                        side: 60
+                    }
+                }
+            },
+            'Platinum Axe': {
+                image: "axes",
+                frame: "PlatinumAxe",
+                type: "weapon",
+                attributes: new Attributes({ health: 0, strength: 3, defense: 1, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 60,
+                        side: 60
+                    }
+                }
+            },
         }
     }
 }

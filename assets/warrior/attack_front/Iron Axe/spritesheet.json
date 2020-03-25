@@ -1,0 +1,415 @@
+{
+	"frames": {
+		"IronAxe_000.png": {
+			"frame": {
+				"x": 16,
+				"y": 16,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_001.png": {
+			"frame": {
+				"x": 329,
+				"y": 16,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_002.png": {
+			"frame": {
+				"x": 642,
+				"y": 16,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_003.png": {
+			"frame": {
+				"x": 955,
+				"y": 16,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_004.png": {
+			"frame": {
+				"x": 16,
+				"y": 394,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_005.png": {
+			"frame": {
+				"x": 329,
+				"y": 394,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_006.png": {
+			"frame": {
+				"x": 642,
+				"y": 394,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_007.png": {
+			"frame": {
+				"x": 955,
+				"y": 394,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_008.png": {
+			"frame": {
+				"x": 16,
+				"y": 772,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_009.png": {
+			"frame": {
+				"x": 329,
+				"y": 772,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_010.png": {
+			"frame": {
+				"x": 642,
+				"y": 772,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_011.png": {
+			"frame": {
+				"x": 955,
+				"y": 772,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_012.png": {
+			"frame": {
+				"x": 16,
+				"y": 1150,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_013.png": {
+			"frame": {
+				"x": 329,
+				"y": 1150,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_014.png": {
+			"frame": {
+				"x": 642,
+				"y": 1150,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_015.png": {
+			"frame": {
+				"x": 955,
+				"y": 1150,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_016.png": {
+			"frame": {
+				"x": 1268,
+				"y": 16,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_017.png": {
+			"frame": {
+				"x": 1268,
+				"y": 394,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_018.png": {
+			"frame": {
+				"x": 1268,
+				"y": 772,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		},
+		"IronAxe_019.png": {
+			"frame": {
+				"x": 1268,
+				"y": 1150,
+				"w": 281,
+				"h": 346
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 281,
+				"h": 346
+			},
+			"sourceSize": {
+				"w": 281,
+				"h": 346
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 1565,
+			"h": 1512
+		},
+		"scale": "1"
+	}
+}
