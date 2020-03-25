@@ -12,6 +12,7 @@ export default class Tree extends Phaser.GameObjects.Sprite {
 		this.collider.setDebugBodyColor(0xffff00);
 		this.collider.setImmovable(true);
 		this.collider.sprite = this;
+		this.tween = null;
 		this.setDepth(9999);
 
 		this.health = 100;
@@ -23,6 +24,11 @@ export default class Tree extends Phaser.GameObjects.Sprite {
 			this.alpha = 0.5;
 		} else {
 			this.alpha = 0.8;
+		}
+
+		if (this.tween != null && this.tween.isPlaying()) {
+			this.tween.data[2].end = this.scene.player.container.y;
+			this.tween.data[3].end = this.scene.player.container.x;
 		}
 	}
 
@@ -36,7 +42,7 @@ export default class Tree extends Phaser.GameObjects.Sprite {
 	setStumpBounds() {
 		this.body.height = this.height - 220;
 		this.body.y = this.y + 70;
-		this.collider.width = this.body.width;
+		this.collider.width = this.body.width - 50;
 	}
 
 	damage(damage) {
@@ -58,24 +64,27 @@ export default class Tree extends Phaser.GameObjects.Sprite {
 				callbackScope: this
 			});
 			if (this.health <= 0) {
-                this.cut = true;
+				this.cut = true;
 				this.setStumpBounds();
-				this.icon = this.scene.add.image(this.x, this.y, "wood_cut");
-				this.scene.tweens.add({
+				this.icon = this.scene.add.image(this.x - Math.floor(-50 + Math.random() * (50 + 1 - -50)), this.y - Math.random() * 50, "wood_cut");
+				this.tween = this.scene.tweens.add({
 					targets: this.icon,
-					duration: 800,
+					duration: 700,
 					alpha: 1,
-					ease: "Linear",
-					onStart: function() {
+					scale: "-=1",
+					ease: "Power3",
+					onStart: function(tween, targets) {
 						this.icon.alpha = 0;
 						this.anims.play("tree_cut", true);
-                    },
-                    completeDelay: 300,
+						this.icon.setDepth(9999);
+					},
+					completeDelay: 100,
 					onComplete: function() {
 						this.icon.destroy();
 					},
-					y: this.y - 100,
-					repeat: 0,
+					y: this.scene.player.container.y,
+					x: this.scene.player.container.x,
+					repeat: 2,
 					callbackScope: this
 				});
 			}

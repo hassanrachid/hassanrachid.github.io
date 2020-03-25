@@ -55,6 +55,8 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 			for (var y = 0; y < this.cols; y++) {
 				if (this.slotArray[y][x].item != undefined && this.slotArray[y][x].item.stackable && item.stackable && this.slotArray[y][x].item.name == item.name) {
 					this.slotArray[y][x].item.quantity += item.quantity;
+					item.destroy();
+					item.text.destroy();
 					return;
 				}
 				if (this.slotArray[y][x].item == undefined) {
