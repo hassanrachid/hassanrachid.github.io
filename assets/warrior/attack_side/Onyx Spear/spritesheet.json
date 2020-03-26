@@ -1,0 +1,255 @@
+{
+	"frames": {
+		"OnyxSpear_000.png": {
+			"frame": {
+				"x": 16,
+				"y": 16,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_001.png": {
+			"frame": {
+				"x": 441,
+				"y": 16,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_002.png": {
+			"frame": {
+				"x": 16,
+				"y": 249,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_003.png": {
+			"frame": {
+				"x": 441,
+				"y": 249,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_004.png": {
+			"frame": {
+				"x": 16,
+				"y": 482,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_005.png": {
+			"frame": {
+				"x": 441,
+				"y": 482,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_006.png": {
+			"frame": {
+				"x": 16,
+				"y": 715,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_007.png": {
+			"frame": {
+				"x": 441,
+				"y": 715,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_008.png": {
+			"frame": {
+				"x": 866,
+				"y": 16,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_009.png": {
+			"frame": {
+				"x": 866,
+				"y": 249,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_010.png": {
+			"frame": {
+				"x": 866,
+				"y": 482,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		},
+		"OnyxSpear_011.png": {
+			"frame": {
+				"x": 866,
+				"y": 715,
+				"w": 393,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 393,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 393,
+				"h": 201
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 1275,
+			"h": 932
+		},
+		"scale": "1"
+	}
+}

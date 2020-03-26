@@ -30,14 +30,21 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 			}
 		}
 
+		this.addItem({ name: "Short Spear" });
+		this.addItem({ name: "Iron Spear" });
+		this.addItem({ name: "Steel Spear" });
+		this.addItem({ name: "Hardened Spear" });
+		this.addItem({ name: "Onyx Spear" });
+		this.addItem({ name: "Short Sword" });
+		this.addItem({ name: "Iron Sword" });
+		this.addItem({ name: "Gold Sword" });
+		this.addItem({ name: "Steel Sword" });
+		this.addItem({ name: "Silverlight" });
 		this.addItem({ name: "Iron Axe" });
 		this.addItem({ name: "Steel Axe" });
 		this.addItem({ name: "Silver Axe" });
 		this.addItem({ name: "Hardened Axe" });
 		this.addItem({ name: "Platinum Axe" });
-		this.addItem({ name: "Wood", quantity: 1 });
-		this.addItem({ name: "Wood", quantity: 6 });
-		this.addItem({ name: "Wood", quantity: 1 });
 
 		this.handleEvents();
 	}
@@ -75,6 +82,7 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 						this.slotArray[y][x].item = item;
 						item.x = this.slotArray[y][x].x;
 						item.y = this.slotArray[y][x].y;
+						item.setTextPosition(item.x, item.y);
 						return;
 					}
 				}
@@ -103,8 +111,8 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 				var item = this.gamescene.player.inventory.getSlot(pointer.x, pointer.y).item;
 				if (item && item.type != "misc") {
 					// equip item
-					this.gamescene.player.equipment.addItem(item);
 					this.removeItem(item);
+					this.gamescene.player.equipment.addItem(item);
 				}
 			}
 		});

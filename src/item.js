@@ -60,6 +60,7 @@ export default class Item extends Phaser.GameObjects.Sprite {
 	}
 
 	setTextPosition(x, y) {
+		this.text.setVisible(true);
 		this.text.text = this.quantity;
 		this.text.x = x - 30;
 		this.text.y = y - 33;

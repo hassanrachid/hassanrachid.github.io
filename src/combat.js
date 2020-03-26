@@ -41,11 +41,12 @@ export default class Combat {
 		var style = { font: "bold 24px Verdana", fill: "#FF0000", align: "center" };
 		var text = o1.scene.add.text(o2.x - 5, o2.y, "-" + playerAttributes.strength, style);
 		text.setOrigin(0.5);
+		text.setDepth(99999);
 		o1.scene.tweens.add({
 			targets: text,
 			duration: 300,
 			ease: "Cubic",
-			y: o2.y - Math.random() * 75,
+			y: o2.y - 50,
 			onComplete: () => {
 				text.destroy();
 			},

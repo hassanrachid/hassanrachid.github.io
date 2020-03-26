@@ -108,7 +108,6 @@ export default class StateMachine {
 
 	AttackState() {
 		if (this.sprite.equipment) {
-			this.sprite.anims.setTimeScale(0.75);
 			this.sprite.anims.play("attack_" + this.sprite.direction + "_" + this.sprite.equipment.getItem("weapon").name, true);
 		}
 	}

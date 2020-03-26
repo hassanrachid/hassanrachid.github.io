@@ -97,7 +97,6 @@ export default class Equipment extends Phaser.GameObjects.Rectangle {
 		this.item.tooltip.text = "Press [E] to Unequip";
 		this.item.setVisible(this.visible);
 		this.item.text.setVisible(false);
-		this.item.setInteractive(false);
 
 		// if there was a previous item.. throw it back in the inventory
 		if (this.slots[this.types[item.type].id].item != undefined) {

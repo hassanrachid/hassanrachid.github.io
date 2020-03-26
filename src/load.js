@@ -149,9 +149,39 @@ export default class LoadScene extends Phaser.Scene {
 			atlasURL: "assets/warrior/attack_front/Iron Sword/spritesheet.json"
 		});
 		this.load.atlas({
+			key: "attack_front_Steel Sword",
+			textureURL: "assets/warrior/attack_front/Steel Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Steel Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Silverlight",
+			textureURL: "assets/warrior/attack_front/Silverlight/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Silverlight/spritesheet.json"
+		});
+		this.load.atlas({
 			key: "attack_front_Short Spear",
 			textureURL: "assets/warrior/attack_front/Short Spear/spritesheet.png",
 			atlasURL: "assets/warrior/attack_front/Short Spear/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Iron Spear",
+			textureURL: "assets/warrior/attack_front/Iron Spear/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Iron Spear/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Steel Spear",
+			textureURL: "assets/warrior/attack_front/Steel Spear/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Steel Spear/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Hardened Spear",
+			textureURL: "assets/warrior/attack_front/Hardened Spear/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Hardened Spear/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_front_Onyx Spear",
+			textureURL: "assets/warrior/attack_front/Onyx Spear/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Onyx Spear/spritesheet.json"
 		});
 		this.load.atlas({
 			key: "attack_front_Iron Axe",
@@ -200,9 +230,39 @@ export default class LoadScene extends Phaser.Scene {
 			atlasURL: "assets/warrior/attack_side/Gold Sword/spritesheet.json"
 		});
 		this.load.atlas({
+			key: "attack_side_Steel Sword",
+			textureURL: "assets/warrior/attack_side/Steel Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Steel Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Silverlight",
+			textureURL: "assets/warrior/attack_side/Silverlight/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Silverlight/spritesheet.json"
+		});
+		this.load.atlas({
 			key: "attack_side_Short Spear",
 			textureURL: "assets/warrior/attack_side/Short Spear/spritesheet.png",
 			atlasURL: "assets/warrior/attack_side/Short Spear/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Iron Spear",
+			textureURL: "assets/warrior/attack_side/Iron Spear/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Iron Spear/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Steel Spear",
+			textureURL: "assets/warrior/attack_side/Steel Spear/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Steel Spear/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Hardened Spear",
+			textureURL: "assets/warrior/attack_side/Hardened Spear/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Hardened Spear/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_side_Onyx Spear",
+			textureURL: "assets/warrior/attack_side/Onyx Spear/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Onyx Spear/spritesheet.json"
 		});
 		this.load.atlas({
 			key: "attack_side_Iron Axe",
@@ -312,8 +372,44 @@ export default class LoadScene extends Phaser.Scene {
 			repeat: 0
 		});
 		this.anims.create({
+			key: "attack_front_Steel Sword",
+			frames: this.anims.generateFrameNames("attack_front_Steel Sword"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_front_Silverlight",
+			frames: this.anims.generateFrameNames("attack_front_Silverlight"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
 			key: "attack_front_Short Spear",
 			frames: this.anims.generateFrameNames("attack_front_Short Spear"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_front_Iron Spear",
+			frames: this.anims.generateFrameNames("attack_front_Iron Spear"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_front_Steel Spear",
+			frames: this.anims.generateFrameNames("attack_front_Steel Spear"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_front_Hardened Spear",
+			frames: this.anims.generateFrameNames("attack_front_Hardened Spear"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_front_Onyx Spear",
+			frames: this.anims.generateFrameNames("attack_front_Onyx Spear"),
 			frameRate: 60,
 			repeat: 0,
 		});
@@ -366,8 +462,44 @@ export default class LoadScene extends Phaser.Scene {
 			repeat: 0
 		});
 		this.anims.create({
+			key: "attack_side_Steel Sword",
+			frames: this.anims.generateFrameNames("attack_side_Steel Sword"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_side_Silverlight",
+			frames: this.anims.generateFrameNames("attack_side_Silverlight"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
 			key: "attack_side_Short Spear",
 			frames: this.anims.generateFrameNames("attack_side_Short Spear"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_side_Iron Spear",
+			frames: this.anims.generateFrameNames("attack_side_Iron Spear"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_side_Steel Spear",
+			frames: this.anims.generateFrameNames("attack_side_Steel Spear"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_side_Hardened Spear",
+			frames: this.anims.generateFrameNames("attack_side_Hardened Spear"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_side_Onyx Spear",
+			frames: this.anims.generateFrameNames("attack_side_Onyx Spear"),
 			frameRate: 60,
 			repeat: 0
 		});

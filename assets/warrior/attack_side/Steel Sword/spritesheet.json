@@ -1,0 +1,255 @@
+{
+	"frames": {
+		"SteelSword_000.png": {
+			"frame": {
+				"x": 16,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_001.png": {
+			"frame": {
+				"x": 346,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_002.png": {
+			"frame": {
+				"x": 16,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_003.png": {
+			"frame": {
+				"x": 346,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_004.png": {
+			"frame": {
+				"x": 16,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_005.png": {
+			"frame": {
+				"x": 346,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_006.png": {
+			"frame": {
+				"x": 16,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_007.png": {
+			"frame": {
+				"x": 346,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_008.png": {
+			"frame": {
+				"x": 676,
+				"y": 16,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_009.png": {
+			"frame": {
+				"x": 676,
+				"y": 249,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_010.png": {
+			"frame": {
+				"x": 676,
+				"y": 482,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		},
+		"SteelSword_011.png": {
+			"frame": {
+				"x": 676,
+				"y": 715,
+				"w": 298,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 298,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 298,
+				"h": 201
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 990,
+			"h": 932
+		},
+		"scale": "1"
+	}
+}

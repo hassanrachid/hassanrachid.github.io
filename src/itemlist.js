@@ -87,6 +87,62 @@ export default class ItemList {
                     }
                 }
             },
+            'Iron Spear': {
+                image: "spears",
+                frame: "IronSpear",
+                type: "weapon",
+                attributes: new Attributes({ health: 21, strength: 54, defense: 8, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 130,
+                        side: 100
+                    }
+                }
+            },
+            'Steel Spear': {
+                image: "spears",
+                frame: "SteelSpear",
+                type: "weapon",
+                attributes: new Attributes({ health: 21, strength: 54, defense: 8, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 130,
+                        side: 100
+                    }
+                }
+            },
+            'Hardened Spear': {
+                image: "spears",
+                frame: "HardenedSpear",
+                type: "weapon",
+                attributes: new Attributes({ health: 21, strength: 54, defense: 8, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 130,
+                        side: 100
+                    }
+                }
+            },
+            'Onyx Spear': {
+                image: "spears",
+                frame: "OnyxSpear",
+                type: "weapon",
+                attributes: new Attributes({ health: 21, strength: 54, defense: 8, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 130,
+                        side: 100
+                    }
+                }
+            },
             'Iron Axe': {
                 image: "axes",
                 frame: "IronAxe",
