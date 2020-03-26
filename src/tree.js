@@ -13,7 +13,10 @@ export default class Tree extends Phaser.GameObjects.Sprite {
 		this.collider.setImmovable(true);
 		this.collider.sprite = this;
 		this.tween = null;
+		this.textTween = null;
 		this.setDepth(9999);
+		this.minWood = config.minWood;
+		this.maxWood = config.maxWood;
 
 		this.health = 100;
 		this.cut = false;
@@ -27,8 +30,8 @@ export default class Tree extends Phaser.GameObjects.Sprite {
 		}
 
 		if (this.tween != null && this.tween.isPlaying()) {
-			this.tween.data[2].end = this.scene.player.container.y;
-			this.tween.data[3].end = this.scene.player.container.x;
+			this.tween.data[1].end = this.scene.player.container.y;
+			this.tween.data[2].end = this.scene.player.container.x;
 		}
 	}
 
@@ -67,27 +70,49 @@ export default class Tree extends Phaser.GameObjects.Sprite {
 				this.cut = true;
 				this.setStumpBounds();
 				this.icon = this.scene.add.image(this.x - Math.floor(-50 + Math.random() * (50 + 1 - -50)), this.y - Math.random() * 50, "wood_cut");
+				var amount = this.getRandomInt(this.minWood, this.maxWood);
 				this.tween = this.scene.tweens.add({
 					targets: this.icon,
-					duration: 700,
-					alpha: 1,
-					scale: "-=1",
+					duration: 500,
+					scale: 0,
 					ease: "Power3",
-					onStart: function(tween, targets) {
-						this.icon.alpha = 0;
+					onStart: function() {
+						this.icon.scale = 1;
 						this.anims.play("tree_cut", true);
 						this.icon.setDepth(9999);
+						var style = {
+							font: "bold 24px Helvetica",
+							fill: "gold"
+						};
+						var text = this.scene.add.text(this.scene.player.container.x, this.scene.player.container.y - 25, "+" + amount + " Wood", style);
+						text.setOrigin(0.5);
+						this.scene.tweens.add({
+							targets: text,
+							duration: 800,
+							ease: "Linear",
+							onComplete: function() {
+								text.destroy();
+							},
+							y: this.scene.player.container.y - 75,
+							x: this.scene.player.container.x,
+							repeat: 0
+						});
 					},
 					completeDelay: 100,
 					onComplete: function() {
 						this.icon.destroy();
+						this.scene.player.inventory.addItem({ name: "Wood", quantity: amount });
 					},
 					y: this.scene.player.container.y,
 					x: this.scene.player.container.x,
-					repeat: 2,
+					repeat: amount,
 					callbackScope: this
 				});
 			}
 		}
+	}
+
+	getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 }

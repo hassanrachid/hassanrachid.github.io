@@ -39,7 +39,6 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 		this.addItem({ name: "Wood", quantity: 6 });
 		this.addItem({ name: "Wood", quantity: 1 });
 
-
 		this.handleEvents();
 	}
 
@@ -51,19 +50,33 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 			name: item.name,
 			quantity: item.quantity
 		});
+		this.added = false;
 		for (var x = 0; x < this.rows; x++) {
 			for (var y = 0; y < this.cols; y++) {
-				if (this.slotArray[y][x].item != undefined && this.slotArray[y][x].item.stackable && item.stackable && this.slotArray[y][x].item.name == item.name) {
-					this.slotArray[y][x].item.quantity += item.quantity;
-					item.destroy();
-					item.text.destroy();
-					return;
+				if (this.slotArray[y][x].item != undefined) {
+					if (this.slotArray[y][x].item.stackable && item.stackable && this.slotArray[y][x].item.name == item.name) {
+						this.slotArray[y][x].item.quantity += item.quantity;
+						this.slotArray[y][x].item.setTextPosition(this.slotArray[y][x].x, this.slotArray[y][x].y);
+						item.destroy();
+						item.text.destroy();
+						if (this.slotArray[y][x].visible) {
+							this.slotArray[y][x].item.text.setVisible(true);
+						}
+						this.added = true;
+						return;
+					}
 				}
-				if (this.slotArray[y][x].item == undefined) {
-					this.slotArray[y][x].item = item;
-					item.x = this.slotArray[y][x].x
-					item.y = this.slotArray[y][x].y;
-					return;
+			}
+		}
+		if (!this.added) {
+			for (var x = 0; x < this.rows; x++) {
+				for (var y = 0; y < this.cols; y++) {
+					if (this.slotArray[y][x].item == undefined) {
+						this.slotArray[y][x].item = item;
+						item.x = this.slotArray[y][x].x;
+						item.y = this.slotArray[y][x].y;
+						return;
+					}
 				}
 			}
 		}
@@ -126,7 +139,6 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 				previous.item.x = previous.x;
 				previous.item.y = previous.y;
 				previous.item.setTextPosition(previous.item.x, previous.item.y);
-
 			}
 			target.item = gameObject;
 			target.item.x = target.x;
@@ -154,7 +166,7 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 				if (this.slotArray[x][y].item != undefined) {
 					this.slotArray[x][y].item.setVisible(!this.slotArray[x][y].item.visible);
 					this.slotArray[x][y].item.text.setVisible(!this.slotArray[x][y].item.text.visible);
-					this.slotArray[x][y].item.setTextPosition(this.slotArray[x][y].x, this.slotArray[x][y].y)
+					this.slotArray[x][y].item.setTextPosition(this.slotArray[x][y].x, this.slotArray[x][y].y);
 				}
 			}
 		}

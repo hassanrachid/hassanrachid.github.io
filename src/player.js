@@ -75,20 +75,16 @@ export default class Player extends BaseCharacter {
 			if (cursors.left.isDown) {
 				this.container.body.setVelocityX(-250);
 				this.flipX = false;
-				super.setDirection("side");
 			} else if (cursors.right.isDown) {
 				this.container.body.setVelocityX(250);
 				this.flipX = true;
-				super.setDirection("side");
 			}
 
 			// Vertical movement
 			if (cursors.up.isDown) {
 				this.container.body.setVelocityY(-250);
-				super.setDirection("front");
 			} else if (cursors.down.isDown) {
 				this.container.body.setVelocityY(250);
-				super.setDirection("front");
 			}
 
 			this.container.body.velocity.normalize().scale(200, 200);

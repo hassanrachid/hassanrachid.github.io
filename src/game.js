@@ -36,7 +36,7 @@ export default class GameScene extends Phaser.Scene {
 
 		this.trees = this.physics.add.staticGroup();
 		treeLayer.forEach(object => {
-			let obj = new Tree({scene: this, x: object.x, y: object.y, width: object.width, height: object.height, key: "tree"});
+			let obj = new Tree({scene: this, x: object.x, y: object.y, width: object.width, height: object.height, key: "tree", minWood: 1, maxWood: 4});
 			this.trees.add(obj, true);
 			obj.setBounds();
 		});
