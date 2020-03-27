@@ -84,7 +84,7 @@ export default class Tree extends Phaser.GameObjects.Sprite {
 							font: "bold 24px Helvetica",
 							fill: "gold"
 						};
-						var text = this.scene.add.text(this.scene.player.container.x, this.scene.player.container.y - 25, "+" + amount + " Wood", style);
+						var text = this.scene.add.text(this.scene.player.container.x, this.scene.player.container.y - 50, "+" + amount + " Wood", style);
 						text.setOrigin(0.5);
 						this.scene.tweens.add({
 							targets: text,

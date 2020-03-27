@@ -108,6 +108,11 @@ export default class LoadScene extends Phaser.Scene {
 
 		// player animations
 		this.load.atlas({
+			key: "idle_back",
+			textureURL: "assets/warrior/idle_back/spritesheet.png",
+			atlasURL: "assets/warrior/idle_back/spritesheet.json"
+		});
+		this.load.atlas({
 			key: "idle_front",
 			textureURL: "assets/warrior/idle_front/spritesheet.png",
 			atlasURL: "assets/warrior/idle_front/spritesheet.json"
@@ -116,6 +121,11 @@ export default class LoadScene extends Phaser.Scene {
 			key: "idle_side",
 			textureURL: "assets/warrior/idle_side/spritesheet.png",
 			atlasURL: "assets/warrior/idle_side/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "walk_back",
+			textureURL: "assets/warrior/walk_back/spritesheet.png",
+			atlasURL: "assets/warrior/walk_back/spritesheet.json"
 		});
 		this.load.atlas({
 			key: "walk_front",
@@ -127,12 +137,14 @@ export default class LoadScene extends Phaser.Scene {
 			textureURL: "assets/warrior/walk_side/spritesheet.png",
 			atlasURL: "assets/warrior/walk_side/spritesheet.json"
 		});
+		// back animations
 		this.load.atlas({
-			key: "attack_front_Default",
-			textureURL: "assets/warrior/attack_front/spritesheet.png",
-			atlasURL: "assets/warrior/attack_front/spritesheet.json"
+			key: "attack_back_Short Sword",
+			textureURL: "assets/warrior/attack_back/Short Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_back/Short Sword/spritesheet.json"
 		});
 		
+		// front animations
 		this.load.atlas({
 			key: "attack_front_Short Sword",
 			textureURL: "assets/warrior/attack_front/Short Sword/spritesheet.png",
@@ -209,11 +221,7 @@ export default class LoadScene extends Phaser.Scene {
 			atlasURL: "assets/warrior/attack_front/Platinum Axe/spritesheet.json"
 		});
 
-		this.load.atlas({
-			key: "attack_side_Default",
-			textureURL: "assets/warrior/attack_side/Default/spritesheet.png",
-			atlasURL: "assets/warrior/attack_side/Default/spritesheet.json"
-		});
+		// side animations
 		this.load.atlas({
 			key: "attack_side_Short Sword",
 			textureURL: "assets/warrior/attack_side/Short Sword/spritesheet.png",
@@ -324,9 +332,21 @@ export default class LoadScene extends Phaser.Scene {
 	create() {
 		// #region PLAYER ANIMATIONS
 		this.anims.create({
+			key: "idle_back",
+			frames: this.anims.generateFrameNames("idle_back"),
+			frameRate: 30,
+			repeat: -1
+		});
+		this.anims.create({
 			key: "idle_front",
 			frames: this.anims.generateFrameNames("idle_front"),
 			frameRate: 30,
+			repeat: -1
+		});
+		this.anims.create({
+			key: "walk_back",
+			frames: this.anims.generateFrameNames("walk_back"),
+			frameRate: 60,
 			repeat: -1
 		});
 		this.anims.create({
@@ -347,12 +367,16 @@ export default class LoadScene extends Phaser.Scene {
 			frameRate: 60,
 			repeat: -1
 		});
+
+		// back animations
 		this.anims.create({
-			key: "attack_front_Default",
-			frames: this.anims.generateFrameNames("attack_front_Default"),
+			key: "attack_back_Short Sword",
+			frames: this.anims.generateFrameNames("attack_back_Short Sword"),
 			frameRate: 60,
 			repeat: 0
 		});
+
+		// front animations
 		this.anims.create({
 			key: "attack_front_Short Sword",
 			frames: this.anims.generateFrameNames("attack_front_Short Sword"),
@@ -443,6 +467,8 @@ export default class LoadScene extends Phaser.Scene {
 			frameRate: 60,
 			repeat: 0,
 		});
+
+		// side animations
 		this.anims.create({
 			key: "attack_side_Short Sword",
 			frames: this.anims.generateFrameNames("attack_side_Short Sword"),
@@ -532,12 +558,6 @@ export default class LoadScene extends Phaser.Scene {
 			frames: this.anims.generateFrameNames("attack_side_Platinum Axe"),
 			frameRate: 60,
 			repeat: 0,
-		});
-		this.anims.create({
-			key: "attack_side_Default",
-			frames: this.anims.generateFrameNames("attack_side_Default"),
-			frameRate: 60,
-			repeat: 0
 		});
 		//#endregion
 

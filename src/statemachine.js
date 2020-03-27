@@ -34,7 +34,7 @@ export default class StateMachine {
 			},
 			this
 		);
-		
+
 		this.sprite.on(
 			"animationstart",
 			function(anim, frame) {
@@ -107,7 +107,7 @@ export default class StateMachine {
 	}
 
 	AttackState() {
-		if (this.sprite.equipment) {
+		if (this.sprite.equipment && this.sprite.equipment.getItem("weapon")) {
 			this.sprite.anims.play("attack_" + this.sprite.direction + "_" + this.sprite.equipment.getItem("weapon").name, true);
 		}
 	}
@@ -128,17 +128,21 @@ export default class StateMachine {
 		var collider = this.sprite.equipment.getItem("weapon").collider;
 		if (direction == "side") {
 			if (!this.sprite.flipX) {
-				this.sprite.collider.body.setSize(collider.height, collider.width)
+				this.sprite.collider.body.setSize(collider.height, collider.width);
 				this.sprite.collider.body.setOffset(-collider.offset.side - 20, 0);
 			} else {
-				this.sprite.collider.body.setSize(collider.height, collider.width)
+				this.sprite.collider.body.setSize(collider.height, collider.width);
 				this.sprite.collider.body.setOffset(collider.offset.side, 0);
 			}
 		}
 		if (direction == "front") {
-			this.sprite.collider.body.setSize(collider.width, collider.height)
+			this.sprite.collider.body.setSize(collider.width, collider.height);
 			this.sprite.collider.body.setOffset(0, collider.offset.front);
-        }
+		}
+		if (direction == "back") {
+			this.sprite.collider.body.setSize(collider.width, collider.height);
+			this.sprite.collider.body.setOffset(0, -collider.offset.back);
+		}
 	}
 
 	ResetColliderBox() {

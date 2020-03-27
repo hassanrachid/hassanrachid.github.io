@@ -50,6 +50,11 @@ export default class GameScene extends Phaser.Scene {
 
 		this.cameras.main.setBounds(0, 0, 6400, 6400);
 		this.cameras.main.startFollow(this.player.container, true, 1, 1);
+
+		this.input.on('pointerdown', function (pointer) {
+			let angle = Phaser.Math.Angle.Between(this.player.container.x, this.player.container.y, pointer.x, pointer.y) 
+			console.log(Phaser.Math.RadToDeg(angle));
+        }, this);
 	}
 
 	update() {

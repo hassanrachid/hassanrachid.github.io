@@ -52,23 +52,29 @@ export default class Player extends BaseCharacter {
 			super.update();
 			this.container.body.setVelocity(0);
 
+			let angle = Phaser.Math.Angle.Between(this.container.x, this.container.y, this.scene.input.activePointer.worldX, this.scene.input.activePointer.worldY) 
+			var degrees = Phaser.Math.RadToDeg(angle);
 			// face to the right if pointer is right of player
-			if (this.scene.input.activePointer.worldX >= this.container.x) {
+			if (degrees > -45 && degrees < 45) {
 				super.setDirection("side");
 				if (!this.flipX) {
 					this.flipX = true;
 				}
 			}
 			// face to the left if pointer is left of player
-			if (this.scene.input.activePointer.worldX <= this.container.x) {
+			if ((degrees > 135 && degrees < 180) || (degrees > -180 && degrees < -135)) {
 				super.setDirection("side");
 				if (this.flipX) {
 					this.flipX = false;
 				}
 			}
 			// face front if pointer is under player
-			if (this.scene.input.activePointer.worldY >= this.container.y + 80) {
+			if (degrees > 45 && degrees < 135) {
 				super.setDirection("front");
+			}
+
+			if (degrees < -45 && degrees > -135) {
+				super.setDirection("back");
 			}
 
 			// Horizontal movement

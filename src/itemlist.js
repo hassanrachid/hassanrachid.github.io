@@ -13,7 +13,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 60,
-                        side: 60
+                        side: 60,
+                        back: 80
                     }
                 }
             },

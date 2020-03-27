@@ -82,7 +82,7 @@ export default class Equipment extends Phaser.GameObjects.Rectangle {
 			this.slots.push(this.slot);
 		}
 
-		this.addItem({ name: "Short Spear", type: "weapon" })
+		// this.addItem({ name: "Short Spear", type: "weapon" })
 	}
 
 	addItem(item) {
@@ -114,9 +114,6 @@ export default class Equipment extends Phaser.GameObjects.Rectangle {
 	}
 
 	getItem(weaponType) {
-		if (this.slots[this.types[weaponType].id].item == undefined) {
-			return "default";
-		}
 		return this.slots[this.types[weaponType].id].item;
 	}
 
