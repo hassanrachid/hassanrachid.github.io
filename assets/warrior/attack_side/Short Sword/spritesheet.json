@@ -1,329 +1,414 @@
 {
-	"frames": [
-		{
-			"filename": "Short_Sword_000.png",
+	"frames": {
+		"ShortSword_000.png": {
 			"frame": {
-				"x": 1,
-				"y": 1,
-				"w": 383,
-				"h": 325
+				"x": 16,
+				"y": 16,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_001.png",
+		"ShortSword_001.png": {
 			"frame": {
-				"x": 386,
-				"y": 1,
-				"w": 383,
-				"h": 325
+				"x": 387,
+				"y": 16,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_002.png",
+		"ShortSword_002.png": {
 			"frame": {
-				"x": 771,
-				"y": 1,
-				"w": 383,
-				"h": 325
+				"x": 758,
+				"y": 16,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_003.png",
+		"ShortSword_003.png": {
 			"frame": {
-				"x": 1,
-				"y": 328,
-				"w": 383,
-				"h": 325
+				"x": 16,
+				"y": 249,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_004.png",
+		"ShortSword_004.png": {
 			"frame": {
-				"x": 386,
-				"y": 328,
-				"w": 383,
-				"h": 325
+				"x": 387,
+				"y": 249,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_005.png",
+		"ShortSword_005.png": {
 			"frame": {
-				"x": 771,
-				"y": 328,
-				"w": 383,
-				"h": 325
+				"x": 758,
+				"y": 249,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_006.png",
+		"ShortSword_006.png": {
 			"frame": {
-				"x": 1,
-				"y": 655,
-				"w": 383,
-				"h": 325
+				"x": 16,
+				"y": 482,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_007.png",
+		"ShortSword_007.png": {
 			"frame": {
-				"x": 386,
-				"y": 655,
-				"w": 383,
-				"h": 325
+				"x": 387,
+				"y": 482,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_008.png",
+		"ShortSword_008.png": {
 			"frame": {
-				"x": 771,
-				"y": 655,
-				"w": 383,
-				"h": 325
+				"x": 758,
+				"y": 482,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_009.png",
+		"ShortSword_009.png": {
 			"frame": {
-				"x": 1,
-				"y": 982,
-				"w": 383,
-				"h": 325
+				"x": 16,
+				"y": 715,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_010.png",
+		"ShortSword_010.png": {
 			"frame": {
-				"x": 386,
-				"y": 982,
-				"w": 383,
-				"h": 325
+				"x": 387,
+				"y": 715,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_011.png",
+		"ShortSword_011.png": {
 			"frame": {
-				"x": 771,
-				"y": 982,
-				"w": 383,
-				"h": 325
+				"x": 758,
+				"y": 715,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_012.png",
+		"ShortSword_012.png": {
 			"frame": {
-				"x": 1156,
-				"y": 1,
-				"w": 383,
-				"h": 325
+				"x": 16,
+				"y": 948,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_013.png",
+		"ShortSword_013.png": {
 			"frame": {
-				"x": 1156,
-				"y": 328,
-				"w": 383,
-				"h": 325
+				"x": 387,
+				"y": 948,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			}
 		},
-		{
-			"filename": "Short_Sword_014.png",
+		"ShortSword_014.png": {
 			"frame": {
-				"x": 1156,
-				"y": 655,
-				"w": 383,
-				"h": 325
+				"x": 758,
+				"y": 948,
+				"w": 339,
+				"h": 201
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 339,
+				"h": 201
+			}
+		},
+		"ShortSword_015.png": {
+			"frame": {
+				"x": 1129,
+				"y": 16,
+				"w": 339,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 339,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 339,
+				"h": 201
+			}
+		},
+		"ShortSword_016.png": {
+			"frame": {
+				"x": 1129,
+				"y": 249,
+				"w": 339,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 339,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 339,
+				"h": 201
+			}
+		},
+		"ShortSword_017.png": {
+			"frame": {
+				"x": 1129,
+				"y": 482,
+				"w": 339,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 339,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 339,
+				"h": 201
+			}
+		},
+		"ShortSword_018.png": {
+			"frame": {
+				"x": 1129,
+				"y": 715,
+				"w": 339,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 339,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 339,
+				"h": 201
+			}
+		},
+		"ShortSword_019.png": {
+			"frame": {
+				"x": 1129,
+				"y": 948,
+				"w": 339,
+				"h": 201
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 339,
+				"h": 201
+			},
+			"sourceSize": {
+				"w": 339,
+				"h": 201
 			}
 		}
-	],
+	},
 	"meta": {
 		"app": "http://www.codeandweb.com/texturepacker",
 		"version": "1.0",
 		"image": "spritesheet.png",
 		"format": "RGBA8888",
 		"size": {
-			"w": 1540,
-			"h": 1308
+			"w": 1484,
+			"h": 1165
 		},
 		"scale": "1"
 	}

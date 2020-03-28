@@ -69,6 +69,8 @@ export default class LoadScene extends Phaser.Scene {
 
 		// misc items
 		this.load.image("wood_cut", "assets/misc items/wood_cut.png");
+		this.load.image("arrow", "assets/misc items/Arrow.png");
+
 
 		this.load.image("warrior", "assets/warrior.png");
 		this.load.image("orc", "assets/orc.png");

@@ -36,7 +36,7 @@ export default class GameScene extends Phaser.Scene {
 
 		this.trees = this.physics.add.staticGroup();
 		treeLayer.forEach(object => {
-			let obj = new Tree({scene: this, x: object.x, y: object.y, width: object.width, height: object.height, key: "tree", minWood: 1, maxWood: 4});
+			let obj = new Tree({ scene: this, x: object.x, y: object.y, width: object.width, height: object.height, key: "tree", minWood: 1, maxWood: 4 });
 			this.trees.add(obj, true);
 			obj.setBounds();
 		});
@@ -51,10 +51,18 @@ export default class GameScene extends Phaser.Scene {
 		this.cameras.main.setBounds(0, 0, 6400, 6400);
 		this.cameras.main.startFollow(this.player.container, true, 1, 1);
 
-		this.input.on('pointerdown', function (pointer) {
-			let angle = Phaser.Math.Angle.Between(this.player.container.x, this.player.container.y, pointer.x, pointer.y) 
-			console.log(Phaser.Math.RadToDeg(angle));
-        }, this);
+		this.input.on(
+			"pointerdown",
+			function(pointer) {
+				var angle = Phaser.Math.Angle.BetweenPoints(this.player.container, pointer);
+				var sprite = this.add.sprite(this.player.container.x, this.player.container.y, "arrow");
+				this.physics.world.enable(sprite);
+				sprite.setScale(0.25);
+				sprite.rotation = angle;
+				this.physics.velocityFromRotation(angle, 500, sprite.body.velocity);
+			},
+			this
+		);
 	}
 
 	update() {

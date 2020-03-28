@@ -52,7 +52,7 @@ export default class Player extends BaseCharacter {
 			super.update();
 			this.container.body.setVelocity(0);
 
-			let angle = Phaser.Math.Angle.Between(this.container.x, this.container.y, this.scene.input.activePointer.worldX, this.scene.input.activePointer.worldY) 
+			let angle = Phaser.Math.Angle.Between(this.container.x, this.container.y, this.scene.input.activePointer.worldX, this.scene.input.activePointer.worldY)
 			var degrees = Phaser.Math.RadToDeg(angle);
 			// face to the right if pointer is right of player
 			if (degrees > -45 && degrees < 45) {

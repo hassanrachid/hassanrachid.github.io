@@ -4,240 +4,400 @@
 			"frame": {
 				"x": 16,
 				"y": 16,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_001.png": {
 			"frame": {
-				"x": 329,
+				"x": 433,
 				"y": 16,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_002.png": {
 			"frame": {
-				"x": 642,
+				"x": 850,
 				"y": 16,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_003.png": {
 			"frame": {
-				"x": 16,
-				"y": 394,
-				"w": 281,
-				"h": 346
+				"x": 1267,
+				"y": 16,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_004.png": {
 			"frame": {
-				"x": 329,
-				"y": 394,
-				"w": 281,
-				"h": 346
+				"x": 16,
+				"y": 426,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_005.png": {
 			"frame": {
-				"x": 642,
-				"y": 394,
-				"w": 281,
-				"h": 346
+				"x": 433,
+				"y": 426,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_006.png": {
 			"frame": {
-				"x": 16,
-				"y": 772,
-				"w": 281,
-				"h": 346
+				"x": 850,
+				"y": 426,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_007.png": {
 			"frame": {
-				"x": 329,
-				"y": 772,
-				"w": 281,
-				"h": 346
+				"x": 1267,
+				"y": 426,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_008.png": {
 			"frame": {
-				"x": 642,
-				"y": 772,
-				"w": 281,
-				"h": 346
+				"x": 16,
+				"y": 836,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_009.png": {
 			"frame": {
-				"x": 955,
-				"y": 16,
-				"w": 281,
-				"h": 346
+				"x": 433,
+				"y": 836,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_010.png": {
 			"frame": {
-				"x": 955,
-				"y": 394,
-				"w": 281,
-				"h": 346
+				"x": 850,
+				"y": 836,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			}
 		},
 		"Silverlight_011.png": {
 			"frame": {
-				"x": 955,
-				"y": 772,
-				"w": 281,
-				"h": 346
+				"x": 1267,
+				"y": 836,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 281,
-				"h": 346
+				"w": 385,
+				"h": 378
+			}
+		},
+		"Silverlight_012.png": {
+			"frame": {
+				"x": 16,
+				"y": 1246,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"Silverlight_013.png": {
+			"frame": {
+				"x": 433,
+				"y": 1246,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"Silverlight_014.png": {
+			"frame": {
+				"x": 850,
+				"y": 1246,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"Silverlight_015.png": {
+			"frame": {
+				"x": 1267,
+				"y": 1246,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"Silverlight_016.png": {
+			"frame": {
+				"x": 1684,
+				"y": 16,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"Silverlight_017.png": {
+			"frame": {
+				"x": 1684,
+				"y": 426,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"Silverlight_018.png": {
+			"frame": {
+				"x": 1684,
+				"y": 836,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"Silverlight_019.png": {
+			"frame": {
+				"x": 1684,
+				"y": 1246,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
 			}
 		}
 	},
@@ -247,8 +407,8 @@
 		"image": "spritesheet.png",
 		"format": "RGBA8888",
 		"size": {
-			"w": 1252,
-			"h": 1134
+			"w": 2085,
+			"h": 1640
 		},
 		"scale": "1"
 	}

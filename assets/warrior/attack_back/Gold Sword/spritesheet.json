@@ -4,240 +4,400 @@
 			"frame": {
 				"x": 16,
 				"y": 16,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_001.png": {
 			"frame": {
-				"x": 313,
+				"x": 364,
 				"y": 16,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_002.png": {
 			"frame": {
-				"x": 610,
+				"x": 712,
 				"y": 16,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_003.png": {
 			"frame": {
 				"x": 16,
-				"y": 243,
-				"w": 265,
-				"h": 195
+				"y": 286,
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_004.png": {
 			"frame": {
-				"x": 313,
-				"y": 243,
-				"w": 265,
-				"h": 195
+				"x": 364,
+				"y": 286,
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_005.png": {
 			"frame": {
-				"x": 610,
-				"y": 243,
-				"w": 265,
-				"h": 195
+				"x": 712,
+				"y": 286,
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_006.png": {
 			"frame": {
 				"x": 16,
-				"y": 470,
-				"w": 265,
-				"h": 195
+				"y": 556,
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_007.png": {
 			"frame": {
-				"x": 313,
-				"y": 470,
-				"w": 265,
-				"h": 195
+				"x": 364,
+				"y": 556,
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_008.png": {
 			"frame": {
-				"x": 610,
-				"y": 470,
-				"w": 265,
-				"h": 195
+				"x": 712,
+				"y": 556,
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_009.png": {
 			"frame": {
-				"x": 907,
-				"y": 16,
-				"w": 265,
-				"h": 195
+				"x": 16,
+				"y": 826,
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_010.png": {
 			"frame": {
-				"x": 907,
-				"y": 243,
-				"w": 265,
-				"h": 195
+				"x": 364,
+				"y": 826,
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			}
 		},
 		"GoldSword_011.png": {
 			"frame": {
-				"x": 907,
-				"y": 470,
-				"w": 265,
-				"h": 195
+				"x": 712,
+				"y": 826,
+				"w": 316,
+				"h": 238
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
 			},
 			"sourceSize": {
-				"w": 265,
-				"h": 195
+				"w": 316,
+				"h": 238
+			}
+		},
+		"GoldSword_012.png": {
+			"frame": {
+				"x": 16,
+				"y": 1096,
+				"w": 316,
+				"h": 238
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 316,
+				"h": 238
+			},
+			"sourceSize": {
+				"w": 316,
+				"h": 238
+			}
+		},
+		"GoldSword_013.png": {
+			"frame": {
+				"x": 364,
+				"y": 1096,
+				"w": 316,
+				"h": 238
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 316,
+				"h": 238
+			},
+			"sourceSize": {
+				"w": 316,
+				"h": 238
+			}
+		},
+		"GoldSword_014.png": {
+			"frame": {
+				"x": 712,
+				"y": 1096,
+				"w": 316,
+				"h": 238
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 316,
+				"h": 238
+			},
+			"sourceSize": {
+				"w": 316,
+				"h": 238
+			}
+		},
+		"GoldSword_015.png": {
+			"frame": {
+				"x": 1060,
+				"y": 16,
+				"w": 316,
+				"h": 238
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 316,
+				"h": 238
+			},
+			"sourceSize": {
+				"w": 316,
+				"h": 238
+			}
+		},
+		"GoldSword_016.png": {
+			"frame": {
+				"x": 1060,
+				"y": 286,
+				"w": 316,
+				"h": 238
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 316,
+				"h": 238
+			},
+			"sourceSize": {
+				"w": 316,
+				"h": 238
+			}
+		},
+		"GoldSword_017.png": {
+			"frame": {
+				"x": 1060,
+				"y": 556,
+				"w": 316,
+				"h": 238
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 316,
+				"h": 238
+			},
+			"sourceSize": {
+				"w": 316,
+				"h": 238
+			}
+		},
+		"GoldSword_018.png": {
+			"frame": {
+				"x": 1060,
+				"y": 826,
+				"w": 316,
+				"h": 238
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 316,
+				"h": 238
+			},
+			"sourceSize": {
+				"w": 316,
+				"h": 238
+			}
+		},
+		"GoldSword_019.png": {
+			"frame": {
+				"x": 1060,
+				"y": 1096,
+				"w": 316,
+				"h": 238
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 316,
+				"h": 238
+			},
+			"sourceSize": {
+				"w": 316,
+				"h": 238
 			}
 		}
 	},
@@ -247,8 +407,8 @@
 		"image": "spritesheet.png",
 		"format": "RGBA8888",
 		"size": {
-			"w": 1188,
-			"h": 681
+			"w": 1392,
+			"h": 1350
 		},
 		"scale": "1"
 	}

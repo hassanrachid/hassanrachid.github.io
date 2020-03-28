@@ -107,12 +107,14 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 		var pointer = this.scene.input.activePointer;
 		this.equipKey = this.scene.input.keyboard.addKey("E");
 		this.equipKey.on("up", () => {
-			if (this.gamescene.player.inventory.getSlot(pointer.x, pointer.y)) {
-				var item = this.gamescene.player.inventory.getSlot(pointer.x, pointer.y).item;
-				if (item && item.type != "misc") {
-					// equip item
-					this.removeItem(item);
-					this.gamescene.player.equipment.addItem(item);
+			if (!this.gamescene.player.statemachine.attacking) {
+				if (this.gamescene.player.inventory.getSlot(pointer.x, pointer.y)) {
+					var item = this.gamescene.player.inventory.getSlot(pointer.x, pointer.y).item;
+					if (item && item.type != "misc") {
+						// equip item
+						this.removeItem(item);
+						this.gamescene.player.equipment.addItem(item);
+					}
 				}
 			}
 		});

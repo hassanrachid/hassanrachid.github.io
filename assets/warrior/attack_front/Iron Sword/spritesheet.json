@@ -1,329 +1,414 @@
 {
-	"frames": [
-		{
-			"filename": "Iron_Sword_000.png",
+	"frames": {
+		"IronSword_000.png": {
 			"frame": {
-				"x": 1,
-				"y": 1,
-				"w": 383,
-				"h": 325
+				"x": 16,
+				"y": 16,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_001.png",
+		"IronSword_001.png": {
 			"frame": {
-				"x": 386,
-				"y": 1,
-				"w": 383,
-				"h": 325
+				"x": 433,
+				"y": 16,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_002.png",
+		"IronSword_002.png": {
 			"frame": {
-				"x": 771,
-				"y": 1,
-				"w": 383,
-				"h": 325
+				"x": 850,
+				"y": 16,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_003.png",
+		"IronSword_003.png": {
 			"frame": {
-				"x": 1,
-				"y": 328,
-				"w": 383,
-				"h": 325
+				"x": 1267,
+				"y": 16,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_004.png",
+		"IronSword_004.png": {
 			"frame": {
-				"x": 386,
-				"y": 328,
-				"w": 383,
-				"h": 325
+				"x": 16,
+				"y": 426,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_005.png",
+		"IronSword_005.png": {
 			"frame": {
-				"x": 771,
-				"y": 328,
-				"w": 383,
-				"h": 325
+				"x": 433,
+				"y": 426,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_006.png",
+		"IronSword_006.png": {
 			"frame": {
-				"x": 1,
-				"y": 655,
-				"w": 383,
-				"h": 325
+				"x": 850,
+				"y": 426,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_007.png",
+		"IronSword_007.png": {
 			"frame": {
-				"x": 386,
-				"y": 655,
-				"w": 383,
-				"h": 325
+				"x": 1267,
+				"y": 426,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_008.png",
+		"IronSword_008.png": {
 			"frame": {
-				"x": 771,
-				"y": 655,
-				"w": 383,
-				"h": 325
+				"x": 16,
+				"y": 836,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_009.png",
+		"IronSword_009.png": {
 			"frame": {
-				"x": 1,
-				"y": 982,
-				"w": 383,
-				"h": 325
+				"x": 433,
+				"y": 836,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_010.png",
+		"IronSword_010.png": {
 			"frame": {
-				"x": 386,
-				"y": 982,
-				"w": 383,
-				"h": 325
+				"x": 850,
+				"y": 836,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_011.png",
+		"IronSword_011.png": {
 			"frame": {
-				"x": 771,
-				"y": 982,
-				"w": 383,
-				"h": 325
+				"x": 1267,
+				"y": 836,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_012.png",
+		"IronSword_012.png": {
 			"frame": {
-				"x": 1156,
-				"y": 1,
-				"w": 383,
-				"h": 325
+				"x": 16,
+				"y": 1246,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_013.png",
+		"IronSword_013.png": {
 			"frame": {
-				"x": 1156,
-				"y": 328,
-				"w": 383,
-				"h": 325
+				"x": 433,
+				"y": 1246,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			}
 		},
-		{
-			"filename": "Iron_Sword_014.png",
+		"IronSword_014.png": {
 			"frame": {
-				"x": 1156,
-				"y": 655,
-				"w": 383,
-				"h": 325
+				"x": 850,
+				"y": 1246,
+				"w": 385,
+				"h": 378
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
 			},
 			"sourceSize": {
-				"w": 383,
-				"h": 325
+				"w": 385,
+				"h": 378
+			}
+		},
+		"IronSword_015.png": {
+			"frame": {
+				"x": 1267,
+				"y": 1246,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"IronSword_016.png": {
+			"frame": {
+				"x": 1684,
+				"y": 16,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"IronSword_017.png": {
+			"frame": {
+				"x": 1684,
+				"y": 426,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"IronSword_018.png": {
+			"frame": {
+				"x": 1684,
+				"y": 836,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
+			}
+		},
+		"IronSword_019.png": {
+			"frame": {
+				"x": 1684,
+				"y": 1246,
+				"w": 385,
+				"h": 378
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 385,
+				"h": 378
+			},
+			"sourceSize": {
+				"w": 385,
+				"h": 378
 			}
 		}
-	],
+	},
 	"meta": {
 		"app": "http://www.codeandweb.com/texturepacker",
 		"version": "1.0",
 		"image": "spritesheet.png",
 		"format": "RGBA8888",
 		"size": {
-			"w": 1540,
-			"h": 1308
+			"w": 2085,
+			"h": 1640
 		},
 		"scale": "1"
 	}
