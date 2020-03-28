@@ -28,7 +28,8 @@ export default class ItemList {
                     height: 180,
                     offset: {
                         front: 130,
-                        side: 145
+                        side: 145,
+                        back: 80
                     }
                 }
             },
@@ -42,7 +43,8 @@ export default class ItemList {
                     height: 180,
                     offset: {
                         front: 130,
-                        side: 145
+                        side: 145,
+                        back: 80
                     }
                 }
             },
@@ -56,7 +58,8 @@ export default class ItemList {
                     height: 180,
                     offset: {
                         front: 130,
-                        side: 145
+                        side: 145,
+                        back: 80
                     }
                 }
             },
@@ -70,7 +73,8 @@ export default class ItemList {
                     height: 180,
                     offset: {
                         front: 130,
-                        side: 145
+                        side: 145,
+                        back: 80
                     }
                 }
             },
@@ -84,7 +88,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 130,
-                        side: 100
+                        side: 100,
+                        back: 80
                     }
                 }
             },
@@ -98,7 +103,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 130,
-                        side: 100
+                        side: 100,
+                        back: 80
                     }
                 }
             },
@@ -112,7 +118,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 130,
-                        side: 100
+                        side: 100,
+                        back: 80
                     }
                 }
             },
@@ -126,7 +133,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 130,
-                        side: 100
+                        side: 100,
+                        back: 80
                     }
                 }
             },
@@ -140,7 +148,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 130,
-                        side: 100
+                        side: 100,
+                        back: 80
                     }
                 }
             },
@@ -154,7 +163,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 60,
-                        side: 60
+                        side: 60,
+                        back: 80
                     }
                 }
             },
@@ -168,7 +178,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 60,
-                        side: 60
+                        side: 60,
+                        back: 80
                     }
                 }
             },
@@ -182,7 +193,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 60,
-                        side: 60
+                        side: 60,
+                        back: 80
                     }
                 }
             },
@@ -196,7 +208,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 60,
-                        side: 60
+                        side: 60,
+                        back: 80
                     }
                 }
             },
@@ -210,7 +223,8 @@ export default class ItemList {
                     height: 120,
                     offset: {
                         front: 60,
-                        side: 60
+                        side: 60,
+                        back: 80
                     }
                 }
             },

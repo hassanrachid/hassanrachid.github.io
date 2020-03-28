@@ -143,6 +143,51 @@ export default class LoadScene extends Phaser.Scene {
 			textureURL: "assets/warrior/attack_back/Short Sword/spritesheet.png",
 			atlasURL: "assets/warrior/attack_back/Short Sword/spritesheet.json"
 		});
+		this.load.atlas({
+			key: "attack_back_Gold Sword",
+			textureURL: "assets/warrior/attack_back/Gold Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_back/Gold Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_back_Iron Sword",
+			textureURL: "assets/warrior/attack_back/Iron Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_back/Iron Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_back_Steel Sword",
+			textureURL: "assets/warrior/attack_back/Steel Sword/spritesheet.png",
+			atlasURL: "assets/warrior/attack_back/Steel Sword/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_back_Silverlight",
+			textureURL: "assets/warrior/attack_back/Silverlight/spritesheet.png",
+			atlasURL: "assets/warrior/attack_back/Silverlight/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_back_Iron Axe",
+			textureURL: "assets/warrior/attack_back/Iron Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_back/Iron Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_back_Steel Axe",
+			textureURL: "assets/warrior/attack_back/Steel Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_back/Steel Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_back_Silver Axe",
+			textureURL: "assets/warrior/attack_back/Silver Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_back/Silver Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_back_Hardened Axe",
+			textureURL: "assets/warrior/attack_back/Hardened Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_back/Hardened Axe/spritesheet.json"
+		});
+		this.load.atlas({
+			key: "attack_back_Platinum Axe",
+			textureURL: "assets/warrior/attack_back/Platinum Axe/spritesheet.png",
+			atlasURL: "assets/warrior/attack_back/Platinum Axe/spritesheet.json"
+		});
 		
 		// front animations
 		this.load.atlas({
@@ -374,6 +419,60 @@ export default class LoadScene extends Phaser.Scene {
 			frames: this.anims.generateFrameNames("attack_back_Short Sword"),
 			frameRate: 60,
 			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_back_Iron Sword",
+			frames: this.anims.generateFrameNames("attack_back_Iron Sword"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_back_Gold Sword",
+			frames: this.anims.generateFrameNames("attack_back_Gold Sword"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_back_Steel Sword",
+			frames: this.anims.generateFrameNames("attack_back_Steel Sword"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_back_Silverlight",
+			frames: this.anims.generateFrameNames("attack_back_Silverlight"),
+			frameRate: 60,
+			repeat: 0
+		});
+		this.anims.create({
+			key: "attack_back_Iron Axe",
+			frames: this.anims.generateFrameNames("attack_back_Iron Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_back_Steel Axe",
+			frames: this.anims.generateFrameNames("attack_back_Steel Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_back_Silver Axe",
+			frames: this.anims.generateFrameNames("attack_back_Silver Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_back_Hardened Axe",
+			frames: this.anims.generateFrameNames("attack_back_Hardened Axe"),
+			frameRate: 60,
+			repeat: 0,
+		});
+		this.anims.create({
+			key: "attack_back_Platinum Axe",
+			frames: this.anims.generateFrameNames("attack_back_Platinum Axe"),
+			frameRate: 60,
+			repeat: 0,
 		});
 
 		// front animations

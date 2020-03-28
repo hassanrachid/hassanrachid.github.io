@@ -4,7 +4,7 @@
 			"frame": {
 				"x": 16,
 				"y": 16,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -12,19 +12,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_001.png": {
 			"frame": {
-				"x": 329,
+				"x": 397,
 				"y": 16,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -32,19 +32,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_002.png": {
 			"frame": {
-				"x": 642,
+				"x": 778,
 				"y": 16,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -52,19 +52,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_003.png": {
 			"frame": {
-				"x": 955,
+				"x": 1159,
 				"y": 16,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -72,11 +72,11 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
@@ -84,7 +84,7 @@
 			"frame": {
 				"x": 16,
 				"y": 394,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -92,19 +92,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_005.png": {
 			"frame": {
-				"x": 329,
+				"x": 397,
 				"y": 394,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -112,19 +112,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_006.png": {
 			"frame": {
-				"x": 642,
+				"x": 778,
 				"y": 394,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -132,19 +132,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_007.png": {
 			"frame": {
-				"x": 955,
+				"x": 1159,
 				"y": 394,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -152,11 +152,11 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
@@ -164,7 +164,7 @@
 			"frame": {
 				"x": 16,
 				"y": 772,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -172,19 +172,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_009.png": {
 			"frame": {
-				"x": 329,
+				"x": 397,
 				"y": 772,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -192,19 +192,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_010.png": {
 			"frame": {
-				"x": 642,
+				"x": 778,
 				"y": 772,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -212,19 +212,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_011.png": {
 			"frame": {
-				"x": 955,
+				"x": 1159,
 				"y": 772,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -232,11 +232,11 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
@@ -244,7 +244,7 @@
 			"frame": {
 				"x": 16,
 				"y": 1150,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -252,19 +252,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_013.png": {
 			"frame": {
-				"x": 329,
+				"x": 397,
 				"y": 1150,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -272,19 +272,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_014.png": {
 			"frame": {
-				"x": 642,
+				"x": 778,
 				"y": 1150,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -292,19 +292,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_015.png": {
 			"frame": {
-				"x": 955,
+				"x": 1159,
 				"y": 1150,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -312,19 +312,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_016.png": {
 			"frame": {
-				"x": 1268,
+				"x": 1540,
 				"y": 16,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -332,19 +332,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_017.png": {
 			"frame": {
-				"x": 1268,
+				"x": 1540,
 				"y": 394,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -352,19 +352,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_018.png": {
 			"frame": {
-				"x": 1268,
+				"x": 1540,
 				"y": 772,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -372,19 +372,19 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		},
 		"HardenedAxe_019.png": {
 			"frame": {
-				"x": 1268,
+				"x": 1540,
 				"y": 1150,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"rotated": false,
@@ -392,11 +392,11 @@
 			"spriteSourceSize": {
 				"x": 0,
 				"y": 0,
-				"w": 281,
+				"w": 349,
 				"h": 346
 			},
 			"sourceSize": {
-				"w": 281,
+				"w": 349,
 				"h": 346
 			}
 		}
@@ -407,7 +407,7 @@
 		"image": "spritesheet.png",
 		"format": "RGBA8888",
 		"size": {
-			"w": 1565,
+			"w": 1905,
 			"h": 1512
 		},
 		"scale": "1"
