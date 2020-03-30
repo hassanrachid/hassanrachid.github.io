@@ -193,6 +193,11 @@ export default class LoadScene extends Phaser.Scene {
 		
 		// front animations
 		this.load.atlas({
+			key: "attack_front_Bow",
+			textureURL: "assets/warrior/attack_front/Bow/spritesheet.png",
+			atlasURL: "assets/warrior/attack_front/Bow/spritesheet.json"
+		});
+		this.load.atlas({
 			key: "attack_front_Short Sword",
 			textureURL: "assets/warrior/attack_front/Short Sword/spritesheet.png",
 			atlasURL: "assets/warrior/attack_front/Short Sword/spritesheet.json"
@@ -478,6 +483,12 @@ export default class LoadScene extends Phaser.Scene {
 		});
 
 		// front animations
+		this.anims.create({
+			key: "attack_front_Bow",
+			frames: this.anims.generateFrameNames("attack_front_Bow"),
+			frameRate: 60,
+			repeat: 0
+		});
 		this.anims.create({
 			key: "attack_front_Short Sword",
 			frames: this.anims.generateFrameNames("attack_front_Short Sword"),

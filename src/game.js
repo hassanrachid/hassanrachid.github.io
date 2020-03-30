@@ -50,19 +50,6 @@ export default class GameScene extends Phaser.Scene {
 
 		this.cameras.main.setBounds(0, 0, 6400, 6400);
 		this.cameras.main.startFollow(this.player.container, true, 1, 1);
-
-		this.input.on(
-			"pointerdown",
-			function(pointer) {
-				var angle = Phaser.Math.Angle.BetweenPoints(this.player.container, pointer);
-				var sprite = this.add.sprite(this.player.container.x, this.player.container.y, "arrow");
-				this.physics.world.enable(sprite);
-				sprite.setScale(0.25);
-				sprite.rotation = angle;
-				this.physics.velocityFromRotation(angle, 500, sprite.body.velocity);
-			},
-			this
-		);
 	}
 
 	update() {

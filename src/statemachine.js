@@ -6,14 +6,31 @@ export default class StateMachine {
 		this.hurting = false;
 		this.dying = false;
 		this.previousState = "IdleState";
+		this.pointerX;
+		this.pointerY;
 
 		this.sprite.on(
 			"animationupdate",
 			function(anim, frame) {
 				if (anim.key.includes("attack")) {
 					this.AdjustColliderBox(this.sprite.direction);
+					if (frame.index == 2) {
+						// get pointer from start of animation
+						this.pointerX = this.scene.input.activePointer.worldX;
+						this.pointerY = this.scene.input.activePointer.worldY;
+					}
 					if (frame.isLast) {
 						this.attacking = false;
+						if (anim.key.includes("Bow")) {
+							var angle = Phaser.Math.Angle.Between(this.sprite.container.x, this.sprite.container.y, this.pointerX, this.pointerY);
+							// alter firing position based on direction, so arrow doesn't come directly from players body
+							var position = this.GetFiringPosition(this.sprite.container.x, this.sprite.container.y, this.sprite.direction);
+							var sprite = this.scene.add.sprite(position.x, position.y, "arrow");
+							this.scene.physics.world.enable(sprite);
+							sprite.setScale(0.15);
+							sprite.rotation = angle;
+							this.scene.physics.velocityFromRotation(angle, 500, sprite.body.velocity);
+						}
 					}
 				}
 			},
@@ -108,7 +125,8 @@ export default class StateMachine {
 
 	AttackState() {
 		if (this.sprite.equipment && this.sprite.equipment.getItem("weapon")) {
-			this.sprite.anims.play("attack_" + this.sprite.direction + "_" + this.sprite.equipment.getItem("weapon").name, true);
+			// this.sprite.anims.play("attack_" + this.sprite.direction + "_" + this.sprite.equipment.getItem("weapon").name, true);
+			this.sprite.anims.play("attack_" + this.sprite.direction + "_Bow", true);
 		}
 	}
 
@@ -147,5 +165,12 @@ export default class StateMachine {
 
 	ResetColliderBox() {
 		this.sprite.collider.body.setOffset(0, 0);
+	}
+
+	GetFiringPosition(oldX, oldY, direction) {
+		if (this.sprite.direction = "front") {
+			oldY += 50;
+			return { y: oldY, x: oldX };
+		}
 	}
 }

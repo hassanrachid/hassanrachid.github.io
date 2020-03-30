@@ -1,0 +1,815 @@
+{
+	"frames": {
+		"Bow_000.png": {
+			"frame": {
+				"x": 16,
+				"y": 16,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_001.png": {
+			"frame": {
+				"x": 249,
+				"y": 16,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_002.png": {
+			"frame": {
+				"x": 482,
+				"y": 16,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_003.png": {
+			"frame": {
+				"x": 715,
+				"y": 16,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_004.png": {
+			"frame": {
+				"x": 948,
+				"y": 16,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_005.png": {
+			"frame": {
+				"x": 1181,
+				"y": 16,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_006.png": {
+			"frame": {
+				"x": 1414,
+				"y": 16,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_007.png": {
+			"frame": {
+				"x": 16,
+				"y": 336,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_008.png": {
+			"frame": {
+				"x": 249,
+				"y": 336,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_009.png": {
+			"frame": {
+				"x": 482,
+				"y": 336,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_010.png": {
+			"frame": {
+				"x": 715,
+				"y": 336,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_011.png": {
+			"frame": {
+				"x": 948,
+				"y": 336,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_012.png": {
+			"frame": {
+				"x": 1181,
+				"y": 336,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_013.png": {
+			"frame": {
+				"x": 1414,
+				"y": 336,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_014.png": {
+			"frame": {
+				"x": 16,
+				"y": 656,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_015.png": {
+			"frame": {
+				"x": 249,
+				"y": 656,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_016.png": {
+			"frame": {
+				"x": 482,
+				"y": 656,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_017.png": {
+			"frame": {
+				"x": 715,
+				"y": 656,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_018.png": {
+			"frame": {
+				"x": 948,
+				"y": 656,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_019.png": {
+			"frame": {
+				"x": 1181,
+				"y": 656,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_020.png": {
+			"frame": {
+				"x": 1414,
+				"y": 656,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_021.png": {
+			"frame": {
+				"x": 16,
+				"y": 976,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_022.png": {
+			"frame": {
+				"x": 249,
+				"y": 976,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_023.png": {
+			"frame": {
+				"x": 482,
+				"y": 976,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_024.png": {
+			"frame": {
+				"x": 715,
+				"y": 976,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_025.png": {
+			"frame": {
+				"x": 948,
+				"y": 976,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_026.png": {
+			"frame": {
+				"x": 1181,
+				"y": 976,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_027.png": {
+			"frame": {
+				"x": 1414,
+				"y": 976,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_028.png": {
+			"frame": {
+				"x": 16,
+				"y": 1296,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_029.png": {
+			"frame": {
+				"x": 249,
+				"y": 1296,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_030.png": {
+			"frame": {
+				"x": 482,
+				"y": 1296,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_031.png": {
+			"frame": {
+				"x": 715,
+				"y": 1296,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_032.png": {
+			"frame": {
+				"x": 948,
+				"y": 1296,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_033.png": {
+			"frame": {
+				"x": 1181,
+				"y": 1296,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_034.png": {
+			"frame": {
+				"x": 1414,
+				"y": 1296,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_035.png": {
+			"frame": {
+				"x": 1647,
+				"y": 16,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_036.png": {
+			"frame": {
+				"x": 1647,
+				"y": 336,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_037.png": {
+			"frame": {
+				"x": 1647,
+				"y": 656,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_038.png": {
+			"frame": {
+				"x": 1647,
+				"y": 976,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		},
+		"Bow_039.png": {
+			"frame": {
+				"x": 1647,
+				"y": 1296,
+				"w": 201,
+				"h": 288
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 288
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 288
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 1864,
+			"h": 1600
+		},
+		"scale": "1"
+	}
+}
