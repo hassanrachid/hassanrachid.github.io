@@ -48,6 +48,7 @@ export default class Player extends BaseCharacter {
 
 		// allows player to attack
 		this.scene.input.on("pointerdown", gameObject => {
+			console.log(gameObject)
 			this.utilitybar.closeAllInterfaces();
 			this.state = "AttackState";
 		});

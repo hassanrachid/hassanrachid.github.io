@@ -7,6 +7,7 @@ export default class Equipment extends Phaser.GameObjects.Rectangle {
 		this.scene = scene;
 		this.player = player;
 		this.scene.add.existing(this);
+		this.isStroked = true;
 
 		this.types = {
 			weapon: {
@@ -68,6 +69,7 @@ export default class Equipment extends Phaser.GameObjects.Rectangle {
 	show() {
 		this.setVisible(!this.visible);
 		for (var s in this.slots) {
+			this.slots[s].setVisible(!this.slots[s].visible);
 			this.slots[s].image.setVisible(!this.slots[s].image.visible);
 			if (this.slots[s].item != null) {
 				this.slots[s].item.setVisible(!this.slots[s].item.visible);
