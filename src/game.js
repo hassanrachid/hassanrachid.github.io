@@ -18,7 +18,8 @@ export default class GameScene extends Phaser.Scene {
 			right: "d",
 			up: "w",
 			down: "s",
-			space: "space"
+			space: "space",
+			escape: "esc"
 		});
 
 		this.itemlist = new ItemList();
@@ -50,6 +51,7 @@ export default class GameScene extends Phaser.Scene {
 
 		this.cameras.main.setBounds(0, 0, 6400, 6400);
 		this.cameras.main.startFollow(this.player.container, true, 1, 1);
+
 	}
 
 	update() {

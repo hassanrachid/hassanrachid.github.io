@@ -236,6 +236,51 @@ export default class ItemList {
                 maxStackSize: 64,
                 description: "A piece of wood"
             },
+            'Bow': {
+                image: "bows",
+                frame: "Bow",
+                type: "weapon",
+                attributes: new Attributes({ health: 0, strength: 3, defense: 1, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 60,
+                        side: 60,
+                        back: 80
+                    }
+                }
+            },
+            'Long Bow': {
+                image: "bows",
+                frame: "LongBow",
+                type: "weapon",
+                attributes: new Attributes({ health: 0, strength: 3, defense: 1, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 60,
+                        side: 60,
+                        back: 80
+                    }
+                }
+            },
+            'Magic Bow': {
+                image: "bows",
+                frame: "MagicBow",
+                type: "weapon",
+                attributes: new Attributes({ health: 0, strength: 3, defense: 1, intelligence: 0, agility: 0 }),
+                collider: {
+                    width: 120,
+                    height: 120,
+                    offset: {
+                        front: 60,
+                        side: 60,
+                        back: 80
+                    }
+                }
+            },
         }
     }
 }

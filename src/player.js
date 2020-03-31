@@ -26,8 +26,8 @@ export default class Player extends BaseCharacter {
 
 		this.inventory = new Inventory({
 			scene: this.scene.game.scene.keys["InterfaceScene"],
-			x: 100,
-			y: 580,
+			x: this.scene.cameras.main.centerX - 75,
+			y: this.scene.cameras.main.centerY - 75,
 			width: 256,
 			height: 256
 		});
@@ -45,6 +45,13 @@ export default class Player extends BaseCharacter {
 		});
 
 		this.combat = new Combat(this, this.collider, this.scene);
+
+		// allows player to attack
+		this.scene.input.on("pointerdown", gameObject => {
+			this.utilitybar.closeAllInterfaces();
+			this.state = "AttackState";
+		});
+		
 	}
 
 	update(cursors) {
@@ -52,21 +59,15 @@ export default class Player extends BaseCharacter {
 			super.update();
 			this.container.body.setVelocity(0);
 
-			let angle = Phaser.Math.Angle.Between(this.container.x, this.container.y, this.scene.input.activePointer.worldX, this.scene.input.activePointer.worldY)
+			let angle = Phaser.Math.Angle.Between(this.container.x, this.container.y, this.scene.input.activePointer.worldX, this.scene.input.activePointer.worldY);
 			var degrees = Phaser.Math.RadToDeg(angle);
 			// face to the right if pointer is right of player
 			if (degrees > -45 && degrees < 45) {
-				super.setDirection("side");
-				if (!this.flipX) {
-					this.flipX = true;
-				}
+				super.setDirection("right");
 			}
 			// face to the left if pointer is left of player
 			if ((degrees > 135 && degrees < 180) || (degrees > -180 && degrees < -135)) {
-				super.setDirection("side");
-				if (this.flipX) {
-					this.flipX = false;
-				}
+				super.setDirection("left");
 			}
 			// face front if pointer is under player
 			if (degrees > 45 && degrees < 135) {
@@ -80,10 +81,8 @@ export default class Player extends BaseCharacter {
 			// Horizontal movement
 			if (cursors.left.isDown) {
 				this.container.body.setVelocityX(-250);
-				this.flipX = false;
 			} else if (cursors.right.isDown) {
 				this.container.body.setVelocityX(250);
-				this.flipX = true;
 			}
 
 			// Vertical movement
@@ -95,9 +94,9 @@ export default class Player extends BaseCharacter {
 
 			this.container.body.velocity.normalize().scale(200, 200);
 
-			if (Phaser.Input.Keyboard.JustDown(cursors.space)) {
-				this.state = "AttackState";
-			}
+			// if (Phaser.Input.Keyboard.JustDown(cursors.space)) {
+			// 	this.state = "AttackState";
+			// }
 		}
 
 		// On if move state, check for any enemies near by, and then have the enemy move to the player

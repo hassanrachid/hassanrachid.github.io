@@ -9,15 +9,7 @@ export default class UtilityBar {
 		this.height = config.height;
 		this.player = config.player;
 
-		this.iconNames = [
-			"inventory",
-			"abilities",
-			"skills",
-			"equipment",
-			"5",
-			"6",
-			"7"
-		];
+		this.iconNames = ["inventory", "abilities", "skills", "equipment", undefined, undefined, undefined];
 
 		this.create();
 	}
@@ -36,14 +28,17 @@ export default class UtilityBar {
 		}
 	}
 
+	closeAllInterfaces() {
+		this.iconNames.forEach(i => {
+			if (this.player[i] != undefined && this.player[i].visible) {
+				this.player[i].show();
+			}
+		});
+	}
+
 	closeOtherInterfaces(currentInterface) {
 		this.iconNames.forEach(i => {
-			if (
-				this.player[i] != undefined &&
-				i != currentInterface &&
-				this.player[i].visible == true
-			) {
-				console.log(i);
+			if (this.player[i] != undefined && i != currentInterface && this.player[i].visible) {
 				this.player[i].show();
 			}
 		});

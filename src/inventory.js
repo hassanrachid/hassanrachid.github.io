@@ -20,31 +20,24 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 		this.cols = this.width / 64;
 		this.rows = this.height / 64;
 
+		var style = {
+			font: "bold 24px Helvetica",
+			fill: "white",
+			wordWrap: { width: 280 }
+		};
+		this.text = this.scene.add.text(this.x, this.y, "Inventory", style)
+		this.text.setOrigin(0.3, 2.5)
+
 		for (var x = 0; x < this.rows; x++) {
 			this.slotArray[x] = [];
 			for (var y = 0; y < this.cols; y++) {
 				this.slotArray[x][y] = new ItemSlot(this.scene, this.x + x * 72, this.y + y * 72, 64, 64, null);
-
 				this.slotArray[x][y].setInteractive({ dropZone: true });
 				this.scene.add.existing(this.slotArray[x][y]);
 			}
 		}
 
-		this.addItem({ name: "Short Spear" });
-		this.addItem({ name: "Iron Spear" });
-		this.addItem({ name: "Steel Spear" });
-		this.addItem({ name: "Hardened Spear" });
-		this.addItem({ name: "Onyx Spear" });
-		this.addItem({ name: "Short Sword" });
-		this.addItem({ name: "Iron Sword" });
-		this.addItem({ name: "Gold Sword" });
-		this.addItem({ name: "Steel Sword" });
-		this.addItem({ name: "Silverlight" });
-		this.addItem({ name: "Iron Axe" });
-		this.addItem({ name: "Steel Axe" });
-		this.addItem({ name: "Silver Axe" });
-		this.addItem({ name: "Hardened Axe" });
-		this.addItem({ name: "Platinum Axe" });
+		this.addItem({ name: "Bow" });
 
 		this.handleEvents();
 	}
@@ -169,6 +162,7 @@ export default class Inventory extends Phaser.GameObjects.Rectangle {
 	show() {
 		// store these in a container later on..
 		this.setVisible(!this.visible);
+		this.text.setVisible(!this.text.visible);
 		for (var x = 0; x < this.rows; x++) {
 			for (var y = 0; y < this.cols; y++) {
 				this.slotArray[x][y].setVisible(!this.slotArray[x][y].visible);

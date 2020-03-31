@@ -62,6 +62,7 @@ export default class LoadScene extends Phaser.Scene {
 		this.load.image("abilities", "assets/utilityicons/2.png");
 		this.load.image("skills", "assets/utilityicons/3.png");
 		this.load.image("equipment", "assets/utilityicons/4.png");
+		this.load.image("exit", "assets/utilityicons/exit.png");
 		this.load.image("itemtooltip", "assets/inventory/itemtooltip.png");
 		this.load.image("inventoryframe", "assets/inventory/inventoryframe.png");
 
@@ -89,11 +90,17 @@ export default class LoadScene extends Phaser.Scene {
 		this.load.text('bloodeffect', 'assets/particles/blood/bloodeffect.json');
 		this.load.text('treehit', 'assets/particles/tree/treehit.json');
 
-
+		// weapons
 		this.load.atlas({
 			key: "swords",
 			textureURL: "assets/weapons/swords.png",
 			atlasURL: "assets/weapons/swords.json"
+		});
+
+		this.load.atlas({
+			key: "bows",
+			textureURL: "assets/weapons/bows.png",
+			atlasURL: "assets/weapons/bows.json"
 		});
 
 		this.load.atlas({
@@ -274,6 +281,11 @@ export default class LoadScene extends Phaser.Scene {
 		});
 
 		// side animations
+		this.load.atlas({
+			key: "attack_side_Bow",
+			textureURL: "assets/warrior/attack_side/Bow/spritesheet.png",
+			atlasURL: "assets/warrior/attack_side/Bow/spritesheet.json"
+		});
 		this.load.atlas({
 			key: "attack_side_Short Sword",
 			textureURL: "assets/warrior/attack_side/Short Sword/spritesheet.png",
@@ -581,6 +593,12 @@ export default class LoadScene extends Phaser.Scene {
 		});
 
 		// side animations
+		this.anims.create({
+			key: "attack_side_Bow",
+			frames: this.anims.generateFrameNames("attack_side_Bow"),
+			frameRate: 60,
+			repeat: 0
+		});
 		this.anims.create({
 			key: "attack_side_Short Sword",
 			frames: this.anims.generateFrameNames("attack_side_Short Sword"),

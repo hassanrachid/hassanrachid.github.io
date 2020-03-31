@@ -7,16 +7,32 @@ export default class Combat {
 
 		this.sprite.on(
 			"animationupdate",
-			(frame, index, key) => {
-				if (frame.key.includes("attack")) {
-					if (index.progress >= 0.5 && index.progress <= 0.55) {
+			(anim, frame) => {
+				if (anim.key.includes("attack") && !anim.key.includes("Bow")) {
+					if (frame.progress >= 0.5 && frame.progress <= 0.55) {
 						// this is probably soo inefficient.....
 						this.scene.physics.world.overlap(this.collider, this.scene.trees, this.TreeCollision);
 						for (var i = 0; i < this.scene.enemies.children.entries.length; i++) {
-							if (this.scene.physics.world.overlap(this.collider, this.scene.enemies.children.entries[i].container, this.Collision)) {
+							if (this.scene.physics.world.overlap(this.collider, this.scene.enemies.children.entries[i].container, this.EnemyCollision)) {
 								break;
 							}
 						}
+					}
+				} else if (anim.key.includes("attack") && anim.key.includes("Bow")) {
+					if (frame.index == 2) {
+						// get pointer from start of animation
+						this.pointerX = this.scene.input.activePointer.worldX;
+						this.pointerY = this.scene.input.activePointer.worldY;
+					}
+					if (frame.index == 30) {
+						// alfter firing position based on direction, so arrow doesn't come directly from players body
+						var position = this.GetFiringPosition(this.sprite.container.x, this.sprite.container.y, this.sprite.direction);
+						var angle = Phaser.Math.Angle.Between(position.x, position.y, this.pointerX, this.pointerY);
+						var sprite = this.scene.add.sprite(position.x, position.y, "arrow");
+						this.scene.physics.world.enable(sprite);
+						sprite.setScale(0.15);
+						sprite.rotation = angle;
+						this.scene.physics.velocityFromRotation(angle, 500, sprite.body.velocity);
 					}
 				}
 			},
@@ -31,7 +47,7 @@ export default class Combat {
 		}
 	}
 
-	Collision(o1, o2) {
+	EnemyCollision(o1, o2) {
 		/* TODO */
 		// make method to take in both object attributes and calculate damage done
 		var playerAttributes = o1.parentContainer.sprite.attributesWithEquipment;
@@ -78,5 +94,20 @@ export default class Combat {
 
 	generateRandomInteger(min, max) {
 		return Math.floor(min + Math.random() * (max + 1 - min));
+	}
+
+	GetFiringPosition(oldX, oldY, direction) {
+		if (direction == "front") {
+			oldY += 40;
+			return { y: oldY, x: oldX };
+		} else if (direction == "side") {
+			if (!this.sprite.flipX) {
+				oldX -= 40;
+			} else {
+				oldX += 40;
+			}
+			oldY += 30;
+			return { y: oldY, x: oldX };
+		}
 	}
 }

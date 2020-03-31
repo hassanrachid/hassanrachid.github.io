@@ -111,6 +111,13 @@ export default class BaseCharacter extends Phaser.GameObjects.Sprite {
 
 	setDirection(direction) {
 		if (!this.statemachine.attacking) {
+			if (direction == "right") {
+				this.flipX = true;
+				direction = "side";
+			} else if (direction == "left") {
+				this.flipX = false;
+				direction = "side";
+			}
 			this.direction = direction;
 			this.statemachine.ResetColliderBox();
 		}
